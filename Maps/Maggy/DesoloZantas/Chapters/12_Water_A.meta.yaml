@@ -1,0 +1,82 @@
+Icon: areas/water
+Interlude: true
+TitleBaseColor: 0000ff
+TitleAccentColor: 000099
+TitleTextColor: ffffff
+IntroType: None
+Dreaming: false
+ColorGrade: water
+Wipe: Celeste.AngledWipe
+DarknessAlpha: 0.05
+BloomBase: 0.0
+BloomStrength: 1.0
+Jumpthru: wood
+CassetteNoteColor: 33a9ee
+CassetteSong: event:/Ingeste/music/Cassette/12_water
+Modes:
+  - AudioState:
+      Music: event:/Ingeste/music/lvl12/main
+      Ambience: event:/Ingeste/env/12_river
+    Inventory: Default
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/BSide/12_water
+      Ambience: event:/Ingeste/env/12_river
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/CSide/12_water
+      Ambience: event:/Ingeste/env/12_river
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/CSide/12_water
+      Ambience: event:/Ingeste/env/12_river
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+Mountain:
+    MountainModelDirectory: Mountain\Maggy\DesoloZantas
+    MountainTextureDirectory: Graphics\Atlases\Mountain\maggy\DesoloZantas
+    Idle:
+        Position: [ -1.952, 4.218, 9.744 ]
+        Target: [ -0.111, 3.393, 8.127 ]
+    Select:
+        Position: [ -0.052, 1.659, 9.902 ]
+        Target: [ 1.110, 1.526, 8.280 ]
+    Zoom:
+        Position: [ 1.437, 1.896, 7.061 ]
+        Target: [ 1.376, 0.881, 5.338 ]
+    Cursor: [ 1.319535, 2.07172, 5.113717 ]
+    State: 0
+CompleteScreen:
+    Atlas: "DesoloZantas"
+    Scale: 2
+    Start: [ -10.0, 2000.0 ]
+    Center: [ -10.0, 1200.0 ]
+    Title:
+        ASide: 'AREACOMPLETE_NORMAL'
+        BSide: 'AREACOMPLETE_BSIDE'
+        CSide: 'AREACOMPLETE_CSIDE'
+        DSide: 'AREACOMPLETE_DSIDE'
+        FullClear: 'AREACOMPLETE_NORMAL_FULLCLEAR'
+    Layers:
+      - Type: "layer"
+        Images: [ "water_01" ]
+        Position: [ 0.0, 0.0 ]
+        Scroll: [ 0.0 ]
+        Scale: 2
+      - Type: "layer"
+        Images: [ "water_02" ]
+        Position: [ -800.0, -700.0 ]
+        Scroll: [ 0.02 ]
+        Scale: 2
+      - Type: "ui"
+        Scroll: [ 0.62 ]
+      - Type: "layer"
+        Images: [ "water_03" ]
+        Position: [ -800.0, -700.0 ]
+        Scroll: [ 0.04 ]
+        Scale: 2

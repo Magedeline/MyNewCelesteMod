@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Sprites>
+
+  <!-- ========================================== -->
+  <!-- HEARTGEMS & COLLECTIBLES                  -->
+  <!-- ========================================== -->
+  
+  <!-- Standard Heartgems (0-4) -->
+  <heartgem0 path="collectables/heartgem/0/" start="idle">
+    <Center />
+    <Loop id="idle" path="spin" frames="0" />
+    <Loop id="spin" path="spin" frames="0*10,1-10" delay="0.08"/>
+    <Loop id="fastspin" path="spin" frames="1-10" delay="0.08"/>
+  </heartgem0>
+
+  <heartgem1 path="collectables/heartgem/1/" start="idle">
+    <Center />
+    <Loop id="idle" path="spin" frames="0" />
+    <Loop id="spin" path="spin" frames="0*10,1-10" delay="0.08"/>
+    <Loop id="fastspin" path="spin" frames="1-10" delay="0.08"/>
+  </heartgem1>
+
+  <heartgem2 path="collectables/heartgem/2/" start="idle">
+    <Center />
+    <Loop id="idle" path="spin" frames="0" />
+    <Loop id="spin" path="spin" frames="0*10,1-10" delay="0.08"/>
+    <Loop id="fastspin" path="spin" frames="1-10" delay="0.08"/>
+  </heartgem2>
+
+  <heartgem3 path="collectables/heartgem/3/" start="idle">
+    <Center />
+    <Loop id="idle" path="spin" frames="0" />
+    <Loop id="spin" path="spin" frames="0*10,1-10" delay="0.08"/>
+    <Loop id="fastspin" path="spin" frames="1-10" delay="0.08"/>
+  </heartgem3>
+
+  <!-- Special White Heartgem -->
+  <heartgem4 path="collectables/heartgem/4/" start="idle">
+    <Center />
+    <Loop id="idle" path="00" frames="0" />
+    <Loop id="spin" path="break" frames="0*11,1-11" delay="0.08"/>
+    <Anim id="break" path="break" frames="12-20" delay="0.07"/>
+  </heartgem4>
+
+  <!-- Heartgem UI Display -->
+  <heartgem path="heartgem/" start="hover">
+    <Justify x="0.5" y="0"/>
+    <Position x="0" y="-207"/>
+    <Loop id="hover" path="heartgem" frames="0" delay="0.1"/>
+    <Loop id="beating" path="heartgem" frames="0-3" delay="0.1"/> 
+  </heartgem>
+
+  <!-- ========================================== -->
+  <!-- SAVE SYSTEM                                -->
+  <!-- ========================================== -->
+  
+  <save path="save/saveIcon" start="start">
+    <Center />
+    <Anim id="start" path="" frames="0-11" goto="idle" delay="0.04"/>
+    <Loop id="idle" path="" frames="11" delay="0.08"/>
+    <Anim id="end" path="" frames="11-20" delay="0.08"/>
+  </save>
+
+  <!-- ========================================== -->
+  <!-- KIRBY UI SYSTEM                            -->
+  <!-- ========================================== -->
+  
+  <!-- Health Display -->
+  <gui_kirby_health path="gui/kirby/health/" start="heart_full">
+    <Origin x="6" y="6" />
+    <Justification x="0.5" y="0.5" />
+    
+    <Anim id="heart_full" path="heart_full" delay="0.1" />
+    <Anim id="heart_empty" path="heart_empty" delay="0.1" />
+    <Anim id="heart_half" path="heart_half" delay="0.1" />
+    <Loop id="heart_beat" path="heart_beat" delay="0.15" />
+    <Anim id="heart_damage" path="heart_damage" delay="0.05" goto="heart_empty" />
+    <Anim id="heart_heal" path="heart_heal" delay="0.08" goto="heart_full" />
+  </gui_kirby_health>
+  
+  <!-- Power Icons -->
+  <gui_kirby_powers path="gui/kirby/powers/" start="none">
+    <Origin x="12" y="12" />
+    <Justification x="0.5" y="0.5" />
+    
+    <Anim id="none" path="none" delay="0.1" />
+    <Loop id="fire" path="fire" delay="0.2" />
+    <Loop id="ice" path="ice" delay="0.25" />
+    <Loop id="spark" path="spark" delay="0.1" />
+    <Loop id="stone" path="stone" delay="0.3" />
+    <Loop id="sword" path="sword" delay="0.2" />
+  </gui_kirby_powers>
+  
+  <!-- HUD Frame Elements -->
+  <gui_kirby_hud path="gui/kirby/hud/" start="frame">
+    <Origin x="0" y="0" />
+    <Justification x="0" y="0" />
+    
+    <Anim id="frame" path="frame" delay="0.1" />
+    <Anim id="frame_damaged" path="frame_damaged" delay="0.1" />
+    <Loop id="frame_low_health" path="frame_low_health" delay="0.3" />
+    <Anim id="power_frame" path="power_frame" delay="0.1" />
+    <Loop id="power_frame_active" path="power_frame_active" delay="0.2" />
+  </gui_kirby_hud>
+  
+  <!-- Menu Interface -->
+  <gui_kirby_menu path="gui/kirby/menu/" start="icon">
+    <Origin x="16" y="16" />
+    <Justification x="0.5" y="0.5" />
+    
+    <Anim id="icon" path="icon" delay="0.1" />
+    <Loop id="icon_selected" path="icon_selected" delay="0.2" />
+    <Anim id="transformation_icon" path="transformation_icon" delay="0.1" />
+    <Anim id="ability_icon" path="ability_icon" delay="0.1" />
+  </gui_kirby_menu>
+  
+  <!-- Status Indicators -->
+  <gui_kirby_status path="gui/kirby/status/" start="normal">
+    <Origin x="8" y="8" />
+    <Justification x="0.5" y="0.5" />
+    
+    <Anim id="normal" path="normal" delay="0.1" />
+    <Loop id="inhaling" path="inhaling" delay="0.08" />
+    <Loop id="hovering" path="hovering" delay="0.12" />
+    <Loop id="powered" path="powered" delay="0.15" />
+    <Anim id="transforming" path="transforming" delay="0.05" />
+    <Loop id="invulnerable" path="invulnerable" delay="0.1" />
+  </gui_kirby_status>
+
+  <!-- ========================================== -->
+  <!-- VISUAL EFFECTS                             -->
+  <!-- ========================================== -->
+  
+  <!-- Transformation Effects -->
+  <gui_transform_effect path="gui/effects/transform/" start="sparkle">
+    <Origin x="16" y="16" />
+    <Justification x="0.5" y="0.5" />
+    
+    <Anim id="sparkle" path="sparkle" delay="0.04" />
+    <Anim id="stars" path="stars" delay="0.05" />
+    <Anim id="flash" path="flash" delay="0.03" />
+    <Loop id="glow" path="glow" delay="0.1" />
+  </gui_transform_effect>
+  
+</Sprites>

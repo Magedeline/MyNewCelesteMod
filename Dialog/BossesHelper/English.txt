@@ -1,0 +1,3 @@
+Badeline_Sidekick_No_Target=
+	[BADELINE left angryALT]
+	{2}There's nothing for me to shoot here.

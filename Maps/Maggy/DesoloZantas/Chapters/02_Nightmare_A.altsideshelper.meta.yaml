@@ -1,0 +1,21 @@
+﻿Sides: 
+  - OverrideVanillaSideData: true
+    Preset: "a-side"
+    Icon: "areas/oldsite"
+  - Map: "Maggy/DesoloZantas/Chapters/02_Nightmare_B"
+    Preset: "b-side"
+    UnlockMode: "cassette"
+    ShowBerriesAsGolden: true
+    ShowBSideRemixIntro: true
+    Icon: "areas/oldsite"
+  - Map: "Maggy/DesoloZantas/Chapters/02_Nightmare_C"
+    Preset: "c-side"
+    UnlockMode: "cassette"
+    ShowBerriesAsGolden: true
+    Icon: "areas/oldsite"
+  - Map: "Maggy/DesoloZantas/Chapters/02_Nightmare_D"
+    Preset: "d-side"
+    UnlockMode: "consecutive"
+    ShowBerriesAsGolden: true
+    Icon: "areas/oldsite"
+

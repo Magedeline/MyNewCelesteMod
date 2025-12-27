@@ -1,0 +1,21 @@
+﻿Sides: 
+  - OverrideVanillaSideData: true
+    Preset: "a-side"
+    Icon: "areas/water"
+  - Map: "Maggy/DesoloZantas/Chapters/12_Water_B"
+    Preset: "b-side"
+    UnlockMode: "cassette"
+    ShowBerriesAsGolden: true
+    ShowBSideRemixIntro: true
+    Icon: "areas/water"
+  - Map: "Maggy/DesoloZantas/Chapters/12_Water_C"
+    Preset: "c-side"
+    UnlockMode: "cassette"
+    ShowBerriesAsGolden: true
+    Icon: "areas/water"
+  - Map: "Maggy/DesoloZantas/Chapters/12_Water_D"
+    Preset: "d-side"
+    UnlockMode: "consecutive"
+    ShowBerriesAsGolden: true
+    Icon: "areas/water"
+

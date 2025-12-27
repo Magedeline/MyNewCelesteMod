@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patterns>
+    <Pattern name="phase1" goto="phase1">
+        <Wait time="1.0"/>
+        <Attack file="void_cataclysm"/>
+        <Wait time="1.5"/>
+        <Attack file="chaos_chains"/>
+        <Wait time="1.5"/>
+        <Attack file="dimension_tear"/>
+        <Wait time="1.5"/>
+        <Attack file="soul_shatter"/>
+        <Wait time="1.5"/>
+        <Attack file="reality_collapse"/>
+        <Wait time="2.0"/>
+    </Pattern>
+    
+    <Event file="intro" goto="phase1"/>
+    <Event file="death"/>
+</Patterns>

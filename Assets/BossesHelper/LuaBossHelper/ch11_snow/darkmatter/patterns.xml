@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Dark the Dark Matter Boss - Pattern Configuration -->
+<Patterns>
+    <!-- Phase 1: Basic katana attacks -->
+    <Pattern name="phase1" goto="phase1">
+        <Wait time="1.0"/>
+        <Attack file="katana_slash"/>
+        <Wait time="1.5"/>
+        <Attack file="dark_beam"/>
+        <Wait time="2.0"/>
+        <Attack file="katana_slash"/>
+        <Wait time="1.5"/>
+        <Attack file="void_orbs"/>
+        <Wait time="2.0"/>
+    </Pattern>
+    
+    <!-- Phase 2: Adds clones and rifts -->
+    <Pattern name="phase2" goto="phase2">
+        <Wait time="0.8"/>
+        <Attack file="shadow_clone"/>
+        <Wait time="1.5"/>
+        <Attack file="katana_slash"/>
+        <Wait time="1.0"/>
+        <Attack file="dimensional_rift"/>
+        <Wait time="1.5"/>
+        <Attack file="dark_beam"/>
+        <Wait time="1.2"/>
+        <Attack file="void_orbs"/>
+        <Wait time="1.0"/>
+    </Pattern>
+    
+    <!-- Phase 3: Full power with ultimate attacks -->
+    <Pattern name="phase3" goto="phase3">
+        <Wait time="0.5"/>
+        <Attack file="void_cleave"/>
+        <Wait time="1.0"/>
+        <Attack file="shadow_clone"/>
+        <Wait time="1.0"/>
+        <Attack file="dimensional_rift"/>
+        <Wait time="0.8"/>
+        <Attack file="katana_slash"/>
+        <Wait time="0.8"/>
+        <Attack file="dark_beam"/>
+        <Wait time="0.8"/>
+    </Pattern>
+    
+    <!-- Random pattern -->
+    <Random name="random_attacks" repeat="5" goto="phase2">
+        <Attack file="katana_slash" wait="1.5" weight="3"/>
+        <Attack file="dark_beam" wait="2.0" weight="2"/>
+        <Attack file="void_orbs" wait="2.0" weight="2"/>
+        <Attack file="shadow_clone" wait="2.0" weight="1"/>
+    </Random>
+    
+    <!-- Events -->
+    <Event file="intro" goto="phase1"/>
+    <Event file="phase2_transition" goto="phase2"/>
+    <Event file="phase3_transition" goto="phase3"/>
+    <Event file="death"/>
+</Patterns>

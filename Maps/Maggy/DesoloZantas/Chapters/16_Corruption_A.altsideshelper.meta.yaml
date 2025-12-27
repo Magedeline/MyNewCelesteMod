@@ -1,0 +1,22 @@
+﻿# Sides B, C, and D are temporarily disabled until map .bin files are created
+# Uncomment and create the corresponding .bin files when ready
+Sides:
+  - OverrideVanillaSideData: true
+    Preset: "a-side"
+    Icon: "areas/corruption"
+#  - Map: "Maggy/DesoloZantas/Chapters/16_Corruption_B"
+#    Preset: "b-side"
+#    UnlockMode: "cassette"
+#    ShowBerriesAsGolden: true
+#    ShowBSideRemixIntro: true
+#    Icon: "areas/corruption"
+#  - Map: "Maggy/DesoloZantas/Chapters/16_Corruption_C"
+#    Preset: "c-side"
+#    UnlockMode: "cassette"
+#    ShowBerriesAsGolden: true
+#    Icon: "areas/corruption"
+#  - Map: "Maggy/DesoloZantas/Chapters/16_Corruption_D"
+#    Preset: "d-side"
+#    UnlockMode: "consecutive"
+#    ShowBerriesAsGolden: true
+#    Icon: "areas/corruption"

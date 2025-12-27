@@ -1,0 +1,2 @@
+function onBegin() player.StateMachine.State = 11 helpers.playPuppetAnim("shutdown") playSound("event:/axis_shutdown") wait(1.0) helpers.sayExt("AXIS_DEFEAT") helpers.removeBoss(true) setFlag("boss_axis_defeated", true) player.StateMachine.State = 0 end
+function onEnd(level, wasSkipped) if wasSkipped then helpers.removeBoss(true) setFlag("boss_axis_defeated", true) player.StateMachine.State = 0 end end

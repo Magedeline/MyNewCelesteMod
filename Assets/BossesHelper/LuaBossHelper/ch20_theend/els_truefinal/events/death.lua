@@ -1,0 +1,2 @@
+function onBegin() player.StateMachine.State = 11 helpers.playPuppetAnim("unravel") playSound("event:/els_final_defeat") level.Shake(5.0) wait(4.0) helpers.sayExt("ELS_TRUEFINAL_DEFEAT") helpers.removeBoss(true) setFlag("boss_els_truefinal_defeated", true) setFlag("game_complete", true) player.StateMachine.State = 0 end
+function onEnd(level, wasSkipped) if wasSkipped then helpers.removeBoss(true) setFlag("boss_els_truefinal_defeated", true) setFlag("game_complete", true) player.StateMachine.State = 0 end end

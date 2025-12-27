@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Wispy Woods Boss - Pattern Configuration -->
+<Patterns>
+    <!-- Phase 1: Basic attacks, learning the boss -->
+    <Pattern name="phase1" goto="phase1">
+        <Wait time="1.0"/>
+        <Attack file="shoot_air"/>
+        <Wait time="2.0"/>
+        <Attack file="drop_apples"/>
+        <Wait time="2.5"/>
+        <Attack file="shoot_air"/>
+        <Wait time="1.5"/>
+        <Attack file="root_attack"/>
+        <Wait time="2.0"/>
+    </Pattern>
+    
+    <!-- Phase 2: More aggressive, adds leaf storm -->
+    <Pattern name="phase2" goto="phase2">
+        <Wait time="0.8"/>
+        <Attack file="shoot_air"/>
+        <Wait time="1.5"/>
+        <Attack file="leaf_storm"/>
+        <Wait time="1.0"/>
+        <Attack file="drop_apples"/>
+        <Wait time="1.5"/>
+        <Attack file="root_attack"/>
+        <Wait time="1.2"/>
+        <Attack file="shoot_air"/>
+        <Wait time="1.0"/>
+    </Pattern>
+    
+    <!-- Phase 3: Desperate attacks with inhale -->
+    <Pattern name="phase3" goto="phase3">
+        <Wait time="0.5"/>
+        <Attack file="inhale"/>
+        <Wait time="0.5"/>
+        <Attack file="shoot_air"/>
+        <Wait time="1.0"/>
+        <Attack file="leaf_storm"/>
+        <Wait time="0.8"/>
+        <Attack file="root_attack"/>
+        <Wait time="1.0"/>
+        <Attack file="drop_apples"/>
+        <Wait time="0.8"/>
+        <Attack file="inhale"/>
+        <Wait time="0.5"/>
+    </Pattern>
+    
+    <!-- Random pattern for variety -->
+    <Random name="random_attacks" repeat="5" goto="phase2">
+        <Attack file="shoot_air" wait="1.5" weight="3"/>
+        <Attack file="drop_apples" wait="2.0" weight="2"/>
+        <Attack file="root_attack" wait="2.0" weight="2"/>
+        <Attack file="leaf_storm" wait="1.5" weight="1"/>
+    </Random>
+    
+    <!-- Intro cutscene event -->
+    <Event file="intro" goto="phase1"/>
+    
+    <!-- Phase transition events -->
+    <Event file="phase2_transition" goto="phase2"/>
+    <Event file="phase3_transition" goto="phase3"/>
+    
+    <!-- Death event -->
+    <Event file="death"/>
+</Patterns>

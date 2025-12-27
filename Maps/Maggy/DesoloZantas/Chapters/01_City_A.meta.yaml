@@ -1,0 +1,85 @@
+Icon: areas/city
+Interlude: true
+TitleBaseColor: 8b9dc3
+TitleAccentColor: 3e4e76
+TitleTextColor: ffffff
+IntroType: None
+Dreaming: false
+ColorGrade: none
+Wipe: Celeste.FadeWipe
+DarknessAlpha: 0.15
+BloomBase: 0.1
+BloomStrength: 1.2
+Jumpthru: wood
+CassetteNoteColor: 5577ee
+CassetteSong: event:/Ingeste/music/Cassette/01_city
+Modes:
+  - AudioState:
+      Music: event:/Ingeste/music/lvl0/main
+      Ambience: event:/Ingeste/env/01_main
+    Inventory: Default
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/BSide/01_city
+      Ambience: event:/Ingeste/env/01_main
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/CSide/01_city
+      Ambience: event:/Ingeste/env/01_main
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/CSide/01_city
+      Ambience: event:/Ingeste/env/01_main
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+Mountain:
+    Idle:
+        Position: [ 2.450, 6.120, 14.250 ]
+        Target: [ 1.680, 5.390, 12.800 ]
+    Select:
+        Position: [ 1.850, 3.750, 14.580 ]
+        Target: [ 2.950, 3.620, 13.120 ]
+    Zoom:
+        Position: [ 3.280, 4.150, 11.650 ]
+        Target: [ 3.180, 3.080, 9.950 ]
+    Cursor: [ 3.142867, 3.798324, 9.725184 ]
+    State: 0
+CompleteScreen:
+    Atlas: "City"
+    Scale: 2
+    Start: [ -10.0, 2000.0 ]
+    Center: [ -10.0, 1200.0 ]
+    Title:
+        ASide: 'AREACOMPLETE_NORMAL'
+        BSide: 'AREACOMPLETE_BSIDE'
+        CSide: 'AREACOMPLETE_CSIDE'
+        DSide: 'AREACOMPLETE_DSIDE'
+        FullClear: 'AREACOMPLETE_NORMAL_FULLCLEAR'
+    Layers:
+      - Type: "layer"
+        Images: [ "city_complete_bg" ]
+        Position: [ 0.0, 0.0 ]
+        Scroll: [ 0.0 ]
+        Scale: 2
+      - Type: "layer"
+        Images: [ "city_complete_buildings" ]
+        Position: [ -400.0, -350.0 ]
+        Scroll: [ 0.02 ]
+        Scale: 2
+      - Type: "layer"
+        Images: [ "city_complete_mid" ]
+        Position: [ -400.0, -300.0 ]
+        Scroll: [ 0.05 ]
+        Scale: 2
+      - Type: "layer"
+        Images: [ "city_complete_fg" ]
+        Position: [ -400.0, -200.0 ]
+        Scroll: [ 0.08 ]
+        Scale: 2
+      - Type: "ui"
+        Scroll: [ 0.62 ]

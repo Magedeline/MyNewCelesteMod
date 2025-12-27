@@ -1,0 +1,33 @@
+Icon: areas/farewell
+Interlude: true
+TitleBaseColor: ffffff
+TitleAccentColor: d9d9d9
+TitleTextColor: ffffff
+IntroType: None
+Dreaming: false
+ColorGrade: epilogue
+Wipe: Celeste.AngledWipe
+DarknessAlpha: 0.05
+BloomBase: 0.0
+BloomStrength: 1.0
+Jumpthru: wood
+CassetteNoteColor: 33a9ee
+CassetteSong: event:/music/cassette/10_epilogue
+Modes:
+  - AudioState:
+      Music: event:/Ingeste/music/lvl17/main
+      Ambience: event:/Ingeste/env/06_main
+    Inventory: Default
+    SeekerSlowdown: false
+Mountain:
+    Idle:
+        Position: [ -1.952, 4.218, 9.744 ]
+        Target: [ -0.111, 3.393, 8.127 ]
+    Select:
+        Position: [ -0.052, 1.659, 9.902 ]
+        Target: [ 1.110, 1.526, 8.280 ]
+    Zoom:
+        Position: [ 1.437, 1.896, 7.061 ]
+        Target: [ 1.376, 0.881, 5.338 ]
+    Cursor: [ 1.319535, 2.07172, 5.113717 ]
+    State: 0

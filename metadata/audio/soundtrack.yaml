@@ -1,0 +1,1449 @@
+# DesoloZatnas Soundtrack Metadata
+# Comprehensive music track definitions with variations for different genres and audio modifications
+# Genres: cinematic, classic, orchestral, heavymetal
+# Audio modifications: pitch and speed adjustments
+
+# ===== MAIN LEVEL MUSIC =====
+
+- id: lvl1_main
+  eventPath: event:/Ingeste/music/lvl1/main
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [main, level1, soundtrack]
+  description: Level 1 Main Theme
+
+- id: lvl1_main_cinematic
+  eventPath: event:/Ingeste/music/lvl1/main
+  category: music
+  volume: 1.1
+  pitch: 0.95
+  looping: true
+  tags: [main, level1, soundtrack, cinematic]
+  description: Level 1 Main Theme - Cinematic Version (slower, deeper)
+
+- id: lvl1_main_classic
+  eventPath: event:/Ingeste/music/lvl1/main
+  category: music
+  volume: 0.9
+  pitch: 1.0
+  looping: true
+  tags: [main, level1, soundtrack, classic]
+  description: Level 1 Main Theme - Classic Version
+
+- id: lvl1_main_orchestral
+  eventPath: event:/Ingeste/music/lvl1/main
+  category: music
+  volume: 1.2
+  pitch: 1.02
+  looping: true
+  tags: [main, level1, soundtrack, orchestral]
+  description: Level 1 Main Theme - Orchestral Version (slightly higher pitch, more volume)
+
+- id: lvl1_main_heavymetal
+  eventPath: event:/Ingeste/music/lvl1/main
+  category: music
+  volume: 1.3
+  pitch: 1.1
+  looping: true
+  tags: [main, level1, soundtrack, heavymetal]
+  description: Level 1 Main Theme - Heavy Metal Version (faster, louder)
+
+- id: lvl1_magolor
+  eventPath: event:/Ingeste/music/lvl1/magolor
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [boss, level1, soundtrack, magolor]
+  description: Magolor Boss Theme
+
+- id: lvl1_magolor_cinematic
+  eventPath: event:/Ingeste/music/lvl1/magolor
+  category: music
+  volume: 1.15
+  pitch: 0.92
+  looping: true
+  tags: [boss, level1, soundtrack, magolor, cinematic]
+  description: Magolor Boss Theme - Cinematic
+
+- id: lvl1_magolor_orchestral
+  eventPath: event:/Ingeste/music/lvl1/magolor
+  category: music
+  volume: 1.25
+  pitch: 1.05
+  looping: true
+  tags: [boss, level1, soundtrack, magolor, orchestral]
+  description: Magolor Boss Theme - Orchestral
+
+- id: lvl1_magolor_heavymetal
+  eventPath: event:/Ingeste/music/lvl1/magolor
+  category: music
+  volume: 1.4
+  pitch: 1.15
+  looping: true
+  tags: [boss, level1, soundtrack, magolor, heavymetal]
+  description: Magolor Boss Theme - Heavy Metal
+
+# ===== LEVEL 2 MUSIC =====
+
+- id: lvl2_main
+  eventPath: event:/Ingeste/music/lvl2/main
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [main, level2, soundtrack]
+  description: Level 2 Main Theme
+
+- id: lvl2_main_cinematic
+  eventPath: event:/Ingeste/music/lvl2/main
+  category: music
+  volume: 1.1
+  pitch: 0.93
+  looping: true
+  tags: [main, level2, soundtrack, cinematic]
+  description: Level 2 Main Theme - Cinematic
+
+- id: lvl2_main_orchestral
+  eventPath: event:/Ingeste/music/lvl2/main
+  category: music
+  volume: 1.2
+  pitch: 1.03
+  looping: true
+  tags: [main, level2, soundtrack, orchestral]
+  description: Level 2 Main Theme - Orchestral
+
+- id: lvl2_main_heavymetal
+  eventPath: event:/Ingeste/music/lvl2/main
+  category: music
+  volume: 1.35
+  pitch: 1.12
+  looping: true
+  tags: [main, level2, soundtrack, heavymetal]
+  description: Level 2 Main Theme - Heavy Metal
+
+- id: lvl2_chase
+  eventPath: event:/Ingeste/music/lvl2/chase
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [chase, level2, soundtrack]
+  description: Level 2 Chase Theme
+
+- id: lvl2_chase_cinematic
+  eventPath: event:/Ingeste/music/lvl2/chase
+  category: music
+  volume: 1.15
+  pitch: 0.95
+  looping: true
+  tags: [chase, level2, soundtrack, cinematic]
+  description: Level 2 Chase Theme - Cinematic
+
+- id: lvl2_chase_heavymetal
+  eventPath: event:/Ingeste/music/lvl2/chase
+  category: music
+  volume: 1.4
+  pitch: 1.18
+  looping: true
+  tags: [chase, level2, soundtrack, heavymetal]
+  description: Level 2 Chase Theme - Heavy Metal
+
+- id: lvl2_evil_chara
+  eventPath: event:/Ingeste/music/lvl2/evil_chara
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [boss, level2, soundtrack, chara]
+  description: Evil Chara Theme
+
+- id: lvl2_evil_chara_cinematic
+  eventPath: event:/Ingeste/music/lvl2/evil_chara
+  category: music
+  volume: 1.2
+  pitch: 0.9
+  looping: true
+  tags: [boss, level2, soundtrack, chara, cinematic]
+  description: Evil Chara Theme - Cinematic (dark and ominous)
+
+- id: lvl2_evil_chara_heavymetal
+  eventPath: event:/Ingeste/music/lvl2/evil_chara
+  category: music
+  volume: 1.45
+  pitch: 1.2
+  looping: true
+  tags: [boss, level2, soundtrack, chara, heavymetal]
+  description: Evil Chara Theme - Heavy Metal
+
+# ===== LEVEL 3 MUSIC =====
+
+- id: lvl3_main
+  eventPath: event:/Ingeste/music/lvl3/main
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [main, level3, soundtrack]
+  description: Level 3 Main Theme
+
+- id: lvl3_main_cinematic
+  eventPath: event:/Ingeste/music/lvl3/main
+  category: music
+  volume: 1.1
+  pitch: 0.94
+  looping: true
+  tags: [main, level3, soundtrack, cinematic]
+  description: Level 3 Main Theme - Cinematic
+
+- id: lvl3_main_orchestral
+  eventPath: event:/Ingeste/music/lvl3/main
+  category: music
+  volume: 1.25
+  pitch: 1.04
+  looping: true
+  tags: [main, level3, soundtrack, orchestral]
+  description: Level 3 Main Theme - Orchestral
+
+- id: lvl3_main_heavymetal
+  eventPath: event:/Ingeste/music/lvl3/main
+  category: music
+  volume: 1.35
+  pitch: 1.13
+  looping: true
+  tags: [main, level3, soundtrack, heavymetal]
+  description: Level 3 Main Theme - Heavy Metal
+
+- id: lvl3_intro
+  eventPath: event:/Ingeste/music/lvl3/intro
+  category: music
+  volume: 0.95
+  pitch: 1.0
+  looping: false
+  tags: [intro, level3, soundtrack]
+  description: Level 3 Intro
+
+- id: lvl3_theo
+  eventPath: event:/Ingeste/music/lvl3/theo
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [character, level3, soundtrack, theo]
+  description: Theo Theme
+
+- id: lvl3_theo_orchestral
+  eventPath: event:/Ingeste/music/lvl3/theo
+  category: music
+  volume: 1.2
+  pitch: 1.03
+  looping: true
+  tags: [character, level3, soundtrack, theo, orchestral]
+  description: Theo Theme - Orchestral
+
+# ===== LEVEL 4 MUSIC =====
+
+- id: lvl4_main
+  eventPath: event:/Ingeste/music/lvl4/main
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [main, level4, soundtrack]
+  description: Level 4 Main Theme
+
+- id: lvl4_main_cinematic
+  eventPath: event:/Ingeste/music/lvl4/main
+  category: music
+  volume: 1.12
+  pitch: 0.93
+  looping: true
+  tags: [main, level4, soundtrack, cinematic]
+  description: Level 4 Main Theme - Cinematic
+
+- id: lvl4_main_orchestral
+  eventPath: event:/Ingeste/music/lvl4/main
+  category: music
+  volume: 1.22
+  pitch: 1.04
+  looping: true
+  tags: [main, level4, soundtrack, orchestral]
+  description: Level 4 Main Theme - Orchestral
+
+- id: lvl4_main_heavymetal
+  eventPath: event:/Ingeste/music/lvl4/main
+  category: music
+  volume: 1.38
+  pitch: 1.14
+  looping: true
+  tags: [main, level4, soundtrack, heavymetal]
+  description: Level 4 Main Theme - Heavy Metal
+
+- id: lvl4_legend
+  eventPath: event:/Ingeste/music/lvl4/legend
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level4, soundtrack, legend]
+  description: Legend Theme
+
+- id: lvl4_legend_cinematic
+  eventPath: event:/Ingeste/music/lvl4/legend
+  category: music
+  volume: 1.15
+  pitch: 0.92
+  looping: true
+  tags: [level4, soundtrack, legend, cinematic]
+  description: Legend Theme - Cinematic (epic and sweeping)
+
+- id: lvl4_legend_orchestral
+  eventPath: event:/Ingeste/music/lvl4/legend
+  category: music
+  volume: 1.3
+  pitch: 1.05
+  looping: true
+  tags: [level4, soundtrack, legend, orchestral]
+  description: Legend Theme - Orchestral (full orchestra sound)
+
+- id: lvl4_chase
+  eventPath: event:/Ingeste/music/lvl4/chase
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [chase, level4, soundtrack]
+  description: Level 4 Chase
+
+- id: lvl4_chase_heavymetal
+  eventPath: event:/Ingeste/music/lvl4/chase
+  category: music
+  volume: 1.4
+  pitch: 1.2
+  looping: true
+  tags: [chase, level4, soundtrack, heavymetal]
+  description: Level 4 Chase - Heavy Metal (intense pursuit)
+
+# ===== LEVEL 5 MUSIC =====
+
+- id: lvl5_explore
+  eventPath: event:/Ingeste/music/lvl5/explore
+  category: music
+  volume: 0.95
+  pitch: 1.0
+  looping: true
+  tags: [explore, level5, soundtrack]
+  description: Level 5 Exploration Theme
+
+- id: lvl5_explore_cinematic
+  eventPath: event:/Ingeste/music/lvl5/explore
+  category: music
+  volume: 1.05
+  pitch: 0.96
+  looping: true
+  tags: [explore, level5, soundtrack, cinematic]
+  description: Level 5 Exploration - Cinematic
+
+- id: lvl5_oshiro_chase
+  eventPath: event:/Ingeste/music/lvl5/oshiro_chase
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [boss, chase, level5, soundtrack, oshiro]
+  description: Oshiro Chase Theme
+
+- id: lvl5_oshiro_chase_heavymetal
+  eventPath: event:/Ingeste/music/lvl5/oshiro_chase
+  category: music
+  volume: 1.42
+  pitch: 1.18
+  looping: true
+  tags: [boss, chase, level5, soundtrack, oshiro, heavymetal]
+  description: Oshiro Chase - Heavy Metal
+
+# ===== LEVEL 6 MUSIC =====
+
+- id: lvl6_main
+  eventPath: event:/Ingeste/music/lvl6/main
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [main, level6, soundtrack]
+  description: Level 6 Main Theme
+
+- id: lvl6_main_cinematic
+  eventPath: event:/Ingeste/music/lvl6/main
+  category: music
+  volume: 1.1
+  pitch: 0.94
+  looping: true
+  tags: [main, level6, soundtrack, cinematic]
+  description: Level 6 Main - Cinematic
+
+- id: lvl6_main_orchestral
+  eventPath: event:/Ingeste/music/lvl6/main
+  category: music
+  volume: 1.25
+  pitch: 1.03
+  looping: true
+  tags: [main, level6, soundtrack, orchestral]
+  description: Level 6 Main - Orchestral
+
+- id: lvl6_main_heavymetal
+  eventPath: event:/Ingeste/music/lvl6/main
+  category: music
+  volume: 1.36
+  pitch: 1.13
+  looping: true
+  tags: [main, level6, soundtrack, heavymetal]
+  description: Level 6 Main - Heavy Metal
+
+- id: lvl6_heavy_winds
+  eventPath: event:/Ingeste/music/lvl6/heavy_winds
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level6, soundtrack, ambient]
+  description: Heavy Winds Theme
+
+# ===== LEVEL 7 MUSIC =====
+
+- id: lvl7_normal
+  eventPath: event:/Ingeste/music/lvl7/normal
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [main, level7, soundtrack]
+  description: Level 7 Normal Theme
+
+- id: lvl7_normal_cinematic
+  eventPath: event:/Ingeste/music/lvl7/normal
+  category: music
+  volume: 1.12
+  pitch: 0.93
+  looping: true
+  tags: [main, level7, soundtrack, cinematic]
+  description: Level 7 Normal - Cinematic
+
+- id: lvl7_normal_orchestral
+  eventPath: event:/Ingeste/music/lvl7/normal
+  category: music
+  volume: 1.23
+  pitch: 1.04
+  looping: true
+  tags: [main, level7, soundtrack, orchestral]
+  description: Level 7 Normal - Orchestral
+
+- id: lvl7_mirror
+  eventPath: event:/Ingeste/music/lvl7/mirror
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level7, soundtrack, mirror]
+  description: Mirror Temple Theme
+
+- id: lvl7_mirror_cinematic
+  eventPath: event:/Ingeste/music/lvl7/mirror
+  category: music
+  volume: 1.15
+  pitch: 0.91
+  looping: true
+  tags: [level7, soundtrack, mirror, cinematic]
+  description: Mirror Temple - Cinematic (mysterious and ethereal)
+
+# ===== LEVEL 8 MUSIC =====
+
+- id: lvl8_main
+  eventPath: event:/Ingeste/music/lvl8/main
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [main, level8, soundtrack]
+  description: Level 8 Main Theme
+
+- id: lvl8_main_cinematic
+  eventPath: event:/Ingeste/music/lvl8/main
+  category: music
+  volume: 1.1
+  pitch: 0.94
+  looping: true
+  tags: [main, level8, soundtrack, cinematic]
+  description: Level 8 Main - Cinematic
+
+- id: lvl8_main_orchestral
+  eventPath: event:/Ingeste/music/lvl8/main
+  category: music
+  volume: 1.25
+  pitch: 1.04
+  looping: true
+  tags: [main, level8, soundtrack, orchestral]
+  description: Level 8 Main - Orchestral
+
+- id: lvl8_main_heavymetal
+  eventPath: event:/Ingeste/music/lvl8/main
+  category: music
+  volume: 1.37
+  pitch: 1.14
+  looping: true
+  tags: [main, level8, soundtrack, heavymetal]
+  description: Level 8 Main - Heavy Metal
+
+- id: lvl8_chara_fight
+  eventPath: event:/Ingeste/music/lvl8/chara_fight
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [boss, level8, soundtrack, chara, fight]
+  description: Chara Boss Fight
+
+- id: lvl8_chara_fight_cinematic
+  eventPath: event:/Ingeste/music/lvl8/chara_fight
+  category: music
+  volume: 1.2
+  pitch: 0.9
+  looping: true
+  tags: [boss, level8, soundtrack, chara, fight, cinematic]
+  description: Chara Boss Fight - Cinematic (dramatic and intense)
+
+- id: lvl8_chara_fight_heavymetal
+  eventPath: event:/Ingeste/music/lvl8/chara_fight
+  category: music
+  volume: 1.45
+  pitch: 1.22
+  looping: true
+  tags: [boss, level8, soundtrack, chara, fight, heavymetal]
+  description: Chara Boss Fight - Heavy Metal (maximum intensity)
+
+# ===== LEVEL 9 MUSIC =====
+
+- id: lvl9_main
+  eventPath: event:/Ingeste/music/lvl9/main
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [main, level9, soundtrack]
+  description: Level 9 Main Theme
+
+- id: lvl9_main_cinematic
+  eventPath: event:/Ingeste/music/lvl9/main
+  category: music
+  volume: 1.12
+  pitch: 0.92
+  looping: true
+  tags: [main, level9, soundtrack, cinematic]
+  description: Level 9 Main - Cinematic
+
+- id: lvl9_main_orchestral
+  eventPath: event:/Ingeste/music/lvl9/main
+  category: music
+  volume: 1.28
+  pitch: 1.05
+  looping: true
+  tags: [main, level9, soundtrack, orchestral]
+  description: Level 9 Main - Orchestral (grand finale feel)
+
+- id: lvl9_final_ascent
+  eventPath: event:/Ingeste/music/lvl9/final_ascent
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level9, soundtrack, finale]
+  description: Final Ascent Theme
+
+- id: lvl9_final_ascent_cinematic
+  eventPath: event:/Ingeste/music/lvl9/final_ascent
+  category: music
+  volume: 1.2
+  pitch: 0.91
+  looping: true
+  tags: [level9, soundtrack, finale, cinematic]
+  description: Final Ascent - Cinematic (epic climax)
+
+- id: lvl9_final_ascent_orchestral
+  eventPath: event:/Ingeste/music/lvl9/final_ascent
+  category: music
+  volume: 1.35
+  pitch: 1.06
+  looping: true
+  tags: [level9, soundtrack, finale, orchestral]
+  description: Final Ascent - Orchestral (triumphant)
+
+- id: lvl9_final_ascent_heavymetal
+  eventPath: event:/Ingeste/music/lvl9/final_ascent
+  category: music
+  volume: 1.5
+  pitch: 1.2
+  looping: true
+  tags: [level9, soundtrack, finale, heavymetal]
+  description: Final Ascent - Heavy Metal (explosive finale)
+
+# ===== LEVEL 10 MUSIC =====
+
+- id: lvl10_main
+  eventPath: event:/Ingeste/music/lvl10/main
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [main, level10, soundtrack]
+  description: Level 10 Main Theme
+
+- id: lvl10_main_orchestral
+  eventPath: event:/Ingeste/music/lvl10/main
+  category: music
+  volume: 1.22
+  pitch: 1.04
+  looping: true
+  tags: [main, level10, soundtrack, orchestral]
+  description: Level 10 Main - Orchestral
+
+- id: lvl10_boss_fight
+  eventPath: event:/Ingeste/music/lvl10/boss_fight
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [boss, level10, soundtrack, fight]
+  description: Level 10 Boss Fight
+
+- id: lvl10_boss_fight_cinematic
+  eventPath: event:/Ingeste/music/lvl10/boss_fight
+  category: music
+  volume: 1.18
+  pitch: 0.92
+  looping: true
+  tags: [boss, level10, soundtrack, fight, cinematic]
+  description: Level 10 Boss Fight - Cinematic
+
+- id: lvl10_boss_fight_heavymetal
+  eventPath: event:/Ingeste/music/lvl10/boss_fight
+  category: music
+  volume: 1.48
+  pitch: 1.24
+  looping: true
+  tags: [boss, level10, soundtrack, fight, heavymetal]
+  description: Level 10 Boss Fight - Heavy Metal
+
+- id: lvl10_flowey
+  eventPath: event:/Ingeste/music/lvl10/flowey
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [boss, level10, soundtrack, flowey]
+  description: Flowey Theme
+
+- id: lvl10_flowey_heavymetal
+  eventPath: event:/Ingeste/music/lvl10/flowey
+  category: music
+  volume: 1.45
+  pitch: 1.2
+  looping: true
+  tags: [boss, level10, soundtrack, flowey, heavymetal]
+  description: Flowey Theme - Heavy Metal
+
+# ===== LEVEL 11 MUSIC =====
+
+- id: lvl11_main
+  eventPath: event:/Ingeste/music/lvl11/main
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [main, level11, soundtrack]
+  description: Level 11 Main Theme
+
+- id: lvl11_main_cinematic
+  eventPath: event:/Ingeste/music/lvl11/main
+  category: music
+  volume: 1.1
+  pitch: 0.94
+  looping: true
+  tags: [main, level11, soundtrack, cinematic]
+  description: Level 11 Main - Cinematic
+
+- id: lvl11_main_orchestral
+  eventPath: event:/Ingeste/music/lvl11/main
+  category: music
+  volume: 1.24
+  pitch: 1.03
+  looping: true
+  tags: [main, level11, soundtrack, orchestral]
+  description: Level 11 Main - Orchestral
+
+- id: lvl11_black_matter_swordman
+  eventPath: event:/Ingeste/music/lvl11/black_matter_swordman
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [boss, level11, soundtrack]
+  description: Black Matter Swordman Boss
+
+- id: lvl11_black_matter_swordman_heavymetal
+  eventPath: event:/Ingeste/music/lvl11/black_matter_swordman
+  category: music
+  volume: 1.44
+  pitch: 1.2
+  looping: true
+  tags: [boss, level11, soundtrack, heavymetal]
+  description: Black Matter Swordman - Heavy Metal
+
+# ===== LEVEL 12 MUSIC =====
+
+- id: lvl12_main
+  eventPath: event:/Ingeste/music/lvl12/main
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [main, level12, soundtrack]
+  description: Level 12 Main Theme
+
+- id: lvl12_main_orchestral
+  eventPath: event:/Ingeste/music/lvl12/main
+  category: music
+  volume: 1.26
+  pitch: 1.04
+  looping: true
+  tags: [main, level12, soundtrack, orchestral]
+  description: Level 12 Main - Orchestral
+
+- id: lvl12_apex_fight
+  eventPath: event:/Ingeste/music/lvl12/apex_fight
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [boss, level12, soundtrack, fight]
+  description: Apex Boss Fight
+
+- id: lvl12_apex_fight_cinematic
+  eventPath: event:/Ingeste/music/lvl12/apex_fight
+  category: music
+  volume: 1.2
+  pitch: 0.91
+  looping: true
+  tags: [boss, level12, soundtrack, fight, cinematic]
+  description: Apex Boss Fight - Cinematic
+
+- id: lvl12_apex_fight_heavymetal
+  eventPath: event:/Ingeste/music/lvl12/apex_fight
+  category: music
+  volume: 1.46
+  pitch: 1.22
+  looping: true
+  tags: [boss, level12, soundtrack, fight, heavymetal]
+  description: Apex Boss Fight - Heavy Metal
+
+# ===== LEVEL 13 MUSIC =====
+
+- id: lvl13_main
+  eventPath: event:/Ingeste/music/lvl13/main
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [main, level13, soundtrack]
+  description: Level 13 Main Theme
+
+- id: lvl13_main_orchestral
+  eventPath: event:/Ingeste/music/lvl13/main
+  category: music
+  volume: 1.25
+  pitch: 1.05
+  looping: true
+  tags: [main, level13, soundtrack, orchestral]
+  description: Level 13 Main - Orchestral
+
+- id: lvl13_giga_fight
+  eventPath: event:/Ingeste/music/lvl13/giga_fight
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [boss, level13, soundtrack, fight]
+  description: Giga Boss Fight
+
+- id: lvl13_giga_fight_cinematic
+  eventPath: event:/Ingeste/music/lvl13/giga_fight
+  category: music
+  volume: 1.22
+  pitch: 0.9
+  looping: true
+  tags: [boss, level13, soundtrack, fight, cinematic]
+  description: Giga Boss Fight - Cinematic
+
+- id: lvl13_giga_fight_heavymetal
+  eventPath: event:/Ingeste/music/lvl13/giga_fight
+  category: music
+  volume: 1.48
+  pitch: 1.25
+  looping: true
+  tags: [boss, level13, soundtrack, fight, heavymetal]
+  description: Giga Boss Fight - Heavy Metal
+
+- id: lvl13_tv_fight
+  eventPath: event:/Ingeste/music/lvl13/tv_fight
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [boss, level13, soundtrack, fight]
+  description: TV Boss Fight
+
+- id: lvl13_tv_fight_heavymetal
+  eventPath: event:/Ingeste/music/lvl13/tv_fight
+  category: music
+  volume: 1.45
+  pitch: 1.2
+  looping: true
+  tags: [boss, level13, soundtrack, fight, heavymetal]
+  description: TV Boss Fight - Heavy Metal
+
+# ===== LEVEL 14 MUSIC =====
+
+- id: lvl14_main
+  eventPath: event:/Ingeste/music/lvl14/main
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [main, level14, soundtrack]
+  description: Level 14 Main Theme
+
+- id: lvl14_main_cinematic
+  eventPath: event:/Ingeste/music/lvl14/main
+  category: music
+  volume: 1.12
+  pitch: 0.93
+  looping: true
+  tags: [main, level14, soundtrack, cinematic]
+  description: Level 14 Main - Cinematic
+
+- id: lvl14_main_orchestral
+  eventPath: event:/Ingeste/music/lvl14/main
+  category: music
+  volume: 1.27
+  pitch: 1.05
+  looping: true
+  tags: [main, level14, soundtrack, orchestral]
+  description: Level 14 Main - Orchestral
+
+- id: lvl14_axis_fight
+  eventPath: event:/Ingeste/music/lvl14/axis_fight
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [boss, level14, soundtrack, fight, axis]
+  description: Axis Boss Fight
+
+- id: lvl14_axis_fight_heavymetal
+  eventPath: event:/Ingeste/music/lvl14/axis_fight
+  category: music
+  volume: 1.47
+  pitch: 1.23
+  looping: true
+  tags: [boss, level14, soundtrack, fight, axis, heavymetal]
+  description: Axis Boss Fight - Heavy Metal
+
+# ===== LEVEL 15 MUSIC =====
+
+- id: lvl15_main
+  eventPath: event:/Ingeste/music/lvl15/main
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [main, level15, soundtrack]
+  description: Level 15 Main Theme
+
+- id: lvl15_main_cinematic
+  eventPath: event:/Ingeste/music/lvl15/main
+  category: music
+  volume: 1.15
+  pitch: 0.92
+  looping: true
+  tags: [main, level15, soundtrack, cinematic]
+  description: Level 15 Main - Cinematic
+
+- id: lvl15_main_orchestral
+  eventPath: event:/Ingeste/music/lvl15/main
+  category: music
+  volume: 1.3
+  pitch: 1.06
+  looping: true
+  tags: [main, level15, soundtrack, orchestral]
+  description: Level 15 Main - Orchestral
+
+- id: lvl15_titan
+  eventPath: event:/Ingeste/music/lvl15/titan
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [boss, level15, soundtrack, titan]
+  description: Titan Boss Theme
+
+- id: lvl15_titan_cinematic
+  eventPath: event:/Ingeste/music/lvl15/titan
+  category: music
+  volume: 1.25
+  pitch: 0.88
+  looping: true
+  tags: [boss, level15, soundtrack, titan, cinematic]
+  description: Titan Boss - Cinematic (massive and overwhelming)
+
+- id: lvl15_titan_orchestral
+  eventPath: event:/Ingeste/music/lvl15/titan
+  category: music
+  volume: 1.4
+  pitch: 1.07
+  looping: true
+  tags: [boss, level15, soundtrack, titan, orchestral]
+  description: Titan Boss - Orchestral (colossal scale)
+
+- id: lvl15_titan_heavymetal
+  eventPath: event:/Ingeste/music/lvl15/titan
+  category: music
+  volume: 1.5
+  pitch: 1.26
+  looping: true
+  tags: [boss, level15, soundtrack, titan, heavymetal]
+  description: Titan Boss - Heavy Metal (ultimate power)
+
+# ===== LEVEL 16 FINAL MUSIC =====
+
+- id: lvl16_fight_finale
+  eventPath: event:/Ingeste/music/lvl16/fight/finale
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [boss, level16, soundtrack, fight, finale]
+  description: Final Boss Fight Finale
+
+- id: lvl16_fight_finale_cinematic
+  eventPath: event:/Ingeste/music/lvl16/fight/finale
+  category: music
+  volume: 1.25
+  pitch: 0.9
+  looping: true
+  tags: [boss, level16, soundtrack, fight, finale, cinematic]
+  description: Final Boss Finale - Cinematic (epic conclusion)
+
+- id: lvl16_fight_finale_orchestral
+  eventPath: event:/Ingeste/music/lvl16/fight/finale
+  category: music
+  volume: 1.4
+  pitch: 1.08
+  looping: true
+  tags: [boss, level16, soundtrack, fight, finale, orchestral]
+  description: Final Boss Finale - Orchestral (legendary climax)
+
+- id: lvl16_fight_finale_heavymetal
+  eventPath: event:/Ingeste/music/lvl16/fight/finale
+  category: music
+  volume: 1.55
+  pitch: 1.28
+  looping: true
+  tags: [boss, level16, soundtrack, fight, finale, heavymetal]
+  description: Final Boss Finale - Heavy Metal (absolute chaos)
+
+# ===== B-SIDE MUSIC =====
+
+- id: bside_01_city
+  eventPath: event:/Ingeste/music/BSide/01_city
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [bside, soundtrack, level1]
+  description: B-Side Chapter 1 - City
+
+- id: bside_01_city_cinematic
+  eventPath: event:/Ingeste/music/BSide/01_city
+  category: music
+  volume: 1.1
+  pitch: 0.95
+  looping: true
+  tags: [bside, soundtrack, level1, cinematic]
+  description: B-Side Chapter 1 - City (Cinematic)
+
+- id: bside_01_city_orchestral
+  eventPath: event:/Ingeste/music/BSide/01_city
+  category: music
+  volume: 1.2
+  pitch: 1.03
+  looping: true
+  tags: [bside, soundtrack, level1, orchestral]
+  description: B-Side Chapter 1 - City (Orchestral)
+
+- id: bside_01_city_heavymetal
+  eventPath: event:/Ingeste/music/BSide/01_city
+  category: music
+  volume: 1.35
+  pitch: 1.15
+  looping: true
+  tags: [bside, soundtrack, level1, heavymetal]
+  description: B-Side Chapter 1 - City (Heavy Metal)
+
+- id: bside_15_castle
+  eventPath: event:/Ingeste/music/BSide/15_castle
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [bside, soundtrack, level15]
+  description: B-Side Chapter 15 - Castle
+
+- id: bside_15_castle_cinematic
+  eventPath: event:/Ingeste/music/BSide/15_castle
+  category: music
+  volume: 1.18
+  pitch: 0.91
+  looping: true
+  tags: [bside, soundtrack, level15, cinematic]
+  description: B-Side Chapter 15 - Castle (Cinematic)
+
+- id: bside_15_castle_orchestral
+  eventPath: event:/Ingeste/music/BSide/15_castle
+  category: music
+  volume: 1.32
+  pitch: 1.06
+  looping: true
+  tags: [bside, soundtrack, level15, orchestral]
+  description: B-Side Chapter 15 - Castle (Orchestral)
+
+- id: bside_15_castle_heavymetal
+  eventPath: event:/Ingeste/music/BSide/15_castle
+  category: music
+  volume: 1.48
+  pitch: 1.22
+  looping: true
+  tags: [bside, soundtrack, level15, heavymetal]
+  description: B-Side Chapter 15 - Castle (Heavy Metal)
+
+# ===== CASSETTE MUSIC =====
+
+- id: cassette_01_metro
+  eventPath: event:/Ingeste/music/Cassette/01_metro
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [cassette, soundtrack, level1]
+  description: Cassette Chapter 1 - Metro
+
+- id: cassette_01_metro_cinematic
+  eventPath: event:/Ingeste/music/Cassette/01_metro
+  category: music
+  volume: 1.12
+  pitch: 0.94
+  looping: true
+  tags: [cassette, soundtrack, level1, cinematic]
+  description: Cassette Chapter 1 - Metro (Cinematic)
+
+- id: cassette_01_metro_heavymetal
+  eventPath: event:/Ingeste/music/Cassette/01_metro
+  category: music
+  volume: 1.38
+  pitch: 1.16
+  looping: true
+  tags: [cassette, soundtrack, level1, heavymetal]
+  description: Cassette Chapter 1 - Metro (Heavy Metal)
+
+# ===== C-SIDE MUSIC =====
+
+- id: cside_01_city
+  eventPath: event:/Ingeste/music/CSide/01_city
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [cside, soundtrack, level1]
+  description: C-Side Chapter 1 - City
+
+- id: cside_01_city_orchestral
+  eventPath: event:/Ingeste/music/CSide/01_city
+  category: music
+  volume: 1.24
+  pitch: 1.05
+  looping: true
+  tags: [cside, soundtrack, level1, orchestral]
+  description: C-Side Chapter 1 - City (Orchestral)
+
+- id: cside_01_city_heavymetal
+  eventPath: event:/Ingeste/music/CSide/01_city
+  category: music
+  volume: 1.42
+  pitch: 1.2
+  looping: true
+  tags: [cside, soundtrack, level1, heavymetal]
+  description: C-Side Chapter 1 - City (Heavy Metal)
+
+# ===== LOBBY MUSIC =====
+
+- id: lobby_main0
+  eventPath: event:/Ingeste/music/lobby/main0
+  category: music
+  volume: 0.9
+  pitch: 1.0
+  looping: true
+  tags: [lobby, soundtrack, menu]
+  description: Lobby Music 0
+
+- id: lobby_main0_classic
+  eventPath: event:/Ingeste/music/lobby/main0
+  category: music
+  volume: 0.85
+  pitch: 1.0
+  looping: true
+  tags: [lobby, soundtrack, menu, classic]
+  description: Lobby Music 0 (Classic)
+
+- id: lobby_main0_orchestral
+  eventPath: event:/Ingeste/music/lobby/main0
+  category: music
+  volume: 1.1
+  pitch: 1.02
+  looping: true
+  tags: [lobby, soundtrack, menu, orchestral]
+  description: Lobby Music 0 (Orchestral)
+
+# ===== FINAL CONTENT MUSIC =====
+
+- id: final_content_main
+  eventPath: event:/Ingeste/final_content/music/
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [final, soundtrack]
+  description: Final Content Music
+
+# ===== LEVEL 19 MUSIC =====
+
+- id: lvl19_beb_cutscenes
+  eventPath: event:/Ingeste/final_content/music/lvl19/cinematic/BEB_cutscenes
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level19, soundtrack, cinematic]
+  description: Level 19 BEB Cutscenes
+
+- id: lvl19_bird_crash_first
+  eventPath: event:/Ingeste/final_content/music/lvl19/cinematic/bird_crash_first
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level19, soundtrack, cinematic]
+  description: Level 19 Bird Crash First
+
+- id: lvl19_bird_crash_second
+  eventPath: event:/Ingeste/final_content/music/lvl19/cinematic/bird_crash_second
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level19, soundtrack, cinematic]
+  description: Level 19 Bird Crash Second
+
+- id: lvl19_els_intro_laugh
+  eventPath: event:/Ingeste/final_content/music/lvl19/cinematic/els_intro_laugh
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level19, soundtrack, cinematic]
+  description: Level 19 Els Intro Laugh
+
+- id: lvl19_els_intro_scream
+  eventPath: event:/Ingeste/final_content/music/lvl19/cinematic/els_intro_scream
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level19, soundtrack, cinematic]
+  description: Level 19 Els Intro Scream
+
+- id: lvl19_dogsong
+  eventPath: event:/Ingeste/final_content/music/lvl19/dogsong
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level19, soundtrack]
+  description: Level 19 Dogsong
+
+- id: lvl19_final_run
+  eventPath: event:/Ingeste/final_content/music/lvl19/final_run
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level19, soundtrack]
+  description: Level 19 Final Run
+
+- id: lvl19_inmyway
+  eventPath: event:/Ingeste/final_content/music/lvl19/inmyway
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level19, soundtrack]
+  description: Level 19 In My Way
+
+- id: lvl19_part01
+  eventPath: event:/Ingeste/final_content/music/lvl19/part01
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level19, soundtrack]
+  description: Level 19 Part 01
+
+- id: lvl19_part02
+  eventPath: event:/Ingeste/final_content/music/lvl19/part02
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level19, soundtrack]
+  description: Level 19 Part 02
+
+- id: lvl19_part03
+  eventPath: event:/Ingeste/final_content/music/lvl19/part03
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level19, soundtrack]
+  description: Level 19 Part 03
+
+- id: lvl19_pinkplatinum_room
+  eventPath: event:/Ingeste/final_content/music/lvl19/pinkplatinum_room
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level19, soundtrack]
+  description: Level 19 Pink Platinum Room
+
+- id: lvl19_tape_rooms
+  eventPath: event:/Ingeste/final_content/music/lvl19/tape_rooms
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level19, soundtrack]
+  description: Level 19 Tape Rooms
+
+- id: lvl19_tragiclost
+  eventPath: event:/Ingeste/final_content/music/lvl19/tragiclost
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level19, soundtrack]
+  description: Level 19 Tragic Lost
+
+- id: lvl19_void_room
+  eventPath: event:/Ingeste/final_content/music/lvl19/void_room
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level19, soundtrack]
+  description: Level 19 Void Room
+
+# ===== LEVEL 20 MUSIC =====
+
+- id: lvl20_donotgiveup
+  eventPath: event:/Ingeste/final_content/music/lvl20/cinematic/donotgiveup
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level20, soundtrack, cinematic]
+  description: Level 20 Do Not Give Up
+
+- id: lvl20_end
+  eventPath: event:/Ingeste/final_content/music/lvl20/cinematic/end
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level20, soundtrack, cinematic]
+  description: Level 20 End
+
+- id: lvl20_end_intro
+  eventPath: event:/Ingeste/final_content/music/lvl20/cinematic/end_intro
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level20, soundtrack, cinematic]
+  description: Level 20 End Intro
+
+- id: lvl20_fail_victory
+  eventPath: event:/Ingeste/final_content/music/lvl20/cinematic/fail_victory
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level20, soundtrack, cinematic]
+  description: Level 20 Fail Victory
+
+- id: lvl20_gameover
+  eventPath: event:/Ingeste/final_content/music/lvl20/cinematic/gameover
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level20, soundtrack, cinematic]
+  description: Level 20 Game Over
+
+- id: lvl20_azzy_theme01
+  eventPath: event:/Ingeste/final_content/music/lvl20/azzy_theme01
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level20, soundtrack, boss, asriel]
+  description: Level 20 Asriel Theme 01
+
+- id: lvl20_azzy_theme02
+  eventPath: event:/Ingeste/final_content/music/lvl20/azzy_theme02
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level20, soundtrack, boss, asriel]
+  description: Level 20 Asriel Theme 02
+
+- id: lvl20_back
+  eventPath: event:/Ingeste/final_content/music/lvl20/back
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level20, soundtrack]
+  description: Level 20 Back
+
+- id: lvl20_doppia_elica
+  eventPath: event:/Ingeste/final_content/music/lvl20/doppia_elica
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level20, soundtrack]
+  description: Level 20 Doppia Elica
+
+- id: lvl20_heart_of_the_void
+  eventPath: event:/Ingeste/final_content/music/lvl20/heart_of_the_void
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level20, soundtrack]
+  description: Level 20 Heart of the Void
+
+- id: lvl20_nightmare
+  eventPath: event:/Ingeste/final_content/music/lvl20/nightmare
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level20, soundtrack]
+  description: Level 20 Nightmare
+
+- id: lvl20_penumbra_phastasm
+  eventPath: event:/Ingeste/final_content/music/lvl20/penumbra_phastasm
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level20, soundtrack]
+  description: Level 20 Penumbra Phantasm
+
+- id: lvl20_saved
+  eventPath: event:/Ingeste/final_content/music/lvl20/saved
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level20, soundtrack]
+  description: Level 20 Saved
+
+- id: lvl20_universe_without_a_creator
+  eventPath: event:/Ingeste/final_content/music/lvl20/universe_without_a_creator
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level20, soundtrack]
+  description: Level 20 Universe Without a Creator
+
+- id: lvl20_world_of_miracle
+  eventPath: event:/Ingeste/final_content/music/lvl20/world_of_miracle
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level20, soundtrack]
+  description: Level 20 World of Miracle
+
+# ===== LEVEL 21 MUSIC =====
+
+- id: lvl21_goodnight
+  eventPath: event:/Ingeste/final_content/music/lvl21/goodnight
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level21, soundtrack]
+  description: Level 21 Goodnight
+
+- id: lvl21_post_credit
+  eventPath: event:/Ingeste/final_content/music/lvl21/post_credit
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level21, soundtrack, credits]
+  description: Level 21 Post Credit
+
+- id: lvl21_respite
+  eventPath: event:/Ingeste/final_content/music/lvl21/respite
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [level21, soundtrack]
+  description: Level 21 Respite
+
+# ===== RMXSIDE MUSIC =====
+
+- id: rmxside_19_goodbye
+  eventPath: event:/Ingeste/final_content/music/RMXSide/19_goodbye
+  category: music
+  volume: 1.0
+  pitch: 1.0
+  looping: true
+  tags: [rmxside, soundtrack, level19]
+  description: RMXSide 19 Goodbye

@@ -1,0 +1,21 @@
+﻿Sides: 
+  - OverrideVanillaSideData: true
+    Preset: "a-side"
+    Icon: "areas/castle"
+  - Map: "Maggy/DesoloZantas/Chapters/15_Castle_B"
+    Preset: "b-side"
+    UnlockMode: "cassette"
+    ShowBerriesAsGolden: true
+    ShowBSideRemixIntro: true
+    Icon: "areas/castle"
+  - Map: "Maggy/DesoloZantas/Chapters/15_Castle_C"
+    Preset: "c-side"
+    UnlockMode: "cassette"
+    ShowBerriesAsGolden: true
+    Icon: "areas/castle"
+  - Map: "Maggy/DesoloZantas/Chapters/15_Castle_D"
+    Preset: "d-side"
+    UnlockMode: "consecutive"
+    ShowBerriesAsGolden: true
+    Icon: "areas/castle"
+

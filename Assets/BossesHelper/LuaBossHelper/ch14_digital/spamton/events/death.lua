@@ -1,0 +1,2 @@
+function onBegin() player.StateMachine.State = 11 helpers.playPuppetAnim("crash") playSound("event:/spamton_crash") level.Shake(1.0) wait(1.5) helpers.sayExt("SPAMTON_DEFEAT") helpers.removeBoss(true) setFlag("boss_spamton_defeated", true) player.StateMachine.State = 0 end
+function onEnd(level, wasSkipped) if wasSkipped then helpers.removeBoss(true) setFlag("boss_spamton_defeated", true) player.StateMachine.State = 0 end end

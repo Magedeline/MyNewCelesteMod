@@ -1,0 +1,80 @@
+Icon: areas/stronghold
+Interlude: true
+TitleBaseColor: 666666
+TitleAccentColor: b8860b
+TitleTextColor: ffffff
+IntroType: None
+Dreaming: false
+ColorGrade: stronghold
+Wipe: Celeste.AngledWipe
+DarknessAlpha: 0.12
+BloomBase: 0.05
+BloomStrength: 1.1
+Jumpthru: stone
+CassetteNoteColor: ccaa55
+CassetteSong: event:/Ingeste/music/Cassette/06_stronghold
+Modes:
+  - AudioState:
+      Music: event:/Ingeste/music/lvl6/main
+      Ambience: event:/Ingeste/env/06_main
+    Inventory: Default
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/BSide/06_stronghold
+      Ambience: event:/Ingeste/env/06_main
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/CSide/06_stronghold
+      Ambience: event:/Ingeste/env/06_main
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/CSide/06_stronghold
+      Ambience: event:/Ingeste/env/06_main
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+Mountain:
+    Idle:
+        Position: [ 4.250, 8.850, 15.220 ]
+        Target: [ 3.180, 7.920, 13.680 ]
+    Select:
+        Position: [ 2.850, 6.420, 15.580 ]
+        Target: [ 4.150, 6.320, 14.120 ]
+    Zoom:
+        Position: [ 4.580, 6.820, 12.450 ]
+        Target: [ 4.420, 5.880, 10.750 ]
+    Cursor: [ 4.282145, 6.588567, 10.525473 ]
+    State: 0
+CompleteScreen:
+    Atlas: "DesoloZantas"
+    Scale: 2
+    Start: [ -10.0, 2000.0 ]
+    Center: [ -10.0, 1200.0 ]
+    Title:
+        ASide: 'AREACOMPLETE_NORMAL'
+        BSide: 'AREACOMPLETE_BSIDE'
+        CSide: 'AREACOMPLETE_CSIDE'
+        DSide: 'AREACOMPLETE_DSIDE'
+        FullClear: 'AREACOMPLETE_NORMAL_FULLCLEAR'
+    Layers:
+      - Type: "layer"
+        Images: [ "stronghold_01" ]
+        Position: [ 0.0, 0.0 ]
+        Scroll: [ 0.0 ]
+        Scale: 2
+      - Type: "layer"
+        Images: [ "stronghold_02" ]
+        Position: [ -800.0, -700.0 ]
+        Scroll: [ 0.02 ]
+        Scale: 2
+      - Type: "ui"
+        Scroll: [ 0.62 ]
+      - Type: "layer"
+        Images: [ "stronghold_03" ]
+        Position: [ -800.0, -700.0 ]
+        Scroll: [ 0.04 ]
+        Scale: 2

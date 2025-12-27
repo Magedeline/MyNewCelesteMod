@@ -1,0 +1,2 @@
+function onBegin() player.StateMachine.State = 11 helpers.playPuppetAnim("destabilize") playSound("event:/els_p3_destabilize") level.Shake(2.0) wait(2.0) helpers.sayExt("ELS_PHASE3_DEFEAT") helpers.removeBoss(true) setFlag("boss_els_phase3_defeated", true) player.StateMachine.State = 0 end
+function onEnd(level, wasSkipped) if wasSkipped then helpers.removeBoss(true) setFlag("boss_els_phase3_defeated", true) player.StateMachine.State = 0 end end

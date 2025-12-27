@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patterns>
+    <Pattern name="phase1" goto="phase1">
+        <Wait time="1.0"/>
+        <Attack file="big_shot"/>
+        <Wait time="1.5"/>
+        <Attack file="pipis"/>
+        <Wait time="2.0"/>
+        <Attack file="wire_attack"/>
+        <Wait time="1.5"/>
+    </Pattern>
+    
+    <Pattern name="phase2" goto="phase2">
+        <Wait time="0.8"/>
+        <Attack file="head_missiles"/>
+        <Wait time="1.2"/>
+        <Attack file="big_shot"/>
+        <Wait time="1.0"/>
+        <Attack file="phone_hands"/>
+        <Wait time="1.0"/>
+        <Attack file="pipis"/>
+        <Wait time="1.2"/>
+    </Pattern>
+    
+    <Pattern name="phase3" goto="phase3">
+        <Wait time="0.5"/>
+        <Attack file="neo_attack"/>
+        <Wait time="1.0"/>
+        <Attack file="head_missiles"/>
+        <Wait time="0.8"/>
+        <Attack file="phone_hands"/>
+        <Wait time="0.8"/>
+        <Attack file="wire_attack"/>
+        <Wait time="0.8"/>
+    </Pattern>
+    
+    <Event file="intro" goto="phase1"/>
+    <Event file="phase2_transition" goto="phase2"/>
+    <Event file="phase3_transition" goto="phase3"/>
+    <Event file="death"/>
+</Patterns>

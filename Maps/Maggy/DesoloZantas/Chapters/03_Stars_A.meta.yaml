@@ -1,0 +1,87 @@
+Icon: areas/stars
+Interlude: false
+TitleBaseColor: 2a1b5e
+TitleAccentColor: 7d5bff
+TitleTextColor: ffffff
+IntroType: None
+Dreaming: false
+ColorGrade: none
+Wipe: Celeste.KeyDoorWipe
+DarknessAlpha: 0.25
+BloomBase: 0.2
+BloomStrength: 1.3
+Jumpthru: resort
+CassetteNoteColor: 9966ff
+CassetteSong: event:/Ingeste/music/Cassette/03_stars
+Modes:
+  - AudioState:
+      Music: event:/Ingeste/music/lvl3/intro
+      Ambience: event:/Ingeste/env/03_main
+    Inventory: Default
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/BSide/03_stars
+      Ambience: event:/Ingeste/env/03_main
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/CSide/03_stars
+      Ambience: event:/Ingeste/env/03_main
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/CSide/03_stars
+      Ambience: event:/Ingeste/env/03_main
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+Mountain:
+    Idle:
+        Position: [ 8.450, 10.280, 7.650 ]
+        Target: [ 7.520, 9.180, 6.180 ]
+    Select:
+        Position: [ 6.850, 8.120, 7.890 ]
+        Target: [ 7.580, 8.320, 5.980 ]
+    Zoom:
+        Position: [ 7.680, 8.180, 4.850 ]
+        Target: [ 7.520, 7.920, 2.820 ]
+    Cursor: [ 7.485769, 8.473367, 3.727691 ]
+    State: 1
+CompleteScreen:
+    Atlas: "DesoloZantas"
+    Start: [ 0.0, 1050.0 ]
+    Center: [ 0.0, 250.0 ]
+    Title:
+        ASide: 'AREACOMPLETE_NORMAL'
+        BSide: 'AREACOMPLETE_BSIDE'
+        CSide: 'AREACOMPLETE_CSIDE'
+        DSide: 'AREACOMPLETE_DSIDE'
+        FullClear: 'AREACOMPLETE_NORMAL_FULLCLEAR'
+    Layers:
+      - Type: "layer"
+        Images: [ "stars_complete_bg" ]
+        Position: [ -54.0, 0.0 ]
+        Scroll: [ 0.0 ]
+        Scale: 2
+      - Type: "layer"
+        Images: [ "stars_complete_nebula" ]
+        Position: [ -54.0, 0.0 ]
+        Scroll: [ 0.02 ]
+        Scale: 2
+      - Type: "layer"
+        Images: [ "stars_complete_stars" ]
+        Position: [ -54.0, 0.0 ]
+        Scroll: [ 0.04 ]
+      - Type: "layer"
+        Images: [ "stars_complete_constellation" ]
+        Position: [ -34.0, -32.0 ]
+        Scroll: [ 0.06 ]
+      - Type: "layer"
+        Images: [ "stars_complete_fg" ]
+        Position: [ -54.0, 0.0 ]
+        Scroll: [ 0.10 ]
+        Scale: 2
+      - Type: "ui"
+        ScrollX: [ 0.2 ]

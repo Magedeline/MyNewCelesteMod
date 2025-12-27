@@ -1,0 +1,2 @@
+function onBegin() player.StateMachine.State = 11 helpers.playPuppetAnim("collapse") playSound("event:/giga_axis_collapse") level.Shake(2.0) wait(2.0) helpers.sayExt("GIGA_AXIS_DEFEAT") helpers.removeBoss(true) setFlag("boss_giga_axis_defeated", true) player.StateMachine.State = 0 end
+function onEnd(level, wasSkipped) if wasSkipped then helpers.removeBoss(true) setFlag("boss_giga_axis_defeated", true) player.StateMachine.State = 0 end end

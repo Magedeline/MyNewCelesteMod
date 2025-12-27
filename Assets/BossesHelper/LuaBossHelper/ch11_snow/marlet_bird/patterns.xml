@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Marlet Possessed Bird Boss - Pattern Configuration -->
+<Patterns>
+    <!-- Phase 1: Aerial attacks -->
+    <Pattern name="phase1" goto="phase1">
+        <Wait time="1.0"/>
+        <Attack file="dive"/>
+        <Wait time="2.0"/>
+        <Attack file="feather_barrage"/>
+        <Wait time="1.5"/>
+        <Attack file="talon_swipe"/>
+        <Wait time="2.0"/>
+        <Attack file="dive"/>
+        <Wait time="1.5"/>
+    </Pattern>
+    
+    <!-- Phase 2: Adds ice attacks -->
+    <Pattern name="phase2" goto="phase2">
+        <Wait time="0.8"/>
+        <Attack file="ice_wind"/>
+        <Wait time="1.5"/>
+        <Attack file="feather_barrage"/>
+        <Wait time="1.0"/>
+        <Attack file="dive"/>
+        <Wait time="1.5"/>
+        <Attack file="talon_swipe"/>
+        <Wait time="1.2"/>
+        <Attack file="ice_wind"/>
+        <Wait time="1.0"/>
+    </Pattern>
+    
+    <!-- Phase 3: Full power with blizzard -->
+    <Pattern name="phase3" goto="phase3">
+        <Wait time="0.5"/>
+        <Attack file="blizzard"/>
+        <Wait time="0.5"/>
+        <Attack file="dive"/>
+        <Wait time="1.0"/>
+        <Attack file="feather_barrage"/>
+        <Wait time="0.8"/>
+        <Attack file="ice_wind"/>
+        <Wait time="1.0"/>
+        <Attack file="talon_swipe"/>
+        <Wait time="0.8"/>
+    </Pattern>
+    
+    <!-- Random attack pattern -->
+    <Random name="random_aerial" repeat="4" goto="phase2">
+        <Attack file="dive" wait="1.5" weight="2"/>
+        <Attack file="feather_barrage" wait="1.5" weight="3"/>
+        <Attack file="talon_swipe" wait="1.5" weight="2"/>
+        <Attack file="ice_wind" wait="1.5" weight="1"/>
+    </Random>
+    
+    <!-- Events -->
+    <Event file="intro" goto="phase1"/>
+    <Event file="phase2_transition" goto="phase2"/>
+    <Event file="phase3_transition" goto="phase3"/>
+    <Event file="death"/>
+</Patterns>

@@ -1,0 +1,2 @@
+function onBegin() player.StateMachine.State = 11 helpers.playPuppetAnim("wilt") playSound("event:/elsflowey_wilt") wait(1.5) helpers.sayExt("ELSFLOWEY_DEFEAT") helpers.removeBoss(true) setFlag("boss_elsflowey_defeated", true) player.StateMachine.State = 0 end
+function onEnd(level, wasSkipped) if wasSkipped then helpers.removeBoss(true) setFlag("boss_elsflowey_defeated", true) player.StateMachine.State = 0 end end

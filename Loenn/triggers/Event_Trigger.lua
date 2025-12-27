@@ -1,0 +1,118 @@
+local eventTrigger = {}
+
+eventTrigger.name = "Ingeste/EventTrigger"
+eventTrigger.placements = {
+    {
+        name = "event_trigger",
+        data = {
+            x = 0,
+            y = 0,
+            width = 16,
+            height = 16,
+            event = "",
+            onlyOnce = false
+        }
+    }
+}
+
+eventTrigger.fieldInformation = {
+    event = {
+        options = {
+            "ch1_mod_city_end",
+            "ch2_chara_trap",
+            "ch2_call_kirby",
+            "ch3_meetup",
+            "ch3_first_step",
+            "ch3_mod_city_end",
+            "ch4_escape",
+            "ch4_call_mom",
+            "ch6_intro",
+            "ch6_stronghold",
+            "ch6_end",
+            "ch7_enter",
+            "ch7_see_maddy_mirror",
+            "ch7_pre_ingeste",
+            "ch7_see_maddy",
+            "ch7_found_maddy",
+            "ch8_plat",
+            "ch8_maddy_hurt",
+            "ch8_theo",
+            "ch8_intro_chara_boss",
+            "ch8_chara_boss_end",
+            "ch8_endingmod",
+            "ch8_end",
+            "ch9_arrivial",
+            "ch9_fake_saved",
+            "ch9_credits",
+            "ch9_message_end",
+            "ch9_end",
+            "ch19_goto_the_future",
+            "ch19_goto_the_past",
+            "ch10_intro",
+            "CH10_flowey_intro",
+            "ch10_house",
+            "ch10_house_indoor",
+            "ch10_house_outdoor",
+            "ch10_pre_boss",
+            "ch10_post_boss",
+            "ch11_intro",
+            "ch11_town",
+            "ch11_marlet_pre_boss",
+            "ch11_marlet_boss_end",
+            "ch12_intro",
+            "ch12_titan_tower",
+            "ch12_titan_pre_boss",
+            "ch12_undyne_refused_to_died",
+            "ch12_titan_post_boss",
+            "ch12_end",
+            "ch13_hot_lava",
+            "ch13_axis_intro",
+            "ch13_well_prepared",
+            "ch13_axis_pre_boss",
+            "ch13_axis_post_boss",
+            "ch13_end",
+            "ch14_intro_core",
+            "ch14_giga_axis_pre_boss",
+            "ch14_giga_axis_post_boss",
+            "ch14_enter_last_elevator",
+            "ch15_exit_last_elevator",
+            "ch15_zantas_1",
+            "ch15_zantas_2",
+            "ch15_judgement",
+            "ch15_intro_roaring_titan",
+            "ch15_barrier",
+            "ch15_roaring_titan_pre_boss",
+            "ch15_roaring_titan_post_boss",
+            "ch16_omega_zero_intro",
+            "ch16_omega_zero_finale",
+            "ch16_omega_zero_outro",
+            "ch16_exited",
+            "ch16_end",
+            "ch17_epilouge",
+            "ch19_another_dimension_intro",
+            "ch19_goto_the_future",
+            "ch19_goto_the_past",
+            "ch19_chara_help",
+            "ch19_hub_second_intro",
+            "ch19_loop",
+            "ch19_big_final_room",
+            "ch20_intro",
+            "ch20_tess_fake_pre_boss",
+            "ch20_tess_fake_post_boss",
+            "ch20_nothiness",
+            "ch20_wakeup",
+            "ch20_tess_pre_boss_for_real",
+            "ch20_saved",
+            "ch20_ending",
+            "ch21_beaches",
+            "ch21_special_thanks",
+            "hub_second_intro"
+        },
+        fieldType = "string"
+    },
+    onlyOnce = {
+        fieldType = "boolean"
+    }
+}
+
+return eventTrigger

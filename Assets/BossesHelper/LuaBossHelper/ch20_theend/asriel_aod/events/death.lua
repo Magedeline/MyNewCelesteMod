@@ -1,0 +1,2 @@
+function onBegin() player.StateMachine.State = 11 helpers.playPuppetAnim("fade") playSound("event:/asriel_aod_fade") level.Shake(2.0) wait(2.5) helpers.sayExt("ASRIEL_AOD_DEFEAT") helpers.removeBoss(true) setFlag("boss_asriel_aod_defeated", true) player.StateMachine.State = 0 end
+function onEnd(level, wasSkipped) if wasSkipped then helpers.removeBoss(true) setFlag("boss_asriel_aod_defeated", true) player.StateMachine.State = 0 end end

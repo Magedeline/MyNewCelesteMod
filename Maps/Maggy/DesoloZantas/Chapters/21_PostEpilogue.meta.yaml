@@ -1,0 +1,33 @@
+Icon: areas/epilogue
+Interlude: true
+TitleBaseColor: ffd700
+TitleAccentColor: 8b0000
+TitleTextColor: ffffff
+IntroType: None
+Dreaming: false
+ColorGrade: none
+Wipe: Celeste.FadeWipe
+DarknessAlpha: 0.05
+BloomBase: 0.0
+BloomStrength: 1.0
+Jumpthru: wood
+CassetteNoteColor: ffd700
+CassetteSong: event:/Ingeste/music/Cassette/21_postepilogue
+Modes:
+  - AudioState:
+      Music: event:/Ingeste/music/lvl21/postrespite
+      Ambience: event:/Ingeste/env/21_postepilogue
+    Inventory: Default
+    SeekerSlowdown: false
+Mountain:
+    Idle:
+        Position: [ 0.0, 10.0, 20.0 ]
+        Target: [ 0.0, 8.0, 15.0 ]
+    Select:
+        Position: [ 0.0, 8.0, 18.0 ]
+        Target: [ 0.0, 6.0, 13.0 ]
+    Zoom:
+        Position: [ 0.0, 6.0, 12.0 ]
+        Target: [ 0.0, 4.0, 8.0 ]
+    Cursor: [ 0.0, 5.0, 10.0 ]
+    State: 0

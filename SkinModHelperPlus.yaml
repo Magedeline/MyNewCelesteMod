@@ -1,0 +1,93 @@
+# SkinModHelperPlus Configuration for Dream Friends
+# Main character skin definitions for Ingeste mod
+
+# Configuration for multiple dream friends including Kirby variants
+characters:
+  kirby:
+    displayName: "Kirby"
+    spritePath: "Characters/Kirby"
+    hairConfig: "skinConfig/HairConfig"
+    enabled: true
+    useHairColor: true
+    particleColor: "#FFB7C5"
+
+  chara:
+    displayName: "Chara"
+    spritePath: "Characters/Chara"
+    hairConfig: "chara_hair"
+    enabled: true
+    useHairColor: true
+    particleColor: "#8B4513"
+
+  vessel:
+    displayName: "Vessel"
+    spritePath: "Characters/Vessel"
+    hairConfig: "vessel_hair"
+    enabled: true
+    useHairColor: true
+    particleColor: "#36454F"
+
+  ralsei:
+    displayName: "Ralsei"
+    spritePath: "Characters/Ralsei"
+    hairConfig: "ralsei_hair"
+    enabled: true
+    useHairColor: true
+    particleColor: "#4A4A4A"
+
+  ralsei_gl:
+    displayName: "Ralsei (Glasses)"
+    spritePath: "Characters/RalseiGL"
+    hairConfig: "ralsei_hair"
+    enabled: true
+    useHairColor: true
+    particleColor: "#4A4A4A"
+
+  ralsei_sil:
+    displayName: "Ralsei (Silhouette)"
+    spritePath: "Characters/RalseiSil"
+    hairConfig: "ralsei_sil_hair"
+    enabled: true
+    useHairColor: true
+    particleColor: "#A9A9A9"
+
+  theo:
+    displayName: "Theo"
+    spritePath: "Characters/Theo"
+    hairConfig: "theo_hair"
+    enabled: true
+    useHairColor: true
+    particleColor: "#8B4513"
+
+# Hair configuration mappings
+hairConfigs:
+  kirby_hair:
+    color: "#FFB7C5"
+    style: "round"
+
+  chara_hair:
+    color: "#8B4513"
+    style: "short"
+
+  vessel_hair:
+    color: "#36454F"
+    style: "ethereal"
+
+  ralsei_hair:
+    color: "#4A4A4A"
+    style: "fluffy"
+
+  ralsei_sil_hair:
+    color: "#A9A9A9"
+    style: "shadow"
+
+  theo_hair:
+    color: "#8B4513"
+    style: "messy"
+
+# Integration settings
+settings:
+  enableRandomSkin: true
+  enableSkinSelection: true
+  defaultSkin: "kirby"
+  showInMainMenu: true

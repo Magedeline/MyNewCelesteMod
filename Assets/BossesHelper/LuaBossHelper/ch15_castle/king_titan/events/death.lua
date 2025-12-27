@@ -1,0 +1,2 @@
+function onBegin() player.StateMachine.State = 11 helpers.playPuppetAnim("fall") playSound("event:/king_titan_fall") level.Shake(1.5) wait(2.0) helpers.sayExt("KING_TITAN_DEFEAT") helpers.removeBoss(true) setFlag("boss_king_titan_defeated", true) player.StateMachine.State = 0 end
+function onEnd(level, wasSkipped) if wasSkipped then helpers.removeBoss(true) setFlag("boss_king_titan_defeated", true) player.StateMachine.State = 0 end end

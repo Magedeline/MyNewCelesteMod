@@ -1,0 +1,2 @@
+function onBegin() player.StateMachine.State = 11 helpers.playPuppetAnim("retreat") playSound("event:/els_p1_retreat") wait(1.0) helpers.sayExt("ELS_PHASE1_DEFEAT") helpers.removeBoss(true) setFlag("boss_els_phase1_defeated", true) player.StateMachine.State = 0 end
+function onEnd(level, wasSkipped) if wasSkipped then helpers.removeBoss(true) setFlag("boss_els_phase1_defeated", true) player.StateMachine.State = 0 end end

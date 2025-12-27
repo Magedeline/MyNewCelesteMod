@@ -1,5 +1,5 @@
 local sampleTrigger = {
-    name = "MyNewCelesteMod/SampleTrigger",
+    name = "Ingeste/SampleTrigger",
     placements = {
         {
             name = "normal",

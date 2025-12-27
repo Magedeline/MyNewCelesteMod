@@ -1,7 +1,7 @@
 local sampleEntity = {
-    name = "MyNewCelesteMod/SampleEntity",
+    name = "Ingeste/SampleEntity",
     depth = -8500,
-    texture = "objects/MyNewCelesteMod/sampleEntity/idle00",
+    texture = "objects/Ingeste/sampleEntity/idle00",
     placements = {
         {
             name = "normal",

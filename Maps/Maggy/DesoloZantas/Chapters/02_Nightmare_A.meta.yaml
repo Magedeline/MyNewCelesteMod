@@ -1,0 +1,88 @@
+Icon: areas/oldsite
+Interlude: true
+TitleBaseColor: 621a3e
+TitleAccentColor: a8255f
+TitleTextColor: ffffff
+IntroType: WakeUp
+Dreaming: true
+ColorGrade: oldsite
+Wipe: Celeste.DreamWipe
+DarknessAlpha: 0.35
+BloomBase: 0.3
+BloomStrength: 1.4
+Jumpthru: dream
+CassetteNoteColor: aa3388
+CassetteSong: event:/Ingeste/music/Cassette/02_nightmare
+Modes:
+  - AudioState:
+      Music: event:/Ingeste/music/lvl2/main
+      Ambience: event:/Ingeste/env/02_nightmare
+    Inventory: Default
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/BSide/01_nightmare
+      Ambience: event:/Ingeste/env/02_nightmare
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/CSide/01_nightmare
+      Ambience: event:/Ingeste/env/02_nightmare
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/CSide/01_nightmare
+      Ambience: event:/Ingeste/env/02_nightmare
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+Mountain:
+    Idle:
+        Position: [ -5.850, 7.120, 6.450 ]
+        Target: [ -4.680, 5.850, 5.280 ]
+    Select:
+        Position: [ -6.420, 5.250, 6.120 ]
+        Target: [ -4.850, 5.180, 5.480 ]
+    Zoom:
+        Position: [ -5.680, 5.890, 5.580 ]
+        Target: [ -4.320, 4.980, 4.120 ]
+    Cursor: [ -4.758426, 5.726348, 4.585326 ]
+    State: 0
+CompleteScreen:
+    Atlas: "DesoloZantas"
+    Start: [ 0.0, 1050.0 ]
+    Center: [ 0.0, 250.0 ]
+    Title:
+        ASide: 'AREACOMPLETE_NORMAL'
+        BSide: 'AREACOMPLETE_BSIDE'
+        CSide: 'AREACOMPLETE_CSIDE'
+        DSide: 'AREACOMPLETE_DSIDE'
+        FullClear: 'AREACOMPLETE_NORMAL_FULLCLEAR'
+    Layers:
+      - Type: "layer"
+        Images: [ "nightmare_complete_bg" ]
+        Position: [ -54.0, 0.0 ]
+        Scroll: [ 0.0 ]
+        Scale: 2
+      - Type: "layer"
+        Images: [ "nightmare_complete_shadows" ]
+        Position: [ -54.0, 0.0 ]
+        Scroll: [ 0.03 ]
+        Scale: 2
+      - Type: "layer"
+        Images: [ "nightmare_complete_mid" ]
+        Position: [ -54.0, 0.0 ]
+        Scroll: [ 0.06 ]
+        Scale: 2
+      - Type: "layer"
+        Images: [ "nightmare_complete_spirits" ]
+        Position: [ -54.0, -10.0 ]
+        Scroll: [ 0.08 ]
+      - Type: "layer"
+        Images: [ "nightmare_complete_fg" ]
+        Position: [ -54.0, 0.0 ]
+        Scroll: [ 0.12 ]
+        Scale: 2
+      - Type: "ui"
+        ScrollX: [ 0.2 ]

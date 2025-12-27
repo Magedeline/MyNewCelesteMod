@@ -1,0 +1,2 @@
+function onBegin() player.StateMachine.State = 11 helpers.playPuppetAnim("purified") playSound("event:/possessed_tenna_purified") wait(1.0) helpers.sayExt("POSSESSED_TENNA_DEFEAT") helpers.removeBoss(true) setFlag("boss_possessed_tenna_defeated", true) player.StateMachine.State = 0 end
+function onEnd(level, wasSkipped) if wasSkipped then helpers.removeBoss(true) setFlag("boss_possessed_tenna_defeated", true) player.StateMachine.State = 0 end end

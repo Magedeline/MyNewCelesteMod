@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Sprites>
+  <badeline_sidekick path="characters/BossesHelper/badelineSidekick/" start="idle">
+  <Justify x="0.5" y="0.65" />
+    <Anim id="idle" path="normalToBoss" delay="0.06" frames="00" />
+    <Anim id="boss_to_mini" path="bosstomini" delay="0.08" frames="00-09" goto="mini_orb" />
+    <Loop id="mini_orb" path="minispin" delay="0.08" frames="00-05" />
+    <Anim id="mini_to_normal" path="minitobadeline" delay="0.06" frames="00-08" />
+    <Anim id="normal_to_boss" path="normalToBoss" delay="0.05" frames="00-08" />
+  </badeline_sidekick>
+</Sprites>

@@ -1,0 +1,33 @@
+Icon: maggy/areas/end
+Interlude: true
+ChapterIndex: 20
+TitleBaseColor: 4b0082
+TitleAccentColor: 2d004d
+TitleTextColor: ffffff
+IntroType: None
+Dreaming: false
+ColorGrade: theend
+Wipe: Celeste.AngledWipe
+DarknessAlpha: 0.05
+BloomBase: 0.0
+BloomStrength: 1.0
+Jumpthru: wood
+CassetteNoteColor: 33a9ee
+Modes:
+  - AudioState:
+      Music: event:/
+      Ambience: event:/
+    Inventory: TheEnd
+    SeekerSlowdown: false
+Mountain:
+    Idle:
+        Position: [ -1.952, 4.218, 9.744 ]
+        Target: [ -0.111, 3.393, 8.127 ]
+    Select:
+        Position: [ -0.052, 1.659, 9.902 ]
+        Target: [ 1.110, 1.526, 8.280 ]
+    Zoom:
+        Position: [ 1.437, 1.896, 7.061 ]
+        Target: [ 1.376, 0.881, 5.338 ]
+    Cursor: [ 1.319535, 2.07172, 5.113717 ]
+    State: 0

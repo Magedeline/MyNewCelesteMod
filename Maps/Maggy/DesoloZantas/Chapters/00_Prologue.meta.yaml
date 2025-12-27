@@ -1,0 +1,33 @@
+Icon: areas/prologue
+Interlude: true
+TitleBaseColor: 6c7c81
+TitleAccentColor: 2f344b
+TitleTextColor: ffffff
+IntroType: Jump
+Dreaming: false
+ColorGrade: none
+Wipe: Celeste.AngledWipe
+DarknessAlpha: 0.05
+BloomBase: 0.0
+BloomStrength: 1.0
+Jumpthru: wood
+CassetteNoteColor: 33a9ee
+CassetteSong: event:/music/cassette/00_prologue
+Modes:
+  - AudioState:
+      Music: event:/Ingeste/music/lvl0/intro
+      Ambience: event:/Ingeste/env/00_prologue
+    Inventory: Default
+    SeekerSlowdown: false
+Mountain:
+    Idle:
+        Position: [ -2.150, 5.420, 12.850 ]
+        Target: [ -1.250, 4.680, 11.200 ]
+    Select:
+        Position: [ -1.180, 2.850, 13.100 ]
+        Target: [ 0.120, 2.720, 11.450 ]
+    Zoom:
+        Position: [ 0.850, 3.200, 9.800 ]
+        Target: [ 0.720, 2.150, 8.100 ]
+    Cursor: [ 0.658425, 2.871845, 7.875632 ]
+    State: 0

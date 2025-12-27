@@ -1,0 +1,536 @@
+# DesoloZantas Entity Definitions
+# This file defines custom entities specific to the DesoloZantas mod.
+# These can be imported into the Unity and Godot editors.
+
+entities:
+  # --- Player Spawns ---
+  - id: "DesoloZantas/KirbyPlayer"
+    displayName: "Kirby Player Spawn"
+    category: "DesoloZantas"
+    description: "Spawns the player as Kirby with special abilities"
+    width: 0
+    height: 0
+    editorColor: "#FF69B4"
+    properties:
+      - name: "floatEnabled"
+        type: "bool"
+        default: "true"
+        description: "Whether Kirby can float by holding jump"
+      - name: "copyAbilityEnabled"
+        type: "bool"
+        default: "true"
+        description: "Whether Kirby can copy enemy abilities"
+
+  # --- Warp Star ---
+  - id: "DesoloZantas/WarpStar"
+    displayName: "Warp Star"
+    category: "DesoloZantas"
+    description: "A Kirby-style warp star that transports the player"
+    width: 16
+    height: 16
+    editorColor: "#FFD700"
+    supportsNodes: true
+    minNodes: 1
+    maxNodes: 1
+    properties:
+      - name: "targetRoom"
+        type: "string"
+        default: ""
+        description: "Target room to warp to"
+      - name: "speed"
+        type: "float"
+        default: "300.0"
+        description: "Speed of the warp star flight"
+        minValue: 50
+        maxValue: 1000
+      - name: "oneUse"
+        type: "bool"
+        default: "false"
+        description: "Whether the warp star disappears after use"
+
+  # --- Custom Refills ---
+  - id: "DesoloZantas/AdvancedRefill"
+    displayName: "Advanced Refill"
+    category: "DesoloZantas"
+    description: "A customizable dash refill with extra options"
+    width: 8
+    height: 8
+    editorColor: "#00FF00"
+    properties:
+      - name: "twoDashes"
+        type: "bool"
+        default: "false"
+        description: "Refills two dashes instead of one"
+      - name: "oneUse"
+        type: "bool"
+        default: "false"
+        description: "Whether the refill disappears permanently"
+      - name: "respawnTime"
+        type: "float"
+        default: "2.5"
+        description: "Time in seconds before respawning"
+        minValue: 0.1
+        maxValue: 60
+      - name: "grantsFloat"
+        type: "bool"
+        default: "false"
+        description: "Temporarily grants Kirby float ability"
+
+  # --- Delta Berry ---
+  - id: "DesoloZantas/DeltaBerry"
+    displayName: "Delta Berry"
+    category: "DesoloZantas"
+    description: "A special collectible from the Deltarune crossover"
+    width: 8
+    height: 8
+    editorColor: "#8B008B"
+    properties:
+      - name: "checkpointId"
+        type: "int"
+        default: "-1"
+        description: "Associated checkpoint ID (-1 for none)"
+      - name: "order"
+        type: "int"
+        default: "-1"
+        description: "Order in chapter completion"
+
+  # --- Holo Delta Berry ---
+  - id: "DesoloZantas/HoloDeltaBerry"
+    displayName: "Holo Delta Berry"
+    category: "DesoloZantas"
+    description: "A holographic variant of the Delta Berry"
+    width: 8
+    height: 8
+    editorColor: "#00CED1"
+    properties:
+      - name: "checkpointId"
+        type: "int"
+        default: "-1"
+      - name: "order"
+        type: "int"
+        default: "-1"
+
+  # --- NPCs ---
+  - id: "DesoloZantas/TorielNPC"
+    displayName: "Toriel NPC"
+    category: "DesoloZantas"
+    description: "Toriel NPC from Undertale crossover"
+    width: 16
+    height: 24
+    editorColor: "#FFFFFF"
+    properties:
+      - name: "dialogId"
+        type: "string"
+        default: ""
+        description: "Dialog ID to trigger when talked to"
+      - name: "sprite"
+        type: "string"
+        default: "toriel"
+        description: "Sprite variant to use"
+
+  - id: "DesoloZantas/MagolorNPC"
+    displayName: "Magolor NPC"
+    category: "DesoloZantas"
+    description: "Magolor NPC from Kirby crossover"
+    width: 16
+    height: 16
+    editorColor: "#4169E1"
+    properties:
+      - name: "dialogId"
+        type: "string"
+        default: ""
+      - name: "sprite"
+        type: "string"
+        default: "magolor"
+
+  - id: "DesoloZantas/CharaNPC"
+    displayName: "Chara NPC"
+    category: "DesoloZantas"
+    description: "Chara NPC (Badeline replacement)"
+    width: 8
+    height: 16
+    editorColor: "#8B0000"
+    properties:
+      - name: "dialogId"
+        type: "string"
+        default: ""
+      - name: "hostile"
+        type: "bool"
+        default: "false"
+
+  # --- Bosses ---
+  - id: "DesoloZantas/FloweyBoss"
+    displayName: "Flowey Boss"
+    category: "DesoloZantas"
+    description: "Flowey boss encounter from Undertale"
+    width: 32
+    height: 32
+    editorColor: "#FFD700"
+    properties:
+      - name: "phase"
+        type: "int"
+        default: "1"
+        minValue: 1
+        maxValue: 3
+      - name: "bossId"
+        type: "string"
+        default: "flowey_1"
+
+  # --- Triggers ---
+  - id: "DesoloZantas/CustomEventTrigger"
+    displayName: "Custom Event Trigger"
+    category: "DesoloZantas"
+    description: "Triggers a custom DesoloZantas event"
+    width: 16
+    height: 16
+    editorColor: "#9932CC"
+    resizable: true
+    properties:
+      - name: "eventId"
+        type: "string"
+        default: ""
+        description: "ID of the event to trigger"
+      - name: "onlyOnce"
+        type: "bool"
+        default: "true"
+      - name: "requiresKirbyMode"
+        type: "bool"
+        default: "false"
+
+  - id: "DesoloZantas/CharaChaserTrigger"
+    displayName: "Chara Chaser Trigger"
+    category: "DesoloZantas"
+    description: "Spawns Chara to chase the player"
+    width: 16
+    height: 16
+    editorColor: "#DC143C"
+    resizable: true
+    properties:
+      - name: "chaseDuration"
+        type: "float"
+        default: "10.0"
+        minValue: 1
+        maxValue: 300
+      - name: "speed"
+        type: "float"
+        default: "100.0"
+
+  # --- Effects ---
+  - id: "DesoloZantas/GiygasBackdrop"
+    displayName: "Giygas Backdrop"
+    category: "DesoloZantas"
+    description: "Earthbound-style Giygas background effect"
+    properties:
+      - name: "intensity"
+        type: "float"
+        default: "1.0"
+      - name: "speed"
+        type: "float"
+        default: "1.0"
+      - name: "colorShiftSpeed"
+        type: "float"
+        default: "0.5"
+      - name: "distortionStrength"
+        type: "float"
+        default: "1.0"
+
+  - id: "DesoloZantas/RainbowBlackholeBg"
+    displayName: "Rainbow Blackhole BG"
+    category: "DesoloZantas"
+    description: "A colorful blackhole background effect"
+    properties:
+      - name: "speed"
+        type: "float"
+        default: "1.0"
+      - name: "colorCycle"
+        type: "bool"
+        default: "true"
+
+  # --- Misc ---
+  - id: "DesoloZantas/TeleportPipe"
+    displayName: "Teleport Pipe"
+    category: "DesoloZantas"
+    description: "Mario-style pipe that teleports the player"
+    width: 32
+    height: 32
+    supportsNodes: true
+    minNodes: 1
+    editorColor: "#228B22"
+    properties:
+      - name: "targetPipeId"
+        type: "string"
+        default: ""
+      - name: "pipeId"
+        type: "string"
+        default: ""
+      - name: "direction"
+        type: "enum"
+        enumOptions: "up,down,left,right"
+        default: "up"
+
+  - id: "DesoloZantas/TesseractPortal"
+    displayName: "Tesseract Portal"
+    category: "DesoloZantas"
+    description: "A 4D portal for dimension-shifting levels"
+    width: 24
+    height: 24
+    editorColor: "#00FFFF"
+    supportsNodes: true
+    properties:
+      - name: "dimensionId"
+        type: "string"
+        default: "A"
+      - name: "targetDimension"
+        type: "string"
+        default: "B"
+      - name: "requiresSwitch"
+        type: "bool"
+        default: "false"
+  # --- New Chapter 22 Entities ---
+  - id: "DesoloZantas/SoulBarrier"
+    displayName: "Soul Barrier"
+    category: "DesoloZantas"
+    description: "A barrier requiring Soul Fragments to unlock"
+    width: 8
+    height: 32
+    editorColor: "#FF69B4"
+    resizable: true
+    properties:
+      - name: "fragmentsRequired"
+        type: "int"
+        default: "3"
+        minValue: 1
+        maxValue: 10
+        description: "Number of Soul Fragments needed to unlock"
+      - name: "barrierId"
+        type: "string"
+        default: ""
+        description: "Unique ID to link with Soul Fragments"
+      - name: "dissolveTime"
+        type: "float"
+        default: "1.0"
+        description: "Time in seconds for barrier to dissolve"
+
+  - id: "DesoloZantas/SoulFragment"
+    displayName: "Soul Fragment"
+    category: "DesoloZantas"
+    description: "Collectible that powers Soul Barriers"
+    width: 8
+    height: 8
+    editorColor: "#FF88CC"
+    properties:
+      - name: "barrierId"
+        type: "string"
+        default: ""
+        description: "ID of the barrier this fragment powers"
+      - name: "color"
+        type: "enum"
+        enumOptions: "red,orange,yellow,green,cyan,blue,purple"
+        default: "red"
+        description: "Soul color (affects visual appearance)"
+
+  - id: "DesoloZantas/TimeEchoPlatform"
+    displayName: "Time Echo Platform"
+    category: "DesoloZantas"
+    description: "Platform that phases between timelines"
+    width: 16
+    height: 8
+    editorColor: "#00FFFF"
+    resizable: true
+    properties:
+      - name: "phaseTime"
+        type: "float"
+        default: "2.0"
+        description: "Time in seconds for one phase cycle"
+      - name: "offset"
+        type: "float"
+        default: "0.0"
+        minValue: 0
+        maxValue: 1
+        description: "Offset in phase cycle (0-1)"
+      - name: "syncOnDash"
+        type: "bool"
+        default: "true"
+        description: "Whether dashing syncs the platform to player's timeline"
+
+  - id: "DesoloZantas/VoidTendril"
+    displayName: "Void Tendril"
+    category: "DesoloZantas"
+    description: "Dangerous tentacle from the void"
+    width: 8
+    height: 48
+    editorColor: "#800080"
+    supportsNodes: true
+    properties:
+      - name: "damage"
+        type: "int"
+        default: "1"
+      - name: "swaySpeed"
+        type: "float"
+        default: "1.0"
+        description: "Speed of swaying motion"
+      - name: "phaseableOnDash"
+        type: "bool"
+        default: "true"
+        description: "Whether player can phase through with well-timed dash"
+      - name: "phaseWindow"
+        type: "float"
+        default: "0.3"
+        description: "Time window in seconds for phasing"
+
+  - id: "DesoloZantas/MemoryCrystal"
+    displayName: "Memory Crystal"
+    category: "DesoloZantas"
+    description: "Collectible that reveals lore"
+    width: 16
+    height: 16
+    editorColor: "#00CED1"
+    properties:
+      - name: "memoryId"
+        type: "string"
+        default: ""
+        description: "Dialog ID for the memory content"
+      - name: "oneTime"
+        type: "bool"
+        default: "true"
+        description: "Whether crystal disappears after collection"
+      - name: "flashbackDuration"
+        type: "float"
+        default: "3.0"
+        description: "Duration of visual flashback effect"
+
+  - id: "DesoloZantas/DimensionalRift"
+    displayName: "Dimensional Rift"
+    category: "DesoloZantas"
+    description: "Portal between different areas"
+    width: 24
+    height: 40
+    editorColor: "#9932CC"
+    supportsNodes: true
+    minNodes: 1
+    maxNodes: 1
+    properties:
+      - name: "targetRoom"
+        type: "string"
+        default: ""
+        description: "Room to teleport to"
+      - name: "targetRiftId"
+        type: "string"
+        default: ""
+        description: "ID of destination rift"
+      - name: "riftId"
+        type: "string"
+        default: ""
+        description: "Unique ID for this rift"
+      - name: "bidirectional"
+        type: "bool"
+        default: "true"
+      - name: "transitionColor"
+        type: "color"
+        default: "#800080"
+
+  - id: "DesoloZantas/StarBubble"
+    displayName: "Star Bubble"
+    category: "DesoloZantas"
+    description: "Kirby-specific protective bubble"
+    width: 24
+    height: 24
+    editorColor: "#FFD700"
+    properties:
+      - name: "duration"
+        type: "float"
+        default: "5.0"
+        description: "How long protection lasts"
+      - name: "floatSpeed"
+        type: "float"
+        default: "80.0"
+        description: "Float movement speed inside bubble"
+      - name: "immuneToHazards"
+        type: "bool"
+        default: "true"
+        description: "Whether bubble protects from all hazards"
+      - name: "respawnTime"
+        type: "float"
+        default: "3.0"
+
+  - id: "DesoloZantas/DeterminationOrb"
+    displayName: "Determination Orb"
+    category: "DesoloZantas"
+    description: "Grants temporary determination boost"
+    width: 12
+    height: 12
+    editorColor: "#FF0000"
+    properties:
+      - name: "dashBoost"
+        type: "int"
+        default: "1"
+        description: "Extra dashes granted"
+      - name: "speedMultiplier"
+        type: "float"
+        default: "1.2"
+        description: "Movement speed multiplier"
+      - name: "duration"
+        type: "float"
+        default: "10.0"
+        description: "Effect duration in seconds"
+      - name: "oneUse"
+        type: "bool"
+        default: "true"
+
+  - id: "DesoloZantas/VoidGate"
+    displayName: "Void Gate"
+    category: "DesoloZantas"
+    description: "Chapter 22 specific barrier"
+    width: 16
+    height: 48
+    editorColor: "#400040"
+    resizable: true
+    properties:
+      - name: "requiredDefeats"
+        type: "int"
+        default: "1"
+        description: "Number of void creatures to defeat"
+      - name: "gateId"
+        type: "string"
+        default: ""
+
+  - id: "DesoloZantas/CorneliusAppearance"
+    displayName: "Cornelius Appearance Trigger"
+    category: "DesoloZantas"
+    description: "Triggers Cornelius Vane appearance/cutscene"
+    width: 16
+    height: 16
+    editorColor: "#800000"
+    resizable: true
+    properties:
+      - name: "cutsceneId"
+        type: "string"
+        default: "cornelius_intro"
+      - name: "onlyOnce"
+        type: "bool"
+        default: "true"
+      - name: "requiresBossDefeat"
+        type: "string"
+        default: ""
+        description: "Boss ID that must be defeated first"
+
+  # --- Boss Difficulty System ---
+  - id: "DesoloZantas/BossDifficultySelector"
+    displayName: "Boss Difficulty Selector"
+    category: "DesoloZantas"
+    description: "UI element to select boss difficulty"
+    width: 32
+    height: 32
+    editorColor: "#FFA500"
+    properties:
+      - name: "bossId"
+        type: "string"
+        default: ""
+        description: "ID of the boss this controls"
+      - name: "defaultDifficulty"
+        type: "enum"
+        enumOptions: "easy,normal,hard,nightmare"
+        default: "normal"
+      - name: "showBeforeBoss"
+        type: "bool"
+        default: "true"

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patterns>
+    <Pattern name="phase1" goto="phase1">
+        <Wait time="0.8"/>
+        <Attack file="sword_slash"/>
+        <Wait time="1.5"/>
+        <Attack file="shuttle_loop"/>
+        <Wait time="1.5"/>
+        <Attack file="sword_beam"/>
+        <Wait time="1.5"/>
+        <Attack file="mach_tornado"/>
+        <Wait time="2.0"/>
+    </Pattern>
+    
+    <Pattern name="phase2" goto="phase2">
+        <Wait time="0.6"/>
+        <Attack file="dimensional_cape"/>
+        <Wait time="1.2"/>
+        <Attack file="sword_slash"/>
+        <Wait time="1.0"/>
+        <Attack file="mach_tornado"/>
+        <Wait time="1.2"/>
+        <Attack file="sword_beam"/>
+        <Wait time="1.0"/>
+        <Attack file="shuttle_loop"/>
+        <Wait time="1.2"/>
+    </Pattern>
+    
+    <Pattern name="phase3" goto="phase3">
+        <Wait time="0.4"/>
+        <Attack file="galaxia_darkness"/>
+        <Wait time="1.0"/>
+        <Attack file="dimensional_cape"/>
+        <Wait time="0.8"/>
+        <Attack file="mach_tornado"/>
+        <Wait time="0.8"/>
+        <Attack file="sword_slash"/>
+        <Wait time="0.6"/>
+        <Attack file="sword_beam"/>
+        <Wait time="0.6"/>
+    </Pattern>
+    
+    <Event file="intro" goto="phase1"/>
+    <Event file="phase2_transition" goto="phase2"/>
+    <Event file="phase3_transition" goto="phase3"/>
+    <Event file="death"/>
+</Patterns>

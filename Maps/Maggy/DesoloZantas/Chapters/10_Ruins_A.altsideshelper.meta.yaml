@@ -1,0 +1,21 @@
+﻿Sides: 
+  - OverrideVanillaSideData: true
+    Preset: "a-side"
+    Icon: "areas/ruins"
+  - Map: "Maggy/DesoloZantas/Chapters/10_Ruins_B"
+    Preset: "b-side"
+    UnlockMode: "cassette"
+    ShowBerriesAsGolden: true
+    ShowBSideRemixIntro: true
+    Icon: "areas/ruins"
+  - Map: "Maggy/DesoloZantas/Chapters/10_Ruins_C"
+    Preset: "c-side"
+    UnlockMode: "cassette"
+    ShowBerriesAsGolden: true
+    Icon: "areas/ruins"
+  - Map: "Maggy/DesoloZantas/Chapters/10_Ruins_D"
+    Preset: "d-side"
+    UnlockMode: "consecutive"
+    ShowBerriesAsGolden: true
+    Icon: "areas/ruins"
+

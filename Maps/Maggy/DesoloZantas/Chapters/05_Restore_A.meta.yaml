@@ -1,0 +1,80 @@
+Icon: areas/temple
+Interlude: true
+TitleBaseColor: 42c9a1
+TitleAccentColor: 1e7a5f
+TitleTextColor: ffffff
+IntroType: WakeUp
+Dreaming: false
+ColorGrade: none
+Wipe: Celeste.DropWipe
+DarknessAlpha: 0.18
+BloomBase: 0.12
+BloomStrength: 1.2
+Jumpthru: temple
+CassetteNoteColor: 66ddbb
+CassetteSong: event:/Ingeste/music/Cassette/05_resort
+Modes:
+  - AudioState:
+      Music: event:/Ingeste/music/lvl5/intro
+      Ambience: event:/Ingeste/env/05_exterior
+    Inventory: Default
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/BSide/05_restore
+      Ambience: event:/Ingeste/env/05_exterior
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/CSide/05_restore
+      Ambience: event:/Ingeste/env/05_exterior
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/CSide/05_restore
+      Ambience: event:/Ingeste/env/05_exterior
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+Mountain:
+    Idle:
+        Position: [ -3.450, 5.920, 13.280 ]
+        Target: [ -2.580, 4.850, 11.650 ]
+    Select:
+        Position: [ -2.120, 3.280, 13.520 ]
+        Target: [ -0.850, 3.180, 11.880 ]
+    Zoom:
+        Position: [ -0.420, 3.680, 10.580 ]
+        Target: [ -0.280, 2.620, 8.850 ]
+    Cursor: [ -0.142857, 3.358434, 8.625236 ]
+    State: 0
+CompleteScreen:
+    Atlas: "DesoloZantas"
+    Scale: 2
+    Start: [ -10.0, 2000.0 ]
+    Center: [ -10.0, 1200.0 ]
+    Title:
+        ASide: 'AREACOMPLETE_NORMAL'
+        BSide: 'AREACOMPLETE_BSIDE'
+        CSide: 'AREACOMPLETE_CSIDE'
+        DSide: 'AREACOMPLETE_DSIDE'
+        FullClear: 'AREACOMPLETE_NORMAL_FULLCLEAR'
+    Layers:
+      - Type: "layer"
+        Images: [ "restore_01" ]
+        Position: [ 0.0, 0.0 ]
+        Scroll: [ 0.0 ]
+        Scale: 2
+      - Type: "layer"
+        Images: [ "restore_02" ]
+        Position: [ -800.0, -700.0 ]
+        Scroll: [ 0.02 ]
+        Scale: 2
+      - Type: "ui"
+        Scroll: [ 0.62 ]
+      - Type: "layer"
+        Images: [ "restore_03" ]
+        Position: [ -800.0, -700.0 ]
+        Scroll: [ 0.04 ]
+        Scale: 2

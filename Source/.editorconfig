@@ -1,0 +1,49 @@
+# EditorConfig for DesoloZantas mod
+root = true
+
+[*.cs]
+# Disable namespace matching folder structure warning
+# The project intentionally uses DesoloZantas.Core namespace from Source/Core folder
+dotnet_diagnostic.IDE0130.severity = none
+
+# Relax naming rule for private methods (allows camelCase)
+dotnet_naming_rule.private_methods_should_be_pascal_case.severity = suggestion
+dotnet_naming_rule.private_methods_should_be_pascal_case.symbols = private_methods
+dotnet_naming_rule.private_methods_should_be_pascal_case.style = pascal_case_style
+
+dotnet_naming_symbols.private_methods.applicable_kinds = method
+dotnet_naming_symbols.private_methods.applicable_accessibilities = private
+
+dotnet_naming_style.pascal_case_style.capitalization = pascal_case
+
+# Allow 'new' expression type inference (IDE0090)
+dotnet_diagnostic.IDE0090.severity = suggestion
+
+# Allow collection initialization not simplified (IDE0028, IDE0300)
+dotnet_diagnostic.IDE0028.severity = suggestion
+dotnet_diagnostic.IDE0300.severity = suggestion
+
+# Allow unused parameters in certain cases (IDE0060)
+dotnet_diagnostic.IDE0060.severity = suggestion
+
+# Allow members that can be static (CA1822)
+dotnet_diagnostic.CA1822.severity = suggestion
+
+# Allow non-readonly fields (IDE0044)
+dotnet_diagnostic.IDE0044.severity = suggestion
+
+# Allow primary constructor suggestion (IDE0290)
+dotnet_diagnostic.IDE0290.severity = suggestion
+
+# Allow object initialization not simplified (IDE0017)
+dotnet_diagnostic.IDE0017.severity = suggestion
+
+# Allow null check simplification suggestions (IDE0029, IDE0031)
+dotnet_diagnostic.IDE0029.severity = suggestion
+dotnet_diagnostic.IDE0031.severity = suggestion
+
+# Allow non-constant public fields (CA2211)  
+dotnet_diagnostic.CA2211.severity = suggestion
+
+# Naming conventions - relax for existing codebase
+dotnet_diagnostic.IDE1006.severity = suggestion

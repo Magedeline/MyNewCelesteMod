@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Tower Titan Boss - Pattern Configuration -->
+<Patterns>
+    <Pattern name="phase1" goto="phase1">
+        <Wait time="1.0"/>
+        <Attack file="ground_pound"/>
+        <Wait time="2.0"/>
+        <Attack file="boulder_throw"/>
+        <Wait time="1.5"/>
+        <Attack file="charge"/>
+        <Wait time="2.0"/>
+        <Attack file="pillar_stomp"/>
+        <Wait time="2.0"/>
+    </Pattern>
+    
+    <Pattern name="phase2" goto="phase2">
+        <Wait time="0.8"/>
+        <Attack file="tidal_wave"/>
+        <Wait time="1.5"/>
+        <Attack file="ground_pound"/>
+        <Wait time="1.2"/>
+        <Attack file="boulder_throw"/>
+        <Wait time="1.0"/>
+        <Attack file="charge"/>
+        <Wait time="1.5"/>
+        <Attack file="pillar_stomp"/>
+        <Wait time="1.0"/>
+    </Pattern>
+    
+    <Pattern name="phase3" goto="phase3">
+        <Wait time="0.5"/>
+        <Attack file="charge"/>
+        <Wait time="0.8"/>
+        <Attack file="tidal_wave"/>
+        <Wait time="1.0"/>
+        <Attack file="ground_pound"/>
+        <Wait time="0.8"/>
+        <Attack file="boulder_throw"/>
+        <Wait time="0.8"/>
+        <Attack file="pillar_stomp"/>
+        <Wait time="0.8"/>
+    </Pattern>
+    
+    <Random name="random" repeat="4" goto="phase2">
+        <Attack file="ground_pound" wait="1.5" weight="2"/>
+        <Attack file="boulder_throw" wait="1.5" weight="2"/>
+        <Attack file="charge" wait="1.5" weight="2"/>
+        <Attack file="pillar_stomp" wait="1.5" weight="1"/>
+    </Random>
+    
+    <Event file="intro" goto="phase1"/>
+    <Event file="phase2_transition" goto="phase2"/>
+    <Event file="phase3_transition" goto="phase3"/>
+    <Event file="death"/>
+</Patterns>

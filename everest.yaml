@@ -1,6 +1,82 @@
-- Name: MyNewCelesteMod
-  Version: 0.1.0
-  DLL: bin/MyNewCelesteMod.dll
+- DLL: Code/net8.0/Desolo_Zantas.dll
+  Name: DesoloZatnas
+  Version: 1.0.0
   Dependencies:
-    - Name: EverestCore
-      Version: 1.5935.0
+    - Name: AdventureHelper
+      Version: 1.6.0
+    - Name: AltSidesHelper
+      Version: 1.5.3
+    - Name: Anonhelper
+      Version: 1.1.1
+    - Name: ArphimigonsToyBox
+      Version: 1.4.1
+    - Name: BounceHelper
+      Version: 1.14.0
+    - Name: BrokemiaHelper
+      Version: 1.8.3
+    - Name: CherryHelper
+      Version: 1.8.2
+    - Name: ChroniaHelper
+      Version: 1.38.3
+    - Name: ChronoHelper
+      Version: 1.2.8
+    - Name: CommunalHelper
+      Version: 1.24.4
+    - Name: ContortHelper
+      Version: 1.5.5
+    - Name: CrystallineHelper
+      Version: 1.16.6
+    - Name: DJMapHelper
+      Version: 1.13.4
+    - Name: DoonvHelper
+      Version: 1.0.2
+    - Name: EeveeHelper
+      Version: 1.12.3
+    - Name: Everest
+      Version: 1.5848.0
+    - Name: ExtendedCameraDynamics
+      Version: 1.1.1
+    - Name: ExtendedVariantMode
+      Version: 0.46.0
+    - Name: Farewell B-Side
+      Version: 2.6
+    - Name: FemtoHelper
+      Version: 1.14.6
+    - Name: FlaglinesAndSuch
+      Version: 1.6.46
+    - Name: FrostHelper
+      Version: 1.73.1
+    - Name: HonlyHelper
+      Version: 1.7.5
+    - Name: IsaGrabBag
+      Version: 1.7.3
+    - Name: JackalHelper
+      Version: 1.7.5
+    - Name: JungleHelper
+      Version: 1.3.7
+    - Name: LuaCutscenes
+      Version: 0.2.13
+    - Name: LunaticHelper
+      Version: 1.1.1
+    - Name: MaxHelpingHand
+      Version: 1.38.0
+    - Name: MoreDasheline
+      Version: 1.7.1
+    - Name: NerdHelper
+      Version: 1.6.3
+    - Name: OzmasOddities
+      Version: 0.6.0
+    - Name: PlatinumStrawberry
+      Version: 1.1.1.0
+    - Name: PrismaticHelper
+      Version: 1.12.0
+    - Name: ReverseHelper
+      Version: 1.15.13
+    - Name: SkinModHelper
+      Version: 0.6.1
+    - Name: SkinModHelperPlus
+      Version: 0.16.5
+    - Name: SorbetHelper
+      Version: 1.7.10
+    - Name: VivHelper
+      Version: 1.14.10

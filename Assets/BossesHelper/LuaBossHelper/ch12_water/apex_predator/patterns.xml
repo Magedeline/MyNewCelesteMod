@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Apex Predator Boss - Pattern Configuration -->
+<Patterns>
+    <Pattern name="phase1" goto="phase1">
+        <Wait time="0.8"/>
+        <Attack file="pounce"/>
+        <Wait time="1.5"/>
+        <Attack file="claw_swipe"/>
+        <Wait time="1.5"/>
+        <Attack file="tail_whip"/>
+        <Wait time="2.0"/>
+        <Attack file="pounce"/>
+        <Wait time="1.5"/>
+    </Pattern>
+    
+    <Pattern name="phase2" goto="phase2">
+        <Wait time="0.6"/>
+        <Attack file="acid_spit"/>
+        <Wait time="1.2"/>
+        <Attack file="pounce"/>
+        <Wait time="1.0"/>
+        <Attack file="claw_swipe"/>
+        <Wait time="1.0"/>
+        <Attack file="tail_whip"/>
+        <Wait time="1.2"/>
+        <Attack file="acid_spit"/>
+        <Wait time="1.0"/>
+    </Pattern>
+    
+    <Pattern name="phase3" goto="phase3">
+        <Wait time="0.4"/>
+        <Attack file="frenzy"/>
+        <Wait time="0.8"/>
+        <Attack file="pounce"/>
+        <Wait time="0.8"/>
+        <Attack file="acid_spit"/>
+        <Wait time="0.8"/>
+        <Attack file="claw_swipe"/>
+        <Wait time="0.6"/>
+        <Attack file="tail_whip"/>
+        <Wait time="0.6"/>
+    </Pattern>
+    
+    <Random name="random" repeat="5" goto="phase2">
+        <Attack file="pounce" wait="1.2" weight="3"/>
+        <Attack file="claw_swipe" wait="1.2" weight="2"/>
+        <Attack file="tail_whip" wait="1.2" weight="2"/>
+        <Attack file="acid_spit" wait="1.5" weight="2"/>
+    </Random>
+    
+    <Event file="intro" goto="phase1"/>
+    <Event file="phase2_transition" goto="phase2"/>
+    <Event file="phase3_transition" goto="phase3"/>
+    <Event file="death"/>
+</Patterns>

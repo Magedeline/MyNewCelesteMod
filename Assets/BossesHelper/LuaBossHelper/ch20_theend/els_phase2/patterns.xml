@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patterns>
+    <Pattern name="phase1" goto="phase1">
+        <Wait time="1.0"/>
+        <Attack file="dual_blade"/>
+        <Wait time="1.5"/>
+        <Attack file="shadow_clone"/>
+        <Wait time="1.5"/>
+        <Attack file="dark_spiral"/>
+        <Wait time="1.5"/>
+        <Attack file="nightmare_pillars"/>
+        <Wait time="1.5"/>
+        <Attack file="shadow_storm"/>
+        <Wait time="2.0"/>
+    </Pattern>
+    
+    <Event file="intro" goto="phase1"/>
+    <Event file="death"/>
+</Patterns>

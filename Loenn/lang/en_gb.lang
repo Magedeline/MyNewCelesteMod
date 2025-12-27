@@ -1,7 +1,781 @@
-# Sample Entity
-entities.MyNewCelesteMod/SampleEntity.placements.name.normal=Sample Entity
-entities.MyNewCelesteMod/SampleEntity.attributes.description.sampleProperty=A sample property for your entity.
+# -- Mod Names --
+# mods.modName.*
+mods.SkinModHelper.name=Skin Mod Helper
+mods.IngesteHelper.name=Ingeste Helper
 
-# Sample Trigger
-triggers.MyNewCelesteMod/SampleTrigger.placements.name.normal=Sample Trigger
-triggers.MyNewCelesteMod/SampleTrigger.attributes.description.sampleProperty=A sample property for your trigger.
+# -- Metadata System --
+# metadata.category.*
+metadata.areas.name=Area Metadata
+metadata.areas.description=Map area definitions and configurations
+metadata.altsides.name=Alternative Sides
+metadata.altsides.description=Alternative side configurations for areas
+metadata.plugins.name=Plugin Metadata
+metadata.plugins.description=Plugin information and dependencies
+metadata.submaps.name=Submap Definitions
+metadata.submaps.description=Sub-areas within larger maps
+metadata.cutscenes.name=Cutscene Library
+metadata.cutscenes.description=Narrative cutscene definitions and sequences
+metadata.models.name=3D Model Specifications
+metadata.models.description=3D model metadata with textures and animations
+metadata.inventory.name=Starting Inventory
+metadata.inventory.description=Player starting configurations and profiles
+metadata.audio.name=Audio Events
+metadata.audio.description=Music, sound effects, and ambient audio definitions
+metadata.particles.name=Particle Effects
+metadata.particles.description=Particle system configurations and properties
+metadata.ui.name=UI Themes
+metadata.ui.description=User interface themes and styling definitions
+
+# -- Submap Metadata --
+# submaps.attributes.*
+submaps.attributes.parentArea=Parent Area
+submaps.attributes.parentArea.description=The main area that contains this submap
+submaps.attributes.entryPoint=Entry Point
+submaps.attributes.entryPoint.description=Coordinates where the player enters the submap
+submaps.attributes.exitPoint=Exit Point
+submaps.attributes.exitPoint.description=Coordinates where the player exits the submap
+submaps.attributes.requiredFlag=Required Flag
+submaps.attributes.requiredFlag.description=Game flag required to access this submap
+submaps.attributes.completionFlag=Completion Flag
+submaps.attributes.completionFlag.description=Flag set when submap is completed
+submaps.attributes.backgroundMusic=Background Music
+submaps.attributes.backgroundMusic.description=Music event to play in this submap
+submaps.attributes.ambientSound=Ambient Sound
+submaps.attributes.ambientSound.description=Ambient sound event for this submap
+submaps.attributes.difficulty=Difficulty
+submaps.attributes.difficulty.description=Difficulty level of this submap
+submaps.attributes.isSecret=Is Secret
+submaps.attributes.isSecret.description=Whether this submap is a secret area
+submaps.attributes.unlockConditions=Unlock Conditions
+submaps.attributes.unlockConditions.description=Conditions required to unlock this submap
+
+# -- Cutscene Metadata --
+# cutscenes.attributes.*
+cutscenes.attributes.type=Cutscene Type
+cutscenes.attributes.type.description=Type of cutscene (dialog, animation, scripted)
+cutscenes.attributes.duration=Duration
+cutscenes.attributes.duration.description=Length of the cutscene in seconds
+cutscenes.attributes.characters=Characters
+cutscenes.attributes.characters.description=Characters involved in this cutscene
+cutscenes.attributes.dialog=Dialog Sequence
+cutscenes.attributes.dialog.description=Dialog keys for this cutscene
+cutscenes.attributes.animations=Animations
+cutscenes.attributes.animations.description=Character animations for this cutscene
+cutscenes.attributes.cameraMovements=Camera Movements
+cutscenes.attributes.cameraMovements.description=Camera control sequences
+cutscenes.attributes.musicTrack=Music Track
+cutscenes.attributes.musicTrack.description=Background music for this cutscene
+cutscenes.attributes.soundEffects=Sound Effects
+cutscenes.attributes.soundEffects.description=Sound effects used in this cutscene
+cutscenes.attributes.screenEffects=Screen Effects
+cutscenes.attributes.screenEffects.description=Visual screen effects
+cutscenes.attributes.transitionIn=Transition In
+cutscenes.attributes.transitionIn.description=Transition effect when starting
+cutscenes.attributes.transitionOut=Transition Out
+cutscenes.attributes.transitionOut.description=Transition effect when ending
+cutscenes.attributes.skippable=Skippable
+cutscenes.attributes.skippable.description=Whether this cutscene can be skipped
+cutscenes.attributes.autoStart=Auto Start
+cutscenes.attributes.autoStart.description=Whether this cutscene starts automatically
+cutscenes.attributes.triggerOnce=Trigger Once
+cutscenes.attributes.triggerOnce.description=Whether this cutscene only plays once
+cutscenes.attributes.flagToSet=Flag to Set
+cutscenes.attributes.flagToSet.description=Game flag to set after completion
+
+# -- Model Metadata --
+# models.attributes.*
+models.attributes.modelPath=Model Path
+models.attributes.modelPath.description=Path to the 3D model file
+models.attributes.texturePath=Texture Path
+models.attributes.texturePath.description=Path to the model texture
+models.attributes.normalMapPath=Normal Map Path
+models.attributes.normalMapPath.description=Path to the normal map texture
+models.attributes.materialPath=Material Path
+models.attributes.materialPath.description=Path to the material definition
+models.attributes.scale=Scale
+models.attributes.scale.description=Scale multiplier for the model (X, Y, Z)
+models.attributes.rotation=Rotation
+models.attributes.rotation.description=Rotation angles in degrees (X, Y, Z)
+models.attributes.position=Position
+models.attributes.position.description=World position coordinates (X, Y, Z)
+models.attributes.animations=Animations
+models.attributes.animations.description=Available animations for this model
+models.attributes.boundingBox=Bounding Box
+models.attributes.boundingBox.description=Collision bounding box dimensions
+models.attributes.collisionMesh=Collision Mesh
+models.attributes.collisionMesh.description=Path to collision mesh file
+models.attributes.lodLevels=LOD Levels
+models.attributes.lodLevels.description=Level-of-detail configurations
+models.attributes.renderDistance=Render Distance
+models.attributes.renderDistance.description=Maximum rendering distance
+models.attributes.castShadows=Cast Shadows
+models.attributes.castShadows.description=Whether this model casts shadows
+models.attributes.receiveShadows=Receive Shadows
+models.attributes.receiveShadows.description=Whether this model receives shadows
+models.attributes.isStatic=Is Static
+models.attributes.isStatic.description=Whether this model is static (non-moving)
+models.attributes.category=Category
+models.attributes.category.description=Model category for organization
+
+# -- Inventory Metadata --
+# inventory.attributes.*
+inventory.attributes.profileId=Profile ID
+inventory.attributes.profileId.description=Unique identifier for this inventory profile
+inventory.attributes.items=Starting Items
+inventory.attributes.items.description=Items the player starts with
+inventory.attributes.abilities=Starting Abilities
+inventory.attributes.abilities.description=Abilities the player starts with
+inventory.attributes.unlocks=Starting Unlocks
+inventory.attributes.unlocks.description=Content unlocked at the start
+inventory.attributes.powerUps=Power-ups
+inventory.attributes.powerUps.description=Power-ups active at start
+inventory.attributes.collectibles=Collectibles
+inventory.attributes.collectibles.description=Collectibles already obtained
+inventory.attributes.maxHealth=Maximum Health
+inventory.attributes.maxHealth.description=Maximum health points
+inventory.attributes.maxStamina=Maximum Stamina
+inventory.attributes.maxStamina.description=Maximum stamina points
+inventory.attributes.startingHealth=Starting Health
+inventory.attributes.startingHealth.description=Health at game start
+inventory.attributes.startingStamina=Starting Stamina
+inventory.attributes.startingStamina.description=Stamina at game start
+inventory.attributes.startingDashes=Starting Dashes
+inventory.attributes.startingDashes.description=Number of dashes available
+inventory.attributes.hasWallJump=Has Wall Jump
+inventory.attributes.hasWallJump.description=Whether wall jump is available
+inventory.attributes.hasClimbing=Has Climbing
+inventory.attributes.hasClimbing.description=Whether climbing is available
+inventory.attributes.hasDashing=Has Dashing
+inventory.attributes.hasDashing.description=Whether dashing is available
+inventory.attributes.hasDoubleJump=Has Double Jump
+inventory.attributes.hasDoubleJump.description=Whether double jump is available
+inventory.attributes.customFlags=Custom Flags
+inventory.attributes.customFlags.description=Custom game flags for this profile
+
+# -- Audio Metadata --
+# audio.attributes.*
+audio.attributes.eventPath=Event Path
+audio.attributes.eventPath.description=FMOD event path for this audio
+audio.attributes.category=Category
+audio.attributes.category.description=Audio category (music, sfx, ambient, ui)
+audio.attributes.volume=Volume
+audio.attributes.volume.description=Audio volume level (0.0 to 1.0)
+audio.attributes.pitch=Pitch
+audio.attributes.pitch.description=Audio pitch multiplier
+audio.attributes.looping=Looping
+audio.attributes.looping.description=Whether this audio loops
+audio.attributes.fadeInTime=Fade In Time
+audio.attributes.fadeInTime.description=Fade in duration in seconds
+audio.attributes.fadeOutTime=Fade Out Time
+audio.attributes.fadeOutTime.description=Fade out duration in seconds
+audio.attributes.priority=Priority
+audio.attributes.priority.description=Playback priority (0-100)
+audio.attributes.maxInstances=Max Instances
+audio.attributes.maxInstances.description=Maximum concurrent instances
+audio.attributes.minDistance=Min Distance
+audio.attributes.minDistance.description=Minimum 3D audio distance
+audio.attributes.maxDistance=Max Distance
+audio.attributes.maxDistance.description=Maximum 3D audio distance
+audio.attributes.rolloffMode=Rolloff Mode
+audio.attributes.rolloffMode.description=Distance attenuation mode
+audio.attributes.spatialBlend=Spatial Blend
+audio.attributes.spatialBlend.description=2D/3D audio blend factor
+audio.attributes.tags=Tags
+audio.attributes.tags.description=Tags for categorizing this audio event
+
+# -- Particle Metadata --
+# particles.attributes.*
+particles.attributes.effectName=Effect Name
+particles.attributes.effectName.description=Name of the particle effect system
+particles.attributes.texture=Texture
+particles.attributes.texture.description=Texture used for particles
+particles.attributes.lifetime=Lifetime
+particles.attributes.lifetime.description=Particle lifetime in seconds
+particles.attributes.startSize=Start Size
+particles.attributes.startSize.description=Initial particle size
+particles.attributes.endSize=End Size
+particles.attributes.endSize.description=Final particle size
+particles.attributes.startColor=Start Color
+particles.attributes.startColor.description=Initial particle color (RGBA)
+particles.attributes.endColor=End Color
+particles.attributes.endColor.description=Final particle color (RGBA)
+particles.attributes.velocity=Velocity
+particles.attributes.velocity.description=Initial particle velocity (X, Y, Z)
+particles.attributes.acceleration=Acceleration
+particles.attributes.acceleration.description=Particle acceleration (X, Y, Z)
+particles.attributes.gravity=Gravity
+particles.attributes.gravity.description=Gravity effect on particles (X, Y, Z)
+particles.attributes.emissionRate=Emission Rate
+particles.attributes.emissionRate.description=Particles emitted per second
+particles.attributes.maxParticles=Max Particles
+particles.attributes.maxParticles.description=Maximum number of particles
+particles.attributes.blendMode=Blend Mode
+particles.attributes.blendMode.description=Rendering blend mode
+particles.attributes.billboard=Billboard
+particles.attributes.billboard.description=Whether particles face the camera
+particles.attributes.worldSpace=World Space
+particles.attributes.worldSpace.description=Whether particles use world space coordinates
+
+# -- UI Theme Metadata --
+# ui.attributes.*
+ui.attributes.themeName=Theme Name
+ui.attributes.themeName.description=Display name for this UI theme
+ui.attributes.colorScheme=Color Scheme
+ui.attributes.colorScheme.description=Color palette for this theme
+ui.attributes.layout=Layout Style
+ui.attributes.layout.description=Layout style for UI elements
+ui.attributes.fontFamily=Font Family
+ui.attributes.fontFamily.description=Primary font family
+ui.attributes.fontSize=Font Size
+ui.attributes.fontSize.description=Base font size in pixels
+ui.attributes.buttonStyle=Button Style
+ui.attributes.buttonStyle.description=Button appearance style
+ui.attributes.panelStyle=Panel Style
+ui.attributes.panelStyle.description=Panel appearance style
+ui.attributes.iconSet=Icon Set
+ui.attributes.iconSet.description=Icon set identifier
+ui.attributes.animations=Animations
+ui.attributes.animations.description=UI animation effects
+ui.attributes.soundEffects=Sound Effects
+ui.attributes.soundEffects.description=UI sound effect mappings
+ui.attributes.responsiveBreakpoints=Responsive Breakpoints
+ui.attributes.responsiveBreakpoints.description=Screen size breakpoints
+ui.attributes.accessibility=Accessibility
+ui.attributes.accessibility.description=Accessibility options
+ui.attributes.customProperties=Custom Properties
+ui.attributes.customProperties.description=Custom styling properties
+
+# -- Metadata Validation Messages --
+# validation.metadata.*
+validation.metadata.invalid_id=Invalid or missing ID
+validation.metadata.invalid_parent_area=Invalid or missing parent area
+validation.metadata.invalid_entry_point=Invalid entry point coordinates
+validation.metadata.invalid_exit_point=Invalid exit point coordinates
+validation.metadata.invalid_cutscene_type=Invalid cutscene type
+validation.metadata.invalid_duration=Invalid duration value
+validation.metadata.invalid_model_path=Invalid or missing model path
+validation.metadata.invalid_scale_format=Invalid scale format
+validation.metadata.invalid_rotation_format=Invalid rotation format
+validation.metadata.invalid_profile_id=Invalid or missing profile ID
+validation.metadata.invalid_health_value=Invalid health value
+validation.metadata.invalid_stamina_value=Invalid stamina value
+validation.metadata.invalid_dash_count=Invalid dash count
+validation.metadata.load_success=Metadata loaded successfully
+validation.metadata.load_error=Error loading metadata
+validation.metadata.parse_error=Error parsing metadata file
+validation.metadata.file_not_found=Metadata file not found
+
+# -- Triggers
+# triggers.triggerName.placements.name.*
+# triggers.triggerName.placements.description.*
+# triggers.triggerName.attributes.name.*
+# triggers.triggerName.attributes.description.*
+
+# Intro Presents Trigger
+triggers.DesoloZatnas/IntroPresentsTrigger.placements.name.default=Intro Presents Screen
+triggers.DesoloZatnas/IntroPresentsTrigger.placements.description.default=Shows the "Magedeline Presents Desolo Zantas" intro screen with disclaimer. Only triggers once per session.
+
+# Disclaimer Trigger
+triggers.DesoloZatnas/DisclaimerTrigger.placements.name.default=Disclaimer Screen
+triggers.DesoloZatnas/DisclaimerTrigger.placements.name.flashing_lights=Disclaimer (Photosensitivity Warning)
+triggers.DesoloZatnas/DisclaimerTrigger.placements.name.mature_content=Disclaimer (Content Advisory)
+triggers.DesoloZatnas/DisclaimerTrigger.placements.description.default=Shows a content warning/disclaimer that requires player acknowledgment before continuing.
+triggers.DesoloZatnas/DisclaimerTrigger.attributes.name.header=Header Text
+triggers.DesoloZatnas/DisclaimerTrigger.attributes.description.header=The header/title text for the disclaimer screen.
+triggers.DesoloZatnas/DisclaimerTrigger.attributes.name.lines=Content Lines
+triggers.DesoloZatnas/DisclaimerTrigger.attributes.description.lines=Disclaimer content lines separated by | character. Leave empty for default content.
+
+# Chara Chaser End Trigger
+triggers.Ingeste/CharaChaserEnd.placements.name.normal=Chara Chaser End (Normal)
+triggers.Ingeste/CharaChaserEnd.placements.name.wide=Chara Chaser End (Wide)
+triggers.Ingeste/CharaChaserEnd.placements.name.tall=Chara Chaser End (Tall)
+triggers.Ingeste/CharaChaserEnd.placements.description.normal=A barrier that prevents the Chara chaser from following the player beyond this point.
+triggers.Ingeste/CharaChaserEnd.placements.description.wide=A wide horizontal barrier that prevents the Chara chaser from following the player.
+triggers.Ingeste/CharaChaserEnd.placements.description.tall=A tall vertical barrier that prevents the Chara chaser from following the player.
+
+# Asriel Start Hit Trigger
+triggers.Ingeste/AsrielStartHitTrigger.placements.name.normal=Asriel Start Hit Trigger
+triggers.Ingeste/AsrielStartHitTrigger.placements.name.with_movement=Asriel Start Hit Trigger (With Movement)
+triggers.Ingeste/AsrielStartHitTrigger.placements.description.normal=Triggers the Asriel God Boss to start attacking when the player enters this trigger.
+triggers.Ingeste/AsrielStartHitTrigger.placements.description.with_movement=Triggers the Asriel God Boss to start attacking and moves Asriel to the first node position.
+triggers.Ingeste/AsrielStartHitTrigger.attributes.name.triggerOnce=Trigger Once
+triggers.Ingeste/AsrielStartHitTrigger.attributes.description.triggerOnce=If checked, this trigger will only activate once.
+triggers.Ingeste/AsrielStartHitTrigger.attributes.name.moveAsriel=Move Asriel
+triggers.Ingeste/AsrielStartHitTrigger.attributes.description.moveAsriel=If checked, Asriel will move to the first node position when triggered.
+triggers.Ingeste/AsrielStartHitTrigger.attributes.name.moveSpeed=Move Speed
+triggers.Ingeste/AsrielStartHitTrigger.attributes.description.moveSpeed=The speed at which Asriel moves to the target position (in pixels per second).
+
+# CS09 Message End Trigger
+triggers.Ingeste/CS09_MessageEndTrigger.placements.name.normal=Sans Message Cutscene (Normal)
+triggers.Ingeste/CS09_MessageEndTrigger.placements.name.after_credits=Sans Message Cutscene (After Credits)
+triggers.Ingeste/CS09_MessageEndTrigger.placements.name.after_trap=Sans Message Cutscene (After Trap)
+triggers.Ingeste/CS09_MessageEndTrigger.placements.description.normal=Plays the Sans voice message warning about Mt. Desolo Zantas.
+triggers.Ingeste/CS09_MessageEndTrigger.placements.description.after_credits=Plays the Sans message after credits have completed.
+triggers.Ingeste/CS09_MessageEndTrigger.placements.description.after_trap=Plays the Sans message after the fake save trap is triggered.
+triggers.Ingeste/CS09_MessageEndTrigger.attributes.name.triggerOnce=Trigger Once
+triggers.Ingeste/CS09_MessageEndTrigger.attributes.description.triggerOnce=If checked, this trigger will only activate once.
+triggers.Ingeste/CS09_MessageEndTrigger.attributes.name.requireFlag=Require Flag
+triggers.Ingeste/CS09_MessageEndTrigger.attributes.description.requireFlag=If checked, requires the specified flag to be set before triggering.
+triggers.Ingeste/CS09_MessageEndTrigger.attributes.name.requiredFlag=Required Flag
+triggers.Ingeste/CS09_MessageEndTrigger.attributes.description.requiredFlag=The game flag that must be set for this trigger to activate.
+
+# CS09 Until Next Time Credit Trigger
+triggers.Ingeste/CS09_UntilNextTimeCreditTrigger.placements.name.normal=Chapter 9 Credits (Normal)
+triggers.Ingeste/CS09_UntilNextTimeCreditTrigger.placements.name.after_trap=Chapter 9 Credits (After Trap)
+triggers.Ingeste/CS09_UntilNextTimeCreditTrigger.placements.name.end_game=Chapter 9 Credits (End Game)
+triggers.Ingeste/CS09_UntilNextTimeCreditTrigger.placements.description.normal=Plays the "Until Next Time..." credits sequence with helper mod acknowledgments.
+triggers.Ingeste/CS09_UntilNextTimeCreditTrigger.placements.description.after_trap=Plays the credits after the fake save trap is triggered.
+triggers.Ingeste/CS09_UntilNextTimeCreditTrigger.placements.description.end_game=Large trigger area for end-of-game credits sequence.
+triggers.Ingeste/CS09_UntilNextTimeCreditTrigger.attributes.name.triggerOnce=Trigger Once
+triggers.Ingeste/CS09_UntilNextTimeCreditTrigger.attributes.description.triggerOnce=If checked, this trigger will only activate once.
+triggers.Ingeste/CS09_UntilNextTimeCreditTrigger.attributes.name.requireFlag=Require Flag
+triggers.Ingeste/CS09_UntilNextTimeCreditTrigger.attributes.description.requireFlag=If checked, requires the specified flag to be set before triggering.
+triggers.Ingeste/CS09_UntilNextTimeCreditTrigger.attributes.name.requiredFlag=Required Flag
+triggers.Ingeste/CS09_UntilNextTimeCreditTrigger.attributes.description.requiredFlag=The game flag that must be set for this trigger to activate.
+
+# CS09 Fake Save Point Stage B Trigger
+triggers.Ingeste/CS09_FakeSaveStageBTrigger.placements.name.default=Fake Save Point - Stage B
+triggers.Ingeste/CS09_FakeSaveStageBTrigger.placements.description.default=Triggers Stage B of the Fake Save Point cutscene. Theo questions Chara about the location. Sets flag: ch9_fakesave_stage_b
+triggers.Ingeste/CS09_FakeSaveStageBTrigger.attributes.name.triggerOnce=Trigger Once
+triggers.Ingeste/CS09_FakeSaveStageBTrigger.attributes.description.triggerOnce=If checked, this trigger will only activate once.
+triggers.Ingeste/CS09_FakeSaveStageBTrigger.attributes.name.playerOnly=Player Only
+triggers.Ingeste/CS09_FakeSaveStageBTrigger.attributes.description.playerOnly=If checked, only the player can activate this trigger.
+
+# CS09 Fake Save Point Stage C Trigger
+triggers.Ingeste/CS09_FakeSaveStageCTrigger.placements.name.default=Fake Save Point - Stage C
+triggers.Ingeste/CS09_FakeSaveStageCTrigger.placements.description.default=Triggers Stage C of the Fake Save Point cutscene. Badeline questions what's going on, Chara feels something. Sets flag: ch9_fakesave_stage_c
+triggers.Ingeste/CS09_FakeSaveStageCTrigger.attributes.name.triggerOnce=Trigger Once
+triggers.Ingeste/CS09_FakeSaveStageCTrigger.attributes.description.triggerOnce=If checked, this trigger will only activate once.
+triggers.Ingeste/CS09_FakeSaveStageCTrigger.attributes.name.playerOnly=Player Only
+triggers.Ingeste/CS09_FakeSaveStageCTrigger.attributes.description.playerOnly=If checked, only the player can activate this trigger.
+
+# CS09 Fake Save Point Stage D Trigger
+triggers.Ingeste/CS09_FakeSaveStageDTrigger.placements.name.default=Fake Save Point - Stage D
+triggers.Ingeste/CS09_FakeSaveStageDTrigger.placements.description.default=Triggers Stage D of the Fake Save Point cutscene. Ralsei asks if Chara is okay, Kirby decides to act. Sets flag: ch9_fakesave_stage_d
+triggers.Ingeste/CS09_FakeSaveStageDTrigger.attributes.name.triggerOnce=Trigger Once
+triggers.Ingeste/CS09_FakeSaveStageDTrigger.attributes.description.triggerOnce=If checked, this trigger will only activate once.
+triggers.Ingeste/CS09_FakeSaveStageDTrigger.attributes.name.playerOnly=Player Only
+triggers.Ingeste/CS09_FakeSaveStageDTrigger.attributes.description.playerOnly=If checked, only the player can activate this trigger.
+
+# CS09 Fake Save Point Stage E Trigger
+triggers.Ingeste/CS09_FakeSaveStageETrigger.placements.name.default=Fake Save Point - Stage E (Trap)
+triggers.Ingeste/CS09_FakeSaveStageETrigger.placements.description.default=Triggers Stage E of the Fake Save Point cutscene. Final stage that triggers the trap sequence. Sets flag: ch9_fakesave_stage_e
+triggers.Ingeste/CS09_FakeSaveStageETrigger.attributes.name.triggerOnce=Trigger Once
+triggers.Ingeste/CS09_FakeSaveStageETrigger.attributes.description.triggerOnce=If checked, this trigger will only activate once.
+triggers.Ingeste/CS09_FakeSaveStageETrigger.attributes.name.playerOnly=Player Only
+triggers.Ingeste/CS09_FakeSaveStageETrigger.attributes.description.playerOnly=If checked, only the player can activate this trigger.
+
+# NPC Event Trigger
+triggers.Ingeste/NPCEventTrigger.placements.name.trigger_event=NPC Event - Trigger
+triggers.Ingeste/NPCEventTrigger.placements.name.generic_interact=NPC Event - Generic Interaction
+triggers.Ingeste/NPCEventTrigger.placements.name.generic_move=NPC Event - Generic Move
+triggers.Ingeste/NPCEventTrigger.placements.name.theo_event=NPC Event - Theo
+triggers.Ingeste/NPCEventTrigger.placements.name.chara_event=NPC Event - Chara
+triggers.Ingeste/NPCEventTrigger.placements.name.kirby_event=NPC Event - Kirby
+triggers.Ingeste/NPCEventTrigger.placements.name.ralsei_event=NPC Event - Ralsei
+triggers.Ingeste/NPCEventTrigger.placements.name.meta_knight_event=NPC Event - Meta Knight
+triggers.Ingeste/NPCEventTrigger.placements.name.roxus_event=NPC Event - Roxus
+triggers.Ingeste/NPCEventTrigger.placements.name.temmie_event=NPC Event - Temmie
+triggers.Ingeste/NPCEventTrigger.placements.name.axis_event=NPC Event - Axis
+triggers.Ingeste/NPCEventTrigger.placements.name.els_event=NPC Event - Els
+triggers.Ingeste/NPCEventTrigger.placements.name.digital_guide_event=NPC Event - Digital Guide
+triggers.Ingeste/NPCEventTrigger.placements.name.phone_event=NPC Event - Phone
+triggers.Ingeste/NPCEventTrigger.placements.name.titan_council_event=NPC Event - Titan Council Member
+triggers.Ingeste/NPCEventTrigger.attributes.name.npcEntityId=NPC Entity ID
+triggers.Ingeste/NPCEventTrigger.attributes.description.npcEntityId=ID of the target NPC (leave empty to target closest NPC)
+triggers.Ingeste/NPCEventTrigger.attributes.name.eventType=Event Type
+triggers.Ingeste/NPCEventTrigger.attributes.description.eventType=Type of event to trigger on the NPC (trigger, interact, or move)
+triggers.Ingeste/NPCEventTrigger.attributes.name.dialog=Dialog Key
+triggers.Ingeste/NPCEventTrigger.attributes.description.dialog=Dialog key for the NPC interaction
+triggers.Ingeste/NPCEventTrigger.attributes.name.animation=Animation
+triggers.Ingeste/NPCEventTrigger.attributes.description.animation=Animation to play on the NPC
+triggers.Ingeste/NPCEventTrigger.attributes.name.oneUse=One Time Use
+triggers.Ingeste/NPCEventTrigger.attributes.description.oneUse=Whether this trigger can only be used once
+
+# NPC Interact Trigger
+triggers.Ingeste/NPCInteractTrigger.placements.name.basic_interaction=NPC Interact - Basic
+triggers.Ingeste/NPCInteractTrigger.placements.name.conditional_interaction=NPC Interact - Conditional
+triggers.Ingeste/NPCInteractTrigger.placements.name.final_interaction=NPC Interact - Final (Removes NPC)
+triggers.Ingeste/NPCInteractTrigger.placements.name.theo_interaction=NPC Interact - Theo
+triggers.Ingeste/NPCInteractTrigger.placements.name.chara_interaction=NPC Interact - Chara
+triggers.Ingeste/NPCInteractTrigger.placements.name.kirby_interaction=NPC Interact - Kirby
+triggers.Ingeste/NPCInteractTrigger.placements.name.ralsei_interaction=NPC Interact - Ralsei
+triggers.Ingeste/NPCInteractTrigger.placements.name.meta_knight_interaction=NPC Interact - Meta Knight
+triggers.Ingeste/NPCInteractTrigger.placements.name.roxus_interaction=NPC Interact - Roxus
+triggers.Ingeste/NPCInteractTrigger.placements.name.temmie_interaction=NPC Interact - Temmie
+triggers.Ingeste/NPCInteractTrigger.placements.name.axis_interaction=NPC Interact - Axis
+triggers.Ingeste/NPCInteractTrigger.placements.name.els_interaction=NPC Interact - Els
+triggers.Ingeste/NPCInteractTrigger.placements.name.digital_guide_interaction=NPC Interact - Digital Guide
+triggers.Ingeste/NPCInteractTrigger.placements.name.phone_interaction=NPC Interact - Phone
+triggers.Ingeste/NPCInteractTrigger.placements.name.titan_council_interaction=NPC Interact - Titan Council Member
+triggers.Ingeste/NPCInteractTrigger.placements.name.npc00_theo=NPC Interact - Chapter 0 Theo
+triggers.Ingeste/NPCInteractTrigger.placements.name.npc01_maggy=NPC Interact - Chapter 1 Maggy
+triggers.Ingeste/NPCInteractTrigger.placements.name.oshiro_breakdown=NPC Interact - Oshiro Breakdown
+triggers.Ingeste/NPCInteractTrigger.placements.name.npc17_kirby=NPC Interact - Chapter 17 Kirby
+triggers.Ingeste/NPCInteractTrigger.placements.name.npc17_ralsei=NPC Interact - Chapter 17 Ralsei
+triggers.Ingeste/NPCInteractTrigger.placements.name.npc17_toriel=NPC Interact - Chapter 17 Toriel
+triggers.Ingeste/NPCInteractTrigger.placements.name.npc20_asriel=NPC Interact - Chapter 20 Asriel
+triggers.Ingeste/NPCInteractTrigger.placements.name.npc20_granny=NPC Interact - Chapter 20 Granny
+triggers.Ingeste/NPCInteractTrigger.attributes.name.npcName=NPC Name
+triggers.Ingeste/NPCInteractTrigger.attributes.description.npcName=Name of the target NPC (leave empty to target closest NPC)
+triggers.Ingeste/NPCInteractTrigger.attributes.name.dialog=Dialog Key
+triggers.Ingeste/NPCInteractTrigger.attributes.description.dialog=Dialog key for the NPC interaction
+triggers.Ingeste/NPCInteractTrigger.attributes.name.flagToSet=Flag to Set
+triggers.Ingeste/NPCInteractTrigger.attributes.description.flagToSet=Game flag to set after interaction
+triggers.Ingeste/NPCInteractTrigger.attributes.name.requiredFlag=Required Flag
+triggers.Ingeste/NPCInteractTrigger.attributes.description.requiredFlag=Game flag required to enable this interaction
+triggers.Ingeste/NPCInteractTrigger.attributes.name.removeNpcAfter=Remove NPC After
+triggers.Ingeste/NPCInteractTrigger.attributes.description.removeNpcAfter=Whether to remove the NPC entity after interaction
+triggers.Ingeste/NPCInteractTrigger.attributes.name.oneTimeUse=One Time Use
+triggers.Ingeste/NPCInteractTrigger.attributes.description.oneTimeUse=Whether this trigger can only be used once
+
+# Skin Swap Trigger
+triggers.SkinModHelper/SkinSwapTrigger.placements.name.normal=Skin Swap Trigger
+triggers.SkinModHelper/SkinSwapTrigger.attributes.description.revertOnLeave=If checked, the previous skin will be restored upon exiting the trigger.
+triggers.SkinModHelper/SkinSwapTrigger.attributes.description.skinId=The skin ID to apply. This should be the same ID as the one in SkinModHelperConfig.yaml (use "Default" for Madeline).
+
+trigger.Ingeste/Kirby_Player_Trigger.placements.name.normal=KirbyPlayerTrigger
+
+# -- Kirby Actor System --
+# Small Enemies
+entities.Ingeste/KirbySmallEnemy.placements.name.Waddle Dee=Kirby Enemy - Waddle Dee
+entities.Ingeste/KirbySmallEnemy.placements.name.Waddle Doo (Beam)=Kirby Enemy - Waddle Doo (Beam)
+entities.Ingeste/KirbySmallEnemy.placements.name.Hot Head (Fire)=Kirby Enemy - Hot Head (Fire)
+entities.Ingeste/KirbySmallEnemy.placements.name.Chilly (Ice)=Kirby Enemy - Chilly (Ice)
+entities.Ingeste/KirbySmallEnemy.placements.name.Sparky (Spark)=Kirby Enemy - Sparky (Spark)
+entities.Ingeste/KirbySmallEnemy.placements.name.Rocky (Stone)=Kirby Enemy - Rocky (Stone)
+entities.Ingeste/KirbySmallEnemy.placements.name.Sir Kibble (Cutter)=Kirby Enemy - Sir Kibble (Cutter)
+entities.Ingeste/KirbySmallEnemy.placements.name.Poppy (Bomb)=Kirby Enemy - Poppy (Bomb)
+entities.Ingeste/KirbySmallEnemy.placements.name.Wheelie (Wheel)=Kirby Enemy - Wheelie (Wheel)
+entities.Ingeste/KirbySmallEnemy.placements.name.Gordo (Invincible)=Kirby Enemy - Gordo (Invincible)
+entities.Ingeste/KirbySmallEnemy.attributes.name.variant=Enemy Variant
+entities.Ingeste/KirbySmallEnemy.attributes.description.variant=The type of enemy (determines appearance and behavior)
+entities.Ingeste/KirbySmallEnemy.attributes.name.powerType=Power Type
+entities.Ingeste/KirbySmallEnemy.attributes.description.powerType=The copy ability power this enemy grants when inhaled
+entities.Ingeste/KirbySmallEnemy.attributes.name.maxHealth=Max Health
+entities.Ingeste/KirbySmallEnemy.attributes.description.maxHealth=Maximum health points for this enemy
+entities.Ingeste/KirbySmallEnemy.attributes.name.moveSpeed=Move Speed
+entities.Ingeste/KirbySmallEnemy.attributes.description.moveSpeed=Movement speed in pixels per second
+entities.Ingeste/KirbySmallEnemy.attributes.name.canBeInhaled=Can Be Inhaled
+entities.Ingeste/KirbySmallEnemy.attributes.description.canBeInhaled=Whether Kirby can inhale this enemy
+entities.Ingeste/KirbySmallEnemy.attributes.name.patrolDistance=Patrol Distance
+entities.Ingeste/KirbySmallEnemy.attributes.description.patrolDistance=Distance the enemy patrols from spawn point
+
+# Kirby NPCs
+entities.Ingeste/KirbyNPC.placements.name.Bandana Waddle Dee=Kirby NPC - Bandana Waddle Dee
+entities.Ingeste/KirbyNPC.placements.name.King Dedede (Friendly)=Kirby NPC - King Dedede (Friendly)
+entities.Ingeste/KirbyNPC.placements.name.Meta Knight (Friendly)=Kirby NPC - Meta Knight (Friendly)
+entities.Ingeste/KirbyNPC.placements.name.Magolor=Kirby NPC - Magolor
+entities.Ingeste/KirbyNPC.placements.name.Shop Keeper=Kirby NPC - Shop Keeper
+entities.Ingeste/KirbyNPC.placements.name.Companion (Follows Player)=Kirby NPC - Companion (Follows)
+entities.Ingeste/KirbyNPC.placements.name.Patrol NPC (With Nodes)=Kirby NPC - Patrol (With Nodes)
+entities.Ingeste/KirbyNPC.attributes.name.character=Character
+entities.Ingeste/KirbyNPC.attributes.description.character=The NPC character type
+entities.Ingeste/KirbyNPC.attributes.name.behavior=Behavior
+entities.Ingeste/KirbyNPC.attributes.description.behavior=How the NPC moves and behaves
+entities.Ingeste/KirbyNPC.attributes.name.dialogId=Dialog ID
+entities.Ingeste/KirbyNPC.attributes.description.dialogId=Dialog key for conversations (from Dialog/*.txt files)
+entities.Ingeste/KirbyNPC.attributes.name.canGiveItem=Can Give Item
+entities.Ingeste/KirbyNPC.attributes.description.canGiveItem=Whether this NPC can give items to the player
+entities.Ingeste/KirbyNPC.attributes.name.giveItemId=Give Item ID
+entities.Ingeste/KirbyNPC.attributes.description.giveItemId=Item ID to give (food, health, maxtomato, star)
+entities.Ingeste/KirbyNPC.attributes.name.followDistance=Follow Distance
+entities.Ingeste/KirbyNPC.attributes.description.followDistance=Distance to maintain when following player
+
+# Kirby Mid Bosses
+entities.Ingeste/KirbyMidBoss.placements.name.Whispy Woods=Kirby Mid Boss - Whispy Woods
+entities.Ingeste/KirbyMidBoss.placements.name.Kracko=Kirby Mid Boss - Kracko
+entities.Ingeste/KirbyMidBoss.placements.name.Mr. Frosty=Kirby Mid Boss - Mr. Frosty
+entities.Ingeste/KirbyMidBoss.placements.name.Bonkers=Kirby Mid Boss - Bonkers
+entities.Ingeste/KirbyMidBoss.placements.name.Bugzzy=Kirby Mid Boss - Bugzzy
+entities.Ingeste/KirbyMidBoss.placements.name.Fire Lion=Kirby Mid Boss - Fire Lion
+entities.Ingeste/KirbyMidBoss.placements.name.Iron Mam=Kirby Mid Boss - Iron Mam
+entities.Ingeste/KirbyMidBoss.placements.name.Grand Wheely=Kirby Mid Boss - Grand Wheely
+entities.Ingeste/KirbyMidBoss.placements.name.Box Boxer=Kirby Mid Boss - Box Boxer
+entities.Ingeste/KirbyMidBoss.placements.name.Master Hand=Kirby Mid Boss - Master Hand
+entities.Ingeste/KirbyMidBoss.attributes.name.bossType=Boss Type
+entities.Ingeste/KirbyMidBoss.attributes.description.bossType=The type of mid-boss to spawn
+entities.Ingeste/KirbyMidBoss.attributes.name.maxHealth=Max Health
+entities.Ingeste/KirbyMidBoss.attributes.description.maxHealth=Maximum health points for this boss
+entities.Ingeste/KirbyMidBoss.attributes.name.arenaWidth=Arena Width
+entities.Ingeste/KirbyMidBoss.attributes.description.arenaWidth=Width of the boss fight arena
+entities.Ingeste/KirbyMidBoss.attributes.name.arenaHeight=Arena Height
+entities.Ingeste/KirbyMidBoss.attributes.description.arenaHeight=Height of the boss fight arena
+
+# Kirby Food Items
+entities.Ingeste/KirbyFood.placements.name.Apple=Kirby Food - Apple
+entities.Ingeste/KirbyFood.placements.name.Max Tomato (Full Heal)=Kirby Food - Max Tomato (Full Heal)
+entities.Ingeste/KirbyFood.placements.name.Meat=Kirby Food - Meat
+entities.Ingeste/KirbyFood.placements.name.Cake=Kirby Food - Cake
+entities.Ingeste/KirbyFood.placements.name.Cherry Bunch=Kirby Food - Cherry Bunch
+entities.Ingeste/KirbyFood.placements.name.Invincibility Star=Kirby Item - Invincibility Star
+entities.Ingeste/KirbyFood.placements.name.1-Up=Kirby Item - 1-Up
+entities.Ingeste/KirbyFood.placements.name.Custom Food=Kirby Food - Custom
+entities.Ingeste/KirbyFood.placements.name.Damaging Apple (Boss Drop)=Kirby Food - Damaging Apple (Boss)
+entities.Ingeste/KirbyFood.attributes.name.foodType=Food Type
+entities.Ingeste/KirbyFood.attributes.description.foodType=Type of food item
+entities.Ingeste/KirbyFood.attributes.name.healAmount=Heal Amount
+entities.Ingeste/KirbyFood.attributes.description.healAmount=Custom heal amount (0 = use default for type)
+entities.Ingeste/KirbyFood.attributes.name.isDamaging=Is Damaging
+entities.Ingeste/KirbyFood.attributes.description.isDamaging=Whether this food damages the player (for boss drops)
+entities.Ingeste/KirbyFood.attributes.name.despawnTime=Despawn Time
+entities.Ingeste/KirbyFood.attributes.description.despawnTime=Seconds until this food despawns
+entities.Ingeste/KirbyFood.attributes.name.isFalling=Is Falling
+entities.Ingeste/KirbyFood.attributes.description.isFalling=Whether this food falls with physics when spawned
+
+# -- CharaBoss Entity --
+entities.Ingeste/CharaBoss.placements.name.intro=Chara Boss (Intro/Sitting - Pattern 0)
+entities.Ingeste/CharaBoss.placements.name.shoot_pattern=Chara Boss (Shoot Pattern - Pattern 1)
+entities.Ingeste/CharaBoss.placements.name.beam_pattern=Chara Boss (Beam + Shoot - Pattern 2)
+entities.Ingeste/CharaBoss.placements.name.bigger_beam_pattern=Chara Boss (Bigger Beam + Triple Shot - Pattern 21)
+entities.Ingeste/CharaBoss.placements.name.custom_triple_shot=Chara Boss (Custom: Triple Angled Shot)
+entities.Ingeste/CharaBoss.placements.name.custom_beam_combo=Chara Boss (Custom: Beam + Double Shot)
+entities.Ingeste/CharaBoss.placements.name.custom_ultimate=Chara Boss (Custom: Ultimate Combo)
+
+entities.Ingeste/CharaBoss.attributes.description.patternIndex=Attack pattern: 0=intro/sitting, 1=shoot only, 2=beam+shoot, 21=bigger beam+triple shoot (ignored if attackSequence is set)
+entities.Ingeste/CharaBoss.attributes.description.attackSequence=Custom attack sequence. Format: "action arg delay, action arg delay, ...". Actions: shoot [angleOffset] [delay], beam [delay], biggerbeam [delay]. Example: "shoot 0 0.3, shoot 15 0.3, beam 1.0". Leave empty to use patternIndex.
+entities.Ingeste/CharaBoss.attributes.description.cameraPastY=Camera Y offset past maximum (default 120)
+entities.Ingeste/CharaBoss.attributes.description.dialog=Show mini-textbox dialog when boss is hit (ch8_charaboss_tired_a/b/c)
+entities.Ingeste/CharaBoss.attributes.description.startHit=Boss starts in already-hit state (triggers immediately)
+entities.Ingeste/CharaBoss.attributes.description.cameraLockY=Lock camera Y position during boss fight
+
+# -- CharaChaser Entity --
+entities.Ingeste/CharaChaser.placements.name.CharaChaser=Chara Chaser
+entities.Ingeste/CharaChaser.attributes.name.canChangeMusic=Can Change Music
+entities.Ingeste/CharaChaser.attributes.description.canChangeMusic=Whether this chaser can change the background music when active
+
+# -- AltSides Meta UI --
+ui.leppa.altsideshelpermeta.title=Alternative Sides Metadata Editor
+ui.leppa.altsideshelpermeta.group.meta.name=Meta Settings
+ui.leppa.altsideshelpermeta.group.overworld.name=Overworld Display
+ui.leppa.altsideshelpermeta.group.inGame.name=In-Game Elements
+ui.leppa.altsideshelpermeta.group.fullClear.name=Full Clear Settings
+ui.leppa.altsideshelpermeta.group.experimental.name=Experimental Features
+ui.leppa.altsideshelpermeta.group.collectibles.name=Collectible Customization
+
+# -- Heart Staff Entity (Kirby Star Allies themed collectible) --
+entities.Ingeste/HeartStaff.placements.name.red=Heart Staff - Blazing (Red)
+entities.Ingeste/HeartStaff.placements.name.blue=Heart Staff - Glacial (Blue)
+entities.Ingeste/HeartStaff.placements.name.yellow=Heart Staff - Spark (Yellow)
+entities.Ingeste/HeartStaff.placements.name.green=Heart Staff - Nature (Green)
+entities.Ingeste/HeartStaff.placements.name.purple=Heart Staff - Void (Purple)
+entities.Ingeste/HeartStaff.placements.name.orange=Heart Staff - Radiant (Orange)
+entities.Ingeste/HeartStaff.placements.name.pink=Heart Staff - Love (Pink/Final)
+entities.Ingeste/HeartStaff.attributes.name.staffColor=Staff Color
+entities.Ingeste/HeartStaff.attributes.description.staffColor=The color/type of Heart Staff (determines appearance and collection message)
+entities.Ingeste/HeartStaff.attributes.name.staffId=Staff ID
+entities.Ingeste/HeartStaff.attributes.description.staffId=Unique identifier for this staff. Leave empty to auto-generate.
+
+# -- Heart Staff Door Entity --
+entities.Ingeste/HeartStaffDoor.placements.name.heart_staff_door=Heart Staff Door (7 Required)
+entities.Ingeste/HeartStaffDoor.placements.name.heart_staff_door_hidden=Heart Staff Door (Hidden)
+entities.Ingeste/HeartStaffDoor.placements.name.heart_staff_door_partial=Heart Staff Door (3 Required)
+entities.Ingeste/HeartStaffDoor.attributes.name.width=Width
+entities.Ingeste/HeartStaffDoor.attributes.description.width=Width of the door in pixels
+entities.Ingeste/HeartStaffDoor.attributes.name.requires=Required Staffs
+entities.Ingeste/HeartStaffDoor.attributes.description.requires=Number of Heart Staffs required to open the door (1-7)
+entities.Ingeste/HeartStaffDoor.attributes.name.startHidden=Start Hidden
+entities.Ingeste/HeartStaffDoor.attributes.description.startHidden=Door starts invisible and appears dramatically when player approaches
+entities.Ingeste/HeartStaffDoor.attributes.name.doorId=Door ID
+entities.Ingeste/HeartStaffDoor.attributes.description.doorId=Unique identifier for save data. Leave empty to auto-generate.
+
+# -- Character Dummy Entities --
+entities.Ingeste/KirbyDummy.placements.name.normal=Kirby Dummy
+entities.Ingeste/KirbyDummy.attributes.name.facing=Facing Direction
+entities.Ingeste/KirbyDummy.attributes.description.facing=Direction the character faces (-1 = left, 1 = right)
+entities.Ingeste/KirbyDummy.attributes.name.animation=Animation
+entities.Ingeste/KirbyDummy.attributes.description.animation=The animation to play (idle, walk, fall, etc.)
+
+entities.Ingeste/CharaDummy.placements.name.normal=Chara Dummy
+entities.Ingeste/CharaDummy.attributes.name.facing=Facing Direction
+entities.Ingeste/CharaDummy.attributes.description.facing=Direction the character faces (-1 = left, 1 = right)
+entities.Ingeste/CharaDummy.attributes.name.animation=Animation
+entities.Ingeste/CharaDummy.attributes.description.animation=The animation to play (idle, walk, fallSlow, laugh, angry, etc.)
+
+entities.Ingeste/RalseiDummy.placements.name.normal=Ralsei Dummy
+entities.Ingeste/RalseiDummy.attributes.name.facing=Facing Direction
+entities.Ingeste/RalseiDummy.attributes.description.facing=Direction the character faces (-1 = left, 1 = right)
+entities.Ingeste/RalseiDummy.attributes.name.animation=Animation
+entities.Ingeste/RalseiDummy.attributes.description.animation=The animation to play (idle, walk, happy, sad, etc.)
+
+entities.Ingeste/FriskDummy.placements.name.normal=Frisk Dummy
+entities.Ingeste/FriskDummy.attributes.name.facing=Facing Direction
+entities.Ingeste/FriskDummy.attributes.description.facing=Direction the character faces (-1 = left, 1 = right)
+entities.Ingeste/FriskDummy.attributes.name.animation=Animation
+entities.Ingeste/FriskDummy.attributes.description.animation=The animation to play (idle, walk, determined, etc.)
+
+# -- Character Refill Entity --
+entities.Ingeste/CharacterRefill.placements.name.kirby=Character Refill - Kirby (Pink)
+entities.Ingeste/CharacterRefill.placements.name.madeline=Character Refill - Madeline (Red)
+entities.Ingeste/CharacterRefill.placements.name.badeline=Character Refill - Badeline (Purple)
+entities.Ingeste/CharacterRefill.placements.name.theo=Character Refill - Theo (Blue)
+entities.Ingeste/CharacterRefill.placements.name.granny=Character Refill - Granny (Silver)
+entities.Ingeste/CharacterRefill.placements.name.oshiro=Character Refill - Oshiro (Teal)
+entities.Ingeste/CharacterRefill.placements.name.chara=Character Refill - Chara (Red Soul)
+entities.Ingeste/CharacterRefill.placements.name.frisk=Character Refill - Frisk (Yellow Soul)
+entities.Ingeste/CharacterRefill.placements.name.ralsei=Character Refill - Ralsei (Green)
+entities.Ingeste/CharacterRefill.placements.name.asriel=Character Refill - Asriel (Rainbow)
+entities.Ingeste/CharacterRefill.placements.name.meta_knight=Character Refill - Meta Knight (Dark Blue)
+entities.Ingeste/CharacterRefill.placements.name.king_dedede=Character Refill - King Dedede (Royal Blue)
+entities.Ingeste/CharacterRefill.placements.name.magolor=Character Refill - Magolor (Purple/Orange)
+entities.Ingeste/CharacterRefill.placements.name.mage_kirby=Character Refill - Mage Kirby (Cyan)
+entities.Ingeste/CharacterRefill.attributes.name.characterType=Character Type
+entities.Ingeste/CharacterRefill.attributes.description.characterType=The character theme for this refill crystal (determines appearance, particles, and special abilities)
+entities.Ingeste/CharacterRefill.attributes.name.dashCount=Dash Count
+entities.Ingeste/CharacterRefill.attributes.description.dashCount=Number of dashes to restore when collected (1-10)
+entities.Ingeste/CharacterRefill.attributes.name.oneUse=One Use
+entities.Ingeste/CharacterRefill.attributes.description.oneUse=If checked, the refill is destroyed after being collected and won't respawn
+entities.Ingeste/CharacterRefill.attributes.name.grantsSpecialAbility=Grants Special Ability
+entities.Ingeste/CharacterRefill.attributes.description.grantsSpecialAbility=Whether this refill grants a character-specific special ability (float for Kirby, dream dash for Badeline, etc.)
+entities.Ingeste/CharacterRefill.attributes.name.refillStamina=Refill Stamina
+entities.Ingeste/CharacterRefill.attributes.description.refillStamina=Whether this refill also restores the player's stamina
+entities.Ingeste/CharacterRefill.attributes.name.characterModeOnly=Character Mode Only
+entities.Ingeste/CharacterRefill.attributes.description.characterModeOnly=If checked, this refill only appears when the matching character mode flag is active
+entities.Ingeste/CharacterRefill.attributes.name.customSpritePath=Custom Sprite Path
+entities.Ingeste/CharacterRefill.attributes.description.customSpritePath=Optional custom sprite path for modders to use their own refill graphics
+entities.Ingeste/CharacterRefill.attributes.name.customSoundEvent=Custom Sound Event
+entities.Ingeste/CharacterRefill.attributes.description.customSoundEvent=Optional custom FMOD sound event to play when collected
+
+# ==============================================================================
+# NEW ENTITIES - Chapter 22 and Beyond
+# ==============================================================================
+
+# -- Soul Barrier Entity --
+entities.Ingeste/SoulBarrier.placements.name.normal=Soul Barrier
+entities.Ingeste/SoulBarrier.attributes.name.width=Width
+entities.Ingeste/SoulBarrier.attributes.description.width=Width of the barrier in pixels
+entities.Ingeste/SoulBarrier.attributes.name.height=Height
+entities.Ingeste/SoulBarrier.attributes.description.height=Height of the barrier in pixels
+entities.Ingeste/SoulBarrier.attributes.name.requiredFragments=Required Fragments
+entities.Ingeste/SoulBarrier.attributes.description.requiredFragments=Number of soul fragments needed to unlock this barrier
+entities.Ingeste/SoulBarrier.attributes.name.barrierColor=Barrier Color
+entities.Ingeste/SoulBarrier.attributes.description.barrierColor=The color of the soul barrier (matches soul type)
+entities.Ingeste/SoulBarrier.attributes.name.flag=Unlocked Flag
+entities.Ingeste/SoulBarrier.attributes.description.flag=Session flag set when this barrier is unlocked
+
+# -- Soul Fragment Entity --
+entities.Ingeste/SoulFragment.placements.name.normal=Soul Fragment
+entities.Ingeste/SoulFragment.attributes.name.fragmentId=Fragment ID
+entities.Ingeste/SoulFragment.attributes.description.fragmentId=Unique identifier for this fragment (used for tracking collection)
+entities.Ingeste/SoulFragment.attributes.name.soulColor=Soul Color
+entities.Ingeste/SoulFragment.attributes.description.soulColor=The color/type of soul fragment (red, orange, yellow, green, cyan, blue, purple, white)
+entities.Ingeste/SoulFragment.attributes.name.barrierTarget=Barrier Target
+entities.Ingeste/SoulFragment.attributes.description.barrierTarget=Optional: ID of the specific barrier this fragment counts toward
+
+# -- Time Echo Platform Entity --
+entities.Ingeste/TimeEchoPlatform.placements.name.normal=Time Echo Platform
+entities.Ingeste/TimeEchoPlatform.placements.name.large=Time Echo Platform (Large)
+entities.Ingeste/TimeEchoPlatform.attributes.name.width=Width
+entities.Ingeste/TimeEchoPlatform.attributes.description.width=Width of the platform in pixels
+entities.Ingeste/TimeEchoPlatform.attributes.name.phaseCount=Phase Count
+entities.Ingeste/TimeEchoPlatform.attributes.description.phaseCount=Number of phase states (2-4)
+entities.Ingeste/TimeEchoPlatform.attributes.name.phaseDuration=Phase Duration
+entities.Ingeste/TimeEchoPlatform.attributes.description.phaseDuration=Time in seconds between phase shifts
+entities.Ingeste/TimeEchoPlatform.attributes.name.syncGroup=Sync Group
+entities.Ingeste/TimeEchoPlatform.attributes.description.syncGroup=Platforms in the same sync group phase together
+entities.Ingeste/TimeEchoPlatform.attributes.name.dashSync=Dash Sync
+entities.Ingeste/TimeEchoPlatform.attributes.description.dashSync=If true, phases shift when player dashes instead of on timer
+
+# -- Void Tendril Entity --
+entities.Ingeste/VoidTendril.placements.name.normal=Void Tendril
+entities.Ingeste/VoidTendril.placements.name.large=Void Tendril (Large)
+entities.Ingeste/VoidTendril.attributes.name.length=Length
+entities.Ingeste/VoidTendril.attributes.description.length=Length of the tendril in pixels
+entities.Ingeste/VoidTendril.attributes.name.swaySpeed=Sway Speed
+entities.Ingeste/VoidTendril.attributes.description.swaySpeed=How fast the tendril sways
+entities.Ingeste/VoidTendril.attributes.name.swayAmount=Sway Amount
+entities.Ingeste/VoidTendril.attributes.description.swayAmount=How far the tendril sways from center
+entities.Ingeste/VoidTendril.attributes.name.phaseableDuringDash=Phaseable During Dash
+entities.Ingeste/VoidTendril.attributes.description.phaseableDuringDash=If true, player can dash through without taking damage
+entities.Ingeste/VoidTendril.attributes.name.damageType=Damage Type
+entities.Ingeste/VoidTendril.attributes.description.damageType=Type of damage dealt (normal, soul, void)
+
+# -- Memory Crystal Entity --
+entities.Ingeste/MemoryCrystal.placements.name.normal=Memory Crystal
+entities.Ingeste/MemoryCrystal.placements.name.major=Memory Crystal (Major)
+entities.Ingeste/MemoryCrystal.attributes.name.memoryId=Memory ID
+entities.Ingeste/MemoryCrystal.attributes.description.memoryId=Unique identifier for this memory (links to dialog/cutscene)
+entities.Ingeste/MemoryCrystal.attributes.name.characterSource=Character Source
+entities.Ingeste/MemoryCrystal.attributes.description.characterSource=Whose memory this crystal contains (Gaster, Cornelius, Els, etc.)
+entities.Ingeste/MemoryCrystal.attributes.name.crystalColor=Crystal Color
+entities.Ingeste/MemoryCrystal.attributes.description.crystalColor=The color tint of the crystal
+entities.Ingeste/MemoryCrystal.attributes.name.triggersFlashback=Triggers Flashback
+entities.Ingeste/MemoryCrystal.attributes.description.triggersFlashback=If true, collecting triggers a full flashback cutscene instead of just dialog
+entities.Ingeste/MemoryCrystal.attributes.name.collectFlag=Collect Flag
+entities.Ingeste/MemoryCrystal.attributes.description.collectFlag=Session flag set when this crystal is collected
+
+# -- Dimensional Rift Entity --
+entities.Ingeste/DimensionalRift.placements.name.normal=Dimensional Rift
+entities.Ingeste/DimensionalRift.placements.name.large=Dimensional Rift (Large)
+entities.Ingeste/DimensionalRift.attributes.name.width=Width
+entities.Ingeste/DimensionalRift.attributes.description.width=Width of the rift in pixels
+entities.Ingeste/DimensionalRift.attributes.name.height=Height
+entities.Ingeste/DimensionalRift.attributes.description.height=Height of the rift in pixels
+entities.Ingeste/DimensionalRift.attributes.name.targetRoom=Target Room
+entities.Ingeste/DimensionalRift.attributes.description.targetRoom=The room to teleport the player to
+entities.Ingeste/DimensionalRift.attributes.name.targetSpawn=Target Spawn
+entities.Ingeste/DimensionalRift.attributes.description.targetSpawn=Spawn point ID in the target room
+entities.Ingeste/DimensionalRift.attributes.name.riftType=Rift Type
+entities.Ingeste/DimensionalRift.attributes.description.riftType=Visual type of rift (void, determination, light, dark)
+entities.Ingeste/DimensionalRift.attributes.name.requiresKey=Requires Key
+entities.Ingeste/DimensionalRift.attributes.description.requiresKey=If true, player needs a dimensional key to use this rift
+entities.Ingeste/DimensionalRift.attributes.name.oneWay=One Way
+entities.Ingeste/DimensionalRift.attributes.description.oneWay=If true, this rift only works in one direction
+
+# -- Star Bubble Entity --
+entities.Ingeste/StarBubble.placements.name.normal=Star Bubble
+entities.Ingeste/StarBubble.attributes.name.travelPath=Travel Path
+entities.Ingeste/StarBubble.attributes.description.travelPath=Comma-separated list of node positions for the bubble to follow
+entities.Ingeste/StarBubble.attributes.name.speed=Speed
+entities.Ingeste/StarBubble.attributes.description.speed=Travel speed of the bubble
+entities.Ingeste/StarBubble.attributes.name.bounceOnEnd=Bounce on End
+entities.Ingeste/StarBubble.attributes.description.bounceOnEnd=If true, bubble bounces back along path; if false, loops
+entities.Ingeste/StarBubble.attributes.name.starColor=Star Color
+entities.Ingeste/StarBubble.attributes.description.starColor=The color/type of star bubble (pink, blue, yellow, green)
+entities.Ingeste/StarBubble.attributes.name.poppable=Poppable
+entities.Ingeste/StarBubble.attributes.description.poppable=If true, bubble pops when player exits, launching them
+
+# -- Determination Orb Entity --
+entities.Ingeste/DeterminationOrb.placements.name.normal=Determination Orb
+entities.Ingeste/DeterminationOrb.placements.name.powerful=Determination Orb (Powerful)
+entities.Ingeste/DeterminationOrb.attributes.name.boostType=Boost Type
+entities.Ingeste/DeterminationOrb.attributes.description.boostType=Type of boost granted (speed, dashes, jump, invincibility)
+entities.Ingeste/DeterminationOrb.attributes.name.duration=Duration
+entities.Ingeste/DeterminationOrb.attributes.description.duration=How long the boost lasts in seconds
+entities.Ingeste/DeterminationOrb.attributes.name.intensity=Intensity
+entities.Ingeste/DeterminationOrb.attributes.description.intensity=Strength of the boost effect (1.0 = normal)
+entities.Ingeste/DeterminationOrb.attributes.name.respawnTime=Respawn Time
+entities.Ingeste/DeterminationOrb.attributes.description.respawnTime=Time in seconds before the orb respawns after use
+entities.Ingeste/DeterminationOrb.attributes.name.oneUse=One Use
+entities.Ingeste/DeterminationOrb.attributes.description.oneUse=If true, orb doesn't respawn after use
+
+# -- Void Gate Entity --
+entities.Ingeste/VoidGate.placements.name.normal=Void Gate
+entities.Ingeste/VoidGate.placements.name.large=Void Gate (Large)
+entities.Ingeste/VoidGate.attributes.name.width=Width
+entities.Ingeste/VoidGate.attributes.description.width=Width of the gate in pixels
+entities.Ingeste/VoidGate.attributes.name.height=Height
+entities.Ingeste/VoidGate.attributes.description.height=Height of the gate in pixels
+entities.Ingeste/VoidGate.attributes.name.openCondition=Open Condition
+entities.Ingeste/VoidGate.attributes.description.openCondition=Condition for the gate to open (flag, time, proximity, etc.)
+entities.Ingeste/VoidGate.attributes.name.openFlag=Open Flag
+entities.Ingeste/VoidGate.attributes.description.openFlag=Session flag that controls whether gate is open
+entities.Ingeste/VoidGate.attributes.name.gateStyle=Gate Style
+entities.Ingeste/VoidGate.attributes.description.gateStyle=Visual style of the gate (void, determination, ancient, modern)
+entities.Ingeste/VoidGate.attributes.name.opensTemporarily=Opens Temporarily
+entities.Ingeste/VoidGate.attributes.description.opensTemporarily=If true, gate closes again after player passes through
+entities.Ingeste/VoidGate.attributes.name.temporaryDuration=Temporary Duration
+entities.Ingeste/VoidGate.attributes.description.temporaryDuration=How long the gate stays open when opened temporarily
+
+# -- Boss Difficulty Selector Entity --
+entities.Ingeste/BossDifficultySelector.placements.name.normal=Boss Difficulty Selector
+entities.Ingeste/BossDifficultySelector.attributes.name.bossId=Boss ID
+entities.Ingeste/BossDifficultySelector.attributes.description.bossId=The unique identifier for the boss this selector controls
+entities.Ingeste/BossDifficultySelector.attributes.name.defaultDifficulty=Default Difficulty
+entities.Ingeste/BossDifficultySelector.attributes.description.defaultDifficulty=The default difficulty when player first encounters (easy, normal, hard, nightmare)
+entities.Ingeste/BossDifficultySelector.attributes.name.allowedDifficulties=Allowed Difficulties
+entities.Ingeste/BossDifficultySelector.attributes.description.allowedDifficulties=Comma-separated list of available difficulties for this boss
+entities.Ingeste/BossDifficultySelector.attributes.name.requiresUnlock=Requires Unlock
+entities.Ingeste/BossDifficultySelector.attributes.description.requiresUnlock=If true, higher difficulties must be unlocked by beating easier ones
+entities.Ingeste/BossDifficultySelector.attributes.name.selectorStyle=Selector Style
+entities.Ingeste/BossDifficultySelector.attributes.description.selectorStyle=Visual style of the selector (undertale, celeste, custom)

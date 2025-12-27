@@ -1,0 +1,2 @@
+function onBegin() player.StateMachine.State = 11 helpers.playPuppetAnim("weaken") playSound("event:/asriel_god_weaken") level.Shake(1.5) wait(2.0) helpers.sayExt("ASRIEL_GOD_DEFEAT") helpers.removeBoss(true) setFlag("boss_asriel_god_defeated", true) player.StateMachine.State = 0 end
+function onEnd(level, wasSkipped) if wasSkipped then helpers.removeBoss(true) setFlag("boss_asriel_god_defeated", true) player.StateMachine.State = 0 end end

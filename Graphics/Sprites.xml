@@ -1,7 +1,2063 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <Sprites>
-    <sampleEntity path="objects/MyNewCelesteMod/sampleEntity/" start="idle">
-        <Justify x="0.5" y="0.5" />
-        <Anim id="idle" path="idle" delay="0.1" frames="0" />
-    </sampleEntity>
+
+  <!-- ================================================================ -->
+  <!--                         CHARACTER SPRITES                       -->
+  <!-- ================================================================ -->
+
+  <!-- Player Character and Variants -->
+  <player path="characters/player/" start="idle">
+    <Origin x="16" y="32" />
+
+    <Loop id="idle_carry" path="idle_carry" delay="0.1" />
+    <Anim id="runSlow_carry" path="run_carry" delay="0.07" />
+    <Loop id="jumpSlow_carry" path="jump_carry" delay="0.1" frames="0,1" />
+    <Anim id="fallSlow_carry" path="jump_carry" delay="0.1" frames="2,3" />
+    <Anim id="pickUp" path="pickup" delay="0.06" />
+    <Anim id="throw" path="throw" delay="0.06" goto="idle" />
+
+    <Anim id="idle" path="idle" delay="0.1" goto="idle"/>
+    
+    <Anim id="idleA" path="idleA" delay="0.12" goto="idle"/>
+    <Anim id="idleB" path="idleB" delay="0.16" goto="idle"/>
+    <Anim id="idleC" path="idleC" delay="0.05" goto="idle"/>
+
+    <Anim id="lookUp" path="lookUp" delay="0.1" frames="2-7" />
+    <Loop id="walk" path="walk" delay="0.06" />
+    <Loop id="push" path="push" delay="0.1" />
+    <Anim id="runSlow" path="runSlow" delay="0.07" goto="runFast" />
+    <Loop id="runFast" path="runFast" delay="0.05" />
+    <Anim id="runStumble" path="runStumble" delay="0.05" frames="10-11,0-11" goto="runFast"/>
+    <Loop id="runWind" path="run_wind" delay="0.095" frames="0-11"/>
+    <Loop id="dash" path="dash" delay="0.09" />
+    <Anim id="dreamDashIn" path="dreamDash" frames="0-3" delay="0.04" goto="dreamDashLoop"/>
+    <Loop id="dreamDashLoop" path="dreamDash" frames="4-16" delay="0.03" />
+    <Anim id="dreamDashOut" path="dreamDash" frames="17-20" delay="0.04" />
+    <Loop id="slide" path="slide" delay="0.03" />
+    <Loop id="jumpSlow" path="jumpSlow" delay="0.1" frames="0,1" />
+    <Loop id="jumpFast" path="jumpFast" delay="0.1" frames="0,1" />
+    <Anim id="fallSlow" path="jumpSlow" delay="0.1" frames="2,3" />
+    <Anim id="fallFast" path="jumpFast" delay="0.1" frames="2,3" />
+    <Loop id="tired" path="tired" delay="0.18" />
+    <Anim id="tiredStill" path="tired" frames="0" />
+    <Loop id="wallslide" path="climb" frames="0" />
+    <Anim id="climbLookBackStart" path="climb" delay="0.08" frames="6,7,8" goto="climbLookBack" />
+    <Loop id="climbLookBack" path="climb" frames="8" />
+    <Loop id="climbup" path="climb" delay="0.04" frames="0-5" />
+    <Anim id="climbPush" path="climb" delay="0.04" frames="0,9-11" />
+    <Anim id="climbPull" path="climb" delay="0.04" frames="0,12-14" />
+    <Loop id="duck" path="duck" delay="0" frames="0" />
+    <Anim id="fallPose" path="fallPose" delay="0.1" frames="0-10" goto="idle"/>
+    <Loop id="edge" path="edge" delay="0.25" frames="0-13" />
+    <Loop id="edgeBack" path="edge_back" delay="0.25"/>
+    <Anim id="faint" path="faint" delay="0.1" frames="0-10" goto="fainted" />
+    <Loop id="fainted" path="faint" delay="0.1" frames="10" />
+    <Anim id="flip" path="flip" delay="0.04" frames="0-7" goto="runFast"/>
+    <Loop id="skid" path="flip" delay="0.04" frames="8"/>
+    <Loop id="dangling" path="dangling" delay="0.11" frames="0-9" />
+    <Anim id="deadside" path="death_h" delay="0.02" frames="0-12" />
+    <Anim id="deadup"   path="death_h" delay="0.02" frames="0-12" />
+    <Anim id="deaddown" path="death_h" delay="0.02" frames="0-12" />
+    
+    <Loop id="swimIdle" path="swim" frames="0-5" delay="0.08" />
+    <Loop id="swimUp" path="swim" frames="6-11" delay="0.08" />
+    <Loop id="swimDown" path="swim" frames="12-17" delay="0.08" />
+      
+    <Anim id="startStarFly" path="startStarFly" delay="0.08" goto="starFly"/>
+    <Loop id="starFly" path="starFly" delay="0.08"/>
+    <Loop id="bubble" path="bubble" delay="0.08"/>
+
+    <Anim id="fall" path="fall" delay="0.06" frames="0-7" />
+    <Loop id="bigFall" path="bigFall" frames="0-4" delay="0.06"/>
+    <Anim id="bigFallRecover" path="bigFall" frames="5*5,6*4,7*3,8,8,9,9,10,10,10" delay="0.08" goto="swimIdle"/>
+
+    <Anim id="sleep" path="sleep" delay="0.1" frames="0-10,10*5,11-23" />
+    <Anim id="bagdown" path="sleep" delay="0.1" frames="0-10" />
+    <Anim id="asleep" path="wakeUp/" frames="0" />
+    <Anim id="wakeUp" path="wakeUp/" delay=".1" frames="0-4,5*10,6-14" />
+    <Anim id="halfWakeUp" path="halfWakeUp/" delay="-.1"/>
+    
+    <Loop id="spin" path="spin" delay="0.1" />
+    <Loop id="shaking" path="shaking" delay="0.1" />
+    <Loop id="hug" path="hug" delay="0.08"/>
+
+    <Anim id="starMorph" path="starMorph" delay="0.06" frames="0-9" goto="starMorphIdle"/>
+    <Loop id="starMorphIdle" path="starMorph" frames="10" delay="0.06"/>
+	  
+  	<Loop id="carryTheoWalk" path="walk_carry_theo" frames="0-11" delay="0.06"/>
+  	<Anim id="carryTheoCollapse" path="walk_carry_theo" frames="12-18" delay="0.06"/>
+
+  	<Loop id="carryMaddyWalk" path="walk_carry_maddy" frames="0-11" delay="0.06"/>
+  	<Anim id="carryMaddyCollapse" path="walk_carry_maddy" frames="12-18" delay="0.06"/>
+  	  
+  	<Anim id="tentacle_grab" path="tentacle/grab" delay="0.06" frames="0-14" goto="tentacle_grabbed"/>
+  	<Loop id="tentacle_grabbed" path="tentacle/grab" delay="0.1" frames="15-23"/>
+  	<Loop id="tentacle_pull" path="tentacle/grab" frames="24" delay="0.1"/>
+    <Loop id="tentacle_dangling" path="tentacle/grab" frames="25" delay="0.1"/>
+	  
+    <Anim id="sitDown" path="sitDown" delay="0.1" />
+
+	<Loop id="launch" path="launch" delay="0.06" frames="0-7"/>
+	<Anim id="launchRecover" path="launchRecover" delay="0.06"/>
+
+    <Metadata>
+      <Frames path="idle" hair="0,-2|0,-2|0,-2|0,-2|0,-1|0,-1|0,-1|0,-1|0,-1"/>
+      <Frames path="idleA" hair="0,-2|-1,-2:1|-1,-2:2|-1,-2:2|-1,-2:2|-1,-1:2|-1,-1:2|-1,-1:2|-1,-1:1|-1,-1:1|-1,-1|0,-1|0,-1"/>
+      <Frames path="idleB" hair="0,-2|-1,-2|-1,-2|-1,-2|-1,-2|-1,-2|-1,-2|-1,-2|-1,-2:1|-1,-2:2|-1,-2:2|-1,-2:2|-1,-2:2|-1,-2:1|-1,-2|-1,-2|-1,-2|0,-2|0,-2|0,-1|0,-1|0,-1|0,-1|0,-1"/>
+      <Frames path="idleC" hair="0,-2|-1,-2|-2,-2|-2,-2|-2,-2|-2,-2|1,-1|2,0|0,0|-1,-1|0,-1|0,-1"/>
+      
+      <Frames path="lookUp" hair="0,-2|0,-2|0,-2|0,-2|-1,-2:1|-1,-2:1|-1,-2:1|-1,-2:1|-1,-3:1"/>
+      <Frames path="edge" hair="-1,-2|-1,-2|-1,-2|-1,-1|-1,-1|-1,-1|-1,-2|0,-2|1,-2|0,-2|0,-1|-1,-1|-1,-1|-1,-2"/>
+      <Frames path="edge_back" hair="1,-2:1|1,-2:2|0,-2:2|0,-1:2|-1,-2:2|0,-2:2|1,-2:2|1,-2:2|1,-2:2|1,-2:2|2,-1|2,-1|2,-1|2,-2"/>
+      <Frames path="walk" hair="0,-2|0,-1|0,-1|0,-1|0,-3|0,-2|0,-1|0,-1|0,-1|0,-1|0,-3|0,-2"/>
+      <Frames path="push" hair="1,-2|1,-1|1,-1|1,-1|1,-2|1,-2|1,-2|1,-2|1,-1|1,-1|1,-1|1,-1|1,-2|1,-2|1,-2|1,-2"/>
+      <Frames path="runSlow" hair="1,-2|1,-1|1,-1|1,-1|1,-3|1,-2|1,-1|1,-1|1,-1|1,-1|1,-3|1,-2"/>
+      <Frames path="runFast" hair="1,-2|1,-1|1,-1|1,-1|1,-3|1,-2|1,-1|1,-1|1,-1|1,-1|1,-3|1,-2"/>
+      <Frames path="run_wind" hair="4,-1|4,0|5,0|5,0|4,-2|4,-1|4,0|4,0|4,0|4,0|4,-2|4,-1"/>
+      <Frames path="runStumble" hair="1, 1|1,2|1,2|1,0|1,-2|1,-2|1,-1|1,-1|1,-1|1,-1|1,-3|1,-2"/>
+      <Frames path="dash" hair="2,0|2,0|2,0|2,1"/>
+      <Frames path="dreamDash" hair="2,0|1,0|0,0|0,0|1,1|2,1|2,1|2,0|1,0|1,0|1,0|1,0|1,0|1,0|1,0|1,0|1,0|0,0|1,0|1,0|2,1"/>
+      <Frames path="slide" hair="0,3|0,3|0,3"/>
+      <Frames path="jumpSlow" hair="1,-3|1,-3|1,-2|0,-2"/>
+      <Frames path="jumpFast" hair="1,-3|1,-3|1,-2|0,-2"/>
+      <Frames path="tired" hair="0,1|0,2|0,1|0,0"/>
+      <Frames path="climb" hair="0,-2|0,-2|0,-2|0,-2|-1,-2|-1,-2|0,-1|1,-2:1|2,-2:2"/>
+      <Frames path="duck" hair="0,3"/>
+      <Frames path="fallPose" hair="x|x|x|x|x|x|x|x|x"/>
+      <Frames path="hug" hair="0,2"/>
+      <Frames path="sleep" hair=""/>
+      <Frames path="flip" hair="-1,-1:2|-1,-1:1|0,-1:1|1,-1:0|1,-1:0|1,0:0|2,0:0|2,0:0|2,0:0"/>
+      <Frames path="faint" hair="0,1|0,1|0,1|0,1|1,1|2,1|2,2|5,5|6,8|6,7"/>
+      <Frames path="fainted" hair="6,7"/>
+      <Frames path="dangling" hair="0,-2|0,-2|0,-2|0,-2|-1,-2|-1,-2|-1,-2|-1,-2|-1,-2|-1,-2"/>
+      <Frames path="shaking" hair="0,-1"/>
+
+      <Frames path="idle_carry" hair="0,-2|0,-2|0,-2|0,-2|0,-1|0,-1|0,-1|0,-1|0,-1" carry="-1,-1,-1,0,0,0,0,0,-1"/>
+      <Frames path="jump_carry" hair="1,-3|1,-3|1,-2|0,-2" carry="-3,-3,-1,-1"/>
+      <Frames path="run_carry" hair="1,-2|1,-1|1,-1|1,-1|1,-3|1,-2|1,-1|1,-1|1,-1|1,-1|1,-3|1,-2" carry="-1,0,0,0,-3,-2,-1,0,0,0,-3,-1"/>
+      <Frames path="pickup" hair="2,0|1,-1|0,-2|0,-2|0,-2"/>
+      <Frames path="throw" hair="0,-3|2,-2|2,-2|1,-2"/>
+
+      <Frames path="swim" hair="0,-2|0,-2|0,-2|0,-2|0,-2|0,-2|0,-3|0,-3|0,-2|0,-2|0,-2|0,-2|1,-1|1,-1|1,0|1,0|1,0|1,0"/>
+      <Frames path="fall" hair="1,-2|1,-2|1,-2|1,-2|1,-2|1,-2|1,-2|1,-2"/>
+      <Frames path="bigFall" hair="1,-2|1,-2|1,-2|1,-2|1,-2|1,-2|1,-2|1,-2|1,-2|1,-2|1,-2"/>
+      
+      <Frames path="startStarFly" hair="0,-2|0,-2|0,-2|0,-2"/>
+      <Frames path="starFly" hair="0,3"/>
+      <Frames path="starMorph" hair="0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0|0,0"/>
+
+    </Metadata>
+  </player>
+
+  <player_no_backpack copy="player" path="characters/player_no_backpack/">
+    <Anim id="idle" path="idle" delay="0.1" goto="idle"/>
+    <Anim id="idleA" path="idleA" delay="0.12" goto="idle"/>
+    <Anim id="idleB" path="idleB" delay="0.16" goto="idle"/>
+    <Anim id="idleC" path="idleC" delay="0.11" goto="idle"/>
+    
+    <Anim id="roll" path="roll" frames="0-12" delay="0.05"/>
+    <Anim id="rollGetUp" path="roll" frames="12-16" delay=".1" goto="downed"/>
+    <Loop id="downed" path="sitDown" delay="0.8" frames="17"/>
+
+    <Metadata length="4" old="false">
+      <Frames path="idleA" hair="0,-2|0,-2|0,-2|0,-3|0,-3|0,-3|0,-3|0,-3|0,-3|0,-3|0,-3|0,-2"/>
+      <Frames path="idleB" hair="0,-2|0,-2|0,-2|0,-2|0,-2|0,-2|0,-3|0,-3|0,-3|0,-3|0,-3|0,-3|0,-3|0,-3|0,-3"/>
+      <Frames path="idleC" hair="0,-2|0,-1|0,-3|0,-2|0,-1|0,-3| 0,-1|0,-3|0,-1|0,-2|0,-3|0,-1|0,-2|0,-2|0,-2"/>
+    </Metadata>
+  </player_no_backpack>
+  
+  <player_level_up path="characters/player/levelUp/" start="levelUp">
+    <Justify x=".5" y="1" />
+    <Anim id="levelUp" path="levelUp" delay=".06"/>
+  </player_level_up>
+  
+  <player_sweat path="characters/player/sweat/" start="idle">
+    <Justify x=".5" y="1" />
+    
+    <Loop id="idle" path="idle" />
+    <Anim id="climb" path="climb" frames="0,1" delay=".1" goto="climbLoop" />
+    <Loop id="climbLoop" path="climb" frames="2-7" delay=".1" />
+    <Loop id="still" path="still" delay=".1" />
+    <Anim id="jump" path="jump" delay=".1" goto="idle" />
+    <Loop id="danger" path="danger" delay=".05" />
+  </player_sweat>
+
+  <player_badeline copy="player" path="characters/player_badeline/">
+    <Anim id="roll" path="roll" frames="0-12" delay="0.05"/>
+    <Anim id="rollGetUp" path="roll" frames="12-15" delay=".1" goto="downed"/>
+    <Loop id="downed" path="sitDown" delay="0.8" frames="15"/>
+  </player_badeline>
+  
+  <player_playback copy="player" path="characters/player_playback/"/>
+
+  <!-- Playable Characters -->
+  <ralsei path="characters/ralsei/">
+    <Justify x=".5" y="1" />
+    
+    <Loop id="idle" path="idle" delay="0.1" />
+    <Loop id="idleA" path="idle" delay="0.1" />
+    <Loop id="idleB" path="idle" delay="0.1" />
+    <Loop id="idleC" path="idle" delay="0.1" />
+    <Anim id="lookUp" path="lookUp" delay="0.1" />
+    <Loop id="walk" path="walk" delay="0.06" />
+    <Loop id="push" path="push" delay="0.1" />
+    <Anim id="runSlow" path="runSlow" delay="0.07" goto="runFast" />
+    <Loop id="runFast" path="runFast" delay="0.05" />
+    <Anim id="runStumble" path="runStumble" delay="0.05" frames="10-11" goto="runFast"/>
+    <Loop id="dash" path="dash" delay="0.06" />
+    <Anim id="dreamDashIn" path="dreamDash" frames="0-3" delay="0.04" goto="dreamDashLoop"/>
+    <Loop id="dreamDashLoop" path="dreamDash" frames="4-16" delay="0.03" />
+    <Anim id="dreamDashOut" path="dreamDash" frames="17-20" delay="0.04" />
+    <Loop id="slide" path="slide" delay="0.03" />
+    <Loop id="jumpSlow" path="jumpSlow" delay="0.1" frames="0,1" />
+    <Loop id="jumpFast" path="jumpFast" delay="0.1" frames="0,1" />
+    <Anim id="fallSlow" path="jumpSlow" delay="0.1" frames="2,3" />
+    <Anim id="fallFast" path="jumpFast" delay="0.1" frames="2,3" />
+    <Loop id="tired" path="tired" delay="0.18" />
+    <Loop id="wallslide" path="climb" frames="0" />
+    <Anim id="climbLookBackStart" path="climb" delay="0.08" frames="6,7,8" goto="climbLookBack" />
+    <Loop id="climbLookBack" path="climb" frames="8" />
+    <Loop id="climbup" path="climb" delay="0.04" frames="0-5" />
+    <Loop id="duck" path="duck" delay="0" frames="0" />
+    <Loop id="edge" path="edge" delay="0.25" frames="0-13" />
+    <Anim id="sleep" path="sleep" delay="0.1" frames="0-10,10*5,11-23" />
+    <Anim id="faint" path="faint" delay="0.1" frames="0-10" goto="fainted" />
+    <Loop id="fainted" path="faint" delay="0.1" frames="10" />
+    <Anim id="flip" path="flip" delay="0.04" frames="0-7" goto="runFast"/>
+    <Loop id="skid" path="flip" delay="0.04" frames="8"/>
+    <Loop id="dangling" path="dangling" delay="0.11" frames="0-9" />
+    <Anim id="spawn" path="spawn" delay="0.08" frames="0*3,0-9" goto="fallSlow"/>
+    <Loop id="laugh" path="laugh" delay="0.04" />
+    <Loop id="angry" path="angry" delay="0.04" />
+    <Anim id="ralseiboost" path="ralseiboost" delay="0.05"/>
+
+    <Loop id="pretendDead" path="sleep" delay="0" frames="23" />
+    <Loop id="spin" path="spin" delay="0.1" />
+    <Loop id="hug" path="hug" delay="0.08"/>
+    
+    <!-- Additional Ralsei animations using ralsei00 sprite -->
+    <Loop id="normal" path="ralsei" delay="0.1" frames="0" />
+    <Loop id="distracted" path="ralsei" delay="0.15" frames="0" />
+    <Loop id="upset" path="ralsei" delay="0.1" frames="0" />
+    <Loop id="sad" path="ralsei" delay="0.12" frames="0" />
+    <Loop id="sadder" path="ralsei" delay="0.14" frames="0" />
+    <Loop id="surprised" path="ralsei" delay="0.08" frames="0" />
+    <Loop id="content" path="ralsei" delay="0.2" frames="0" />
+    <Loop id="campfire_sit" path="ralsei" delay="0.18" frames="0" />
+    <Loop id="starjump_hopeful" path="ralsei" delay="0.15" frames="0" />
+  </ralsei>
+
+  <chara path="characters/chara/">
+    <Justify x=".5" y="1" />
+    
+    <Loop id="idle" path="idle" delay="0.1" />
+    <Loop id="idleA" path="idle" delay="0.1" />
+    <Loop id="idleB" path="idle" delay="0.1" />
+    <Loop id="idleC" path="idle" delay="0.1" />
+    <Anim id="lookUp" path="lookUp" delay="0.1" />
+    <Loop id="walk" path="walk" delay="0.06" />
+    <Loop id="push" path="push" delay="0.1" />
+    <Anim id="runSlow" path="runSlow" delay="0.07" goto="runFast" />
+    <Loop id="runFast" path="runFast" delay="0.05" />
+    <Anim id="runStumble" path="runStumble" delay="0.05" frames="10-11,0-11" goto="runFast"/>
+    <Loop id="dash" path="dash" delay="0.06" />
+    <Anim id="dreamDashIn" path="dreamDash" frames="0-3" delay="0.04" goto="dreamDashLoop"/>
+    <Loop id="dreamDashLoop" path="dreamDash" frames="4-16" delay="0.03" />
+    <Anim id="dreamDashOut" path="dreamDash" frames="17-20" delay="0.04" />
+    <Loop id="slide" path="slide" delay="0.03" />
+    <Loop id="jumpSlow" path="jumpSlow" delay="0.1" frames="0,1" />
+    <Loop id="jumpFast" path="jumpFast" delay="0.1" frames="0,1" />
+    <Anim id="fallSlow" path="jumpSlow" delay="0.1" frames="2,3" />
+    <Anim id="fallFast" path="jumpFast" delay="0.1" frames="2,3" />
+    <Loop id="tired" path="tired" delay="0.18" />
+    <Loop id="wallslide" path="climb" frames="0" />
+    <Anim id="climbLookBackStart" path="climb" delay="0.08" frames="6,7,8" goto="climbLookBack" />
+    <Loop id="climbLookBack" path="climb" frames="8" />
+    <Loop id="climbup" path="climb" delay="0.04" frames="0-5" />
+    <Loop id="duck" path="duck" delay="0" frames="0" />
+    <Loop id="edge" path="edge" delay="0.25" frames="0-13" />
+    <Anim id="sleep" path="sleep" delay="0.1" frames="0-10,10*5,11-23" />
+    <Anim id="faint" path="faint" delay="0.1" frames="0-10" goto="fainted" />
+    <Loop id="fainted" path="faint" delay="0.1" frames="10" />
+    <Anim id="flip" path="flip" delay="0.04" frames="0-7" goto="runFast"/>
+    <Loop id="skid" path="flip" delay="0.04" frames="8"/>
+    <Loop id="dangling" path="dangling" delay="0.11" frames="0-9" />
+    <Anim id="spawn" path="spawn" delay="0.08" frames="0*3,0-9" goto="fallSlow"/>
+    <Loop id="laugh" path="laugh" delay="0.04" />
+    <Loop id="angry" path="angry" delay="0.04" />
+    <Anim id="charaboost" path="charaboost" delay="0.05"/>
+
+    <Loop id="pretendDead" path="sleep" delay="0" frames="23" />
+    <Loop id="spin" path="spin" delay="0.1" />
+    <Loop id="hug" path="hug" delay="0.08"/>
+  </chara>
+
+  <kirby_player path="characters/kirby/" start="idle">
+    <Origin x="16" y="32" />
+    
+    <!-- Metadata for hair/hat positioning -->
+    <Metadata>
+      <Frames path="idle" hair="0,-4:0|0,-4:1|0,-4:2|0,-4:3" hat="0,-12|0,-12|0,-12|0,-12" />
+      <Frames path="walk" hair="0,-4:0|0,-4:1|0,-4:2|0,-4:3|0,-4:4|0,-4:5" hat="0,-12|0,-12|0,-12|0,-12|0,-12|0,-12" />
+      <Frames path="run" hair="0,-4:0|0,-4:1|0,-4:2|0,-4:3" hat="0,-12|0,-12|0,-12|0,-12" />
+      <Frames path="jump" hair="0,-4:0|0,-4:1" hat="0,-12|0,-12" />
+      <Frames path="fall" hair="0,-4:0|0,-4:1" hat="0,-12|0,-12" />
+      <Frames path="dash" hair="0,-4:0|0,-4:1|0,-4:2" hat="0,-12|0,-12|0,-12" />
+      <Frames path="inhale" hair="0,-4:0|0,-4:1|0,-4:2|0,-4:3" hat="0,-12|0,-12|0,-12|0,-12" />
+      <Frames path="exhale" hair="0,-4:0|0,-4:1" hat="0,-12|0,-12" />
+      <Frames path="attack" hair="0,-4:0|0,-4:1|0,-4:2" hat="0,-12|0,-12|0,-12" />
+      <Frames path="parry" hair="0,-4:0|0,-4:1|0,-4:2" hat="0,-12|0,-12|0,-12" />
+      <Frames path="hurt" hair="0,-4:0|0,-4:1" hat="0,-12|0,-12" />
+      <Frames path="duck" hair="0,-2:0|0,-2:1" hat="0,-10|0,-10" />
+      <Frames path="slide" hair="0,-2:0|0,-2:1" hat="0,-10|0,-10" />
+      <Frames path="float" hair="0,-4:0|0,-4:1|0,-4:2|0,-4:3" hat="0,-12|0,-12|0,-12|0,-12" />
+      <Frames path="land" hair="0,-4:0|0,-4:1" hat="0,-12|0,-12" />
+      <Frames path="crouch" hair="0,-2:0|0,-2:1" hat="0,-10|0,-10" />
+    </Metadata>
+    
+    <!-- Basic Movement Animations -->
+    <Loop id="idle" path="idle" delay="0.2" />
+    <Anim id="walk" path="walk" delay="0.08" />
+    <Anim id="run" path="run" delay="0.06" />
+    <Loop id="runSlow" path="run" delay="0.08" />
+    <Loop id="runFast" path="run" delay="0.05" />
+    <Anim id="jump" path="jump" delay="0.1" />
+    <Anim id="jumpFast" path="jump" delay="0.08" />
+    <Anim id="jumpSlow" path="jump" delay="0.12" />
+    <Loop id="fall" path="fall" delay="0.1" />
+    <Loop id="duck" path="duck" delay="0.15" />
+    <Anim id="dash" path="dash" delay="0.04" />
+    
+    <!-- Kirby-Specific Abilities -->
+    <Loop id="inhale" path="inhale" delay="0.1" />
+    <Anim id="exhale" path="exhale" delay="0.08" goto="idle" />
+    <Anim id="attack" path="attack" delay="0.06" goto="idle" />
+    <Anim id="parry" path="parry" delay="0.05" goto="idle" />
+    <Anim id="hurt" path="hurt" delay="0.08" goto="idle" />
+    
+    <!-- Movement Modifiers -->
+    <Anim id="slide" path="slide" delay="0.04" />
+    <Loop id="float" path="float" delay="0.2" />
+    <Loop id="hover" path="hover" delay="0.2" />
+    <Anim id="land" path="land" delay="0.06" goto="idle" />
+    <Loop id="crouch" path="crouch" delay="0.1" />
+    
+    <!-- Climbing Animations -->
+    <Loop id="climbUp" path="climb" delay="0.08" />
+    <Loop id="climbDown" path="climb" delay="0.08" />
+    <Loop id="wallslide" path="wallslide" delay="0.1" />
+    
+    <!-- Dream Dash -->
+    <Anim id="dreamDashIn" path="dreamdash_in" delay="0.06" />
+    <Loop id="dreamDashLoop" path="dreamdash_loop" delay="0.08" />
+    <Anim id="dreamDashOut" path="dreamdash_out" delay="0.06" goto="idle" />
+    
+    <!-- Combat Animations -->
+    <Anim id="punchA" path="combat/punchA" delay="0.05" goto="idle" />
+    <Anim id="punchB" path="combat/punchB" delay="0.04" goto="idle" />
+    <Anim id="backflip" path="combat/backflip" delay="0.06" goto="idle" />
+    <Anim id="spin" path="combat/spin" delay="0.05" />
+    <Anim id="groundpound" path="combat/groundpound" delay="0.04" goto="idle" />
+    <Anim id="grab_enemy" path="combat/grab_enemy" delay="0.06" goto="idle" />
+    
+    <!-- Death Animations -->
+    <Anim id="pre_death" path="combat/pre_death" delay="0.08" goto="mid_death" />
+    <Anim id="mid_death" path="combat/mid_death" delay="0.08" goto="post_death" />
+    <Anim id="post_death" path="combat/post_death" delay="0.08" />
+    <Anim id="death" path="combat/death" delay="0.08" />
+  </kirby_player>
+
+  <kirby_player_ext path="characters/kirby/" start="kirby_idle">
+    <Origin x="16" y="32" />
+    
+    <!-- Basic Animations -->
+    <Loop id="kirby_idle" path="idle" delay="0.15" />
+
+  <!-- ================================================================ -->
+  <!--                         WARP STAR OBJECTS                          -->
+  <!-- ================================================================ -->
+
+  <warpstars path="objects/warpstars/" start="loop">
+    <Justify x="0.5" y="0.5"/>
+    <Anim id="loop" path="idle" delay="0.06" frames="0-20" goto="flash"/>
+    <Anim id="flash" path="flash" delay="0.06"  frames="0-20" goto="loop"/>
+  </warpstars>
+  
+    <Anim id="kirby_walk" path="walk" delay="0.08" />
+    <Anim id="kirby_run" path="run" delay="0.06" />
+    <Anim id="kirby_jump" path="jump" delay="0.1" />
+    <Anim id="kirby_fall" path="fall" delay="0.1" />
+    
+    <!-- Kirby Abilities -->
+    <Anim id="kirby_inhale" path="inhale" delay="0.05" />
+    <Loop id="kirby_hover" path="hover" delay="0.1" />
+    <Anim id="kirby_spit" path="spit" delay="0.05" />
+    <Anim id="kirby_damage" path="damage" delay="0.08" goto="kirby_idle" />
+    
+    <!-- Transformation Animations -->
+    <Anim id="kirby_transform_in" path="transform_in" delay="0.06" goto="kirby_idle" />
+    <Anim id="kirby_transform_out" path="transform_out" delay="0.06" />
+    
+    <!-- Power States - Fire -->
+    <Loop id="kirby_fire_idle" path="fire/idle" delay="0.15" />
+    <Anim id="kirby_fire_walk" path="fire/walk" delay="0.08" />
+    <Anim id="kirby_fire_attack" path="fire/attack" delay="0.04" goto="kirby_fire_idle" />
+    
+    <!-- Power States - Ice -->
+    <Loop id="kirby_ice_idle" path="ice/idle" delay="0.15" />
+    <Anim id="kirby_ice_walk" path="ice/walk" delay="0.08" />
+    <Anim id="kirby_ice_attack" path="ice/attack" delay="0.06" goto="kirby_ice_idle" />
+    
+    <!-- Power States - Spark -->
+    <Loop id="kirby_spark_idle" path="spark/idle" delay="0.12" />
+    <Anim id="kirby_spark_walk" path="spark/walk" delay="0.08" />
+    <Anim id="kirby_spark_attack" path="spark/attack" delay="0.03" goto="kirby_spark_idle" />
+    
+    <!-- Power States - Stone -->
+    <Loop id="kirby_stone_idle" path="stone/idle" delay="0.2" />
+    <Anim id="kirby_stone_walk" path="stone/walk" delay="0.1" />
+    <Anim id="kirby_stone_transform" path="stone/transform" delay="0.05" />
+    <Loop id="kirby_stone_form" path="stone/form" delay="0.3" />
+    
+    <!-- Power States - Sword -->
+    <Loop id="kirby_sword_idle" path="sword/idle" delay="0.15" />
+    <Anim id="kirby_sword_walk" path="sword/walk" delay="0.08" />
+    <Anim id="kirby_sword_attack1" path="sword/attack1" delay="0.04" goto="kirby_sword_idle" />
+    <Anim id="kirby_sword_attack2" path="sword/attack2" delay="0.05" goto="kirby_sword_idle" />
+    <Anim id="kirby_sword_spin" path="sword/spin" delay="0.03" goto="kirby_sword_idle" />
+
+    <!-- Power States - Archer -->
+    <Loop id="kirby_archer_idle" path="archer/idle" delay="0.15" />
+    <Anim id="kirby_archer_aim" path="archer/aim" delay="0.08" />
+    <Anim id="kirby_archer_shoot" path="archer/shoot" delay="0.04" goto="kirby_archer_idle" />
+
+    <!-- Power States - Leaf -->
+    <Loop id="kirby_leaf_idle" path="leaf/idle" delay="0.15" />
+    <Anim id="kirby_leaf_guard" path="leaf/guard" delay="0.06" />
+    <Anim id="kirby_leaf_burst" path="leaf/burst" delay="0.04" goto="kirby_leaf_idle" />
+
+    <!-- Power States - Water -->
+    <Loop id="kirby_water_idle" path="water/idle" delay="0.15" />
+    <Anim id="kirby_water_surf" path="water/surf" delay="0.06" />
+    <Anim id="kirby_water_splash" path="water/splash" delay="0.04" goto="kirby_water_idle" />
+
+    <!-- Power States - ESP -->
+    <Loop id="kirby_esp_idle" path="esp/idle" delay="0.15" />
+    <Anim id="kirby_esp_teleport" path="esp/teleport" delay="0.05" />
+    <Anim id="kirby_esp_burst" path="esp/burst" delay="0.03" goto="kirby_esp_idle" />
+
+    <!-- Power States - Hammer -->
+    <Loop id="kirby_hammer_idle" path="hammer/idle" delay="0.15" />
+    <Anim id="kirby_hammer_swing" path="hammer/swing" delay="0.05" />
+    <Anim id="kirby_hammer_slam" path="hammer/slam" delay="0.04" goto="kirby_hammer_idle" />
+
+    <!-- Power States - Ranger -->
+    <Loop id="kirby_ranger_idle" path="ranger/idle" delay="0.15" />
+    <Anim id="kirby_ranger_aim" path="ranger/aim" delay="0.07" />
+    <Anim id="kirby_ranger_fire" path="ranger/fire" delay="0.04" goto="kirby_ranger_idle" />
+
+    <!-- Power States - Mike -->
+    <Loop id="kirby_mike_idle" path="mike/idle" delay="0.15" />
+    <Anim id="kirby_mike_shout" path="mike/shout" delay="0.05" />
+    <Anim id="kirby_mike_finale" path="mike/finale" delay="0.04" goto="kirby_mike_idle" />
+
+    <!-- Power States - Crash -->
+    <Loop id="kirby_crash_idle" path="crash/idle" delay="0.15" />
+    <Anim id="kirby_crash_charge" path="crash/charge" delay="0.05" />
+    <Anim id="kirby_crash_burst" path="crash/burst" delay="0.04" goto="kirby_crash_idle" />
+
+    <!-- Power States - Bomb -->
+    <Loop id="kirby_bomb_idle" path="bomb/idle" delay="0.15" />
+    <Anim id="kirby_bomb_throw" path="bomb/throw" delay="0.05" />
+    <Anim id="kirby_bomb_juggle" path="bomb/juggle" delay="0.04" goto="kirby_bomb_idle" />
+
+    <!-- Power States - Cutter -->
+    <Loop id="kirby_cutter_idle" path="cutter/idle" delay="0.15" />
+    <Anim id="kirby_cutter_throw" path="cutter/throw" delay="0.05" />
+    <Anim id="kirby_cutter_return" path="cutter/return" delay="0.04" goto="kirby_cutter_idle" />
+
+    <!-- Power States - Painter -->
+    <Loop id="kirby_painter_idle" path="painter/idle" delay="0.15" />
+    <Anim id="kirby_painter_stroke" path="painter/stroke" delay="0.05" />
+    <Anim id="kirby_painter_palette" path="painter/palette" delay="0.04" goto="kirby_painter_idle" />
+
+    <!-- Power States - Cook -->
+    <Loop id="kirby_cook_idle" path="cook/idle" delay="0.15" />
+    <Anim id="kirby_cook_stir" path="cook/stir" delay="0.05" />
+    <Anim id="kirby_cook_serve" path="cook/serve" delay="0.04" goto="kirby_cook_idle" />
+
+    <!-- Power States - Bell -->
+    <Loop id="kirby_bell_idle" path="bell/idle" delay="0.15" />
+    <Anim id="kirby_bell_ring" path="bell/ring" delay="0.05" />
+    <Anim id="kirby_bell_resonate" path="bell/resonate" delay="0.04" goto="kirby_bell_idle" />
+
+    <!-- Power States - Light -->
+    <Loop id="kirby_light_idle" path="light/idle" delay="0.15" />
+    <Anim id="kirby_light_flash" path="light/flash" delay="0.05" />
+    <Anim id="kirby_light_phase" path="light/phase" delay="0.04" goto="kirby_light_idle" />
+
+    <!-- Power States - Drill -->
+    <Loop id="kirby_drill_idle" path="drill/idle" delay="0.15" />
+    <Anim id="kirby_drill_spin" path="drill/spin" delay="0.05" />
+    <Anim id="kirby_drill_dive" path="drill/dive" delay="0.04" goto="kirby_drill_idle" />
+
+    <!-- Power States - Beam -->
+    <Loop id="kirby_beam_idle" path="beam/idle" delay="0.15" />
+    <Anim id="kirby_beam_whip" path="beam/whip" delay="0.04" />
+    <Anim id="kirby_beam_combo" path="beam/combo" delay="0.04" goto="kirby_beam_idle" />
+
+    <!-- Power States - Wheel -->
+    <Loop id="kirby_wheel_idle" path="wheel/idle" delay="0.15" />
+    <Anim id="kirby_wheel_roll" path="wheel/roll" delay="0.03" />
+    <Anim id="kirby_wheel_jump" path="wheel/jump" delay="0.04" goto="kirby_wheel_idle" />
+
+    <!-- Power States - Phase -->
+    <Loop id="kirby_phase_idle" path="phase/idle" delay="0.15" />
+    <Anim id="kirby_phase_shift" path="phase/shift" delay="0.05" />
+    <Anim id="kirby_phase_remerge" path="phase/remerge" delay="0.04" goto="kirby_phase_idle" />
+
+    <!-- Power States - Triple Swap -->
+    <Loop id="kirby_tripleswap_idle" path="tripleswap/idle" delay="0.15" />
+    <Anim id="kirby_tripleswap_cycle" path="tripleswap/cycle" delay="0.05" />
+    <Anim id="kirby_tripleswap_finish" path="tripleswap/finish" delay="0.04" goto="kirby_tripleswap_idle" />
+
+    <!-- Power States - Time Crash -->
+    <Loop id="kirby_timecrash_idle" path="timecrash/idle" delay="0.15" />
+    <Anim id="kirby_timecrash_charge" path="timecrash/charge" delay="0.05" />
+    <Anim id="kirby_timecrash_release" path="timecrash/release" delay="0.04" goto="kirby_timecrash_idle" />
+
+    <!-- Power States - Umbrella -->
+    <Loop id="kirby_umbrella_idle" path="umbrella/idle" delay="0.15" />
+    <Anim id="kirby_umbrella_twirl" path="umbrella/twirl" delay="0.05" />
+    <Anim id="kirby_umbrella_glide" path="umbrella/glide" delay="0.04" goto="kirby_umbrella_idle" />
+
+    <!-- Power States - Mirror -->
+    <Loop id="kirby_mirror_idle" path="mirror/idle" delay="0.15" />
+    <Anim id="kirby_mirror_guard" path="mirror/guard" delay="0.05" />
+    <Anim id="kirby_mirror_reflect" path="mirror/reflect" delay="0.04" goto="kirby_mirror_idle" />
+
+    <!-- Power States - Recycler -->
+    <Loop id="kirby_recycler_idle" path="recycler/idle" delay="0.15" />
+    <Anim id="kirby_recycler_charge" path="recycler/charge" delay="0.05" />
+    <Anim id="kirby_recycler_launch" path="recycler/launch" delay="0.04" goto="kirby_recycler_idle" />
+
+    <!-- Power States - Mini -->
+    <Loop id="kirby_mini_idle" path="mini/idle" delay="0.15" />
+    <Anim id="kirby_mini_dash" path="mini/dash" delay="0.05" />
+    <Anim id="kirby_mini_celebrate" path="mini/celebrate" delay="0.04" goto="kirby_mini_idle" />
+
+    <!-- Super Ability - Inferno Light -->
+    <Loop id="kirby_inferno_super_idle" path="super/inferno/idle" delay="0.15" />
+    <Anim id="kirby_inferno_super_charge" path="super/inferno/charge" delay="0.05" />
+    <Anim id="kirby_inferno_super_blast" path="super/inferno/blast" delay="0.04" goto="kirby_inferno_super_idle" />
+
+    <!-- Super Ability - Grand Hammer -->
+    <Loop id="kirby_grandhammer_super_idle" path="super/grandhammer/idle" delay="0.15" />
+    <Anim id="kirby_grandhammer_super_windup" path="super/grandhammer/windup" delay="0.05" />
+    <Anim id="kirby_grandhammer_super_slam" path="super/grandhammer/slam" delay="0.04" goto="kirby_grandhammer_super_idle" />
+
+    <!-- Super Ability - Mechanize Ranger -->
+    <Loop id="kirby_mechanizeranger_super_idle" path="super/mechanizeranger/idle" delay="0.15" />
+    <Anim id="kirby_mechanizeranger_super_deploy" path="super/mechanizeranger/deploy" delay="0.05" />
+    <Anim id="kirby_mechanizeranger_super_volley" path="super/mechanizeranger/volley" delay="0.04" goto="kirby_mechanizeranger_super_idle" />
+
+    <!-- Super Ability - Frost Mind -->
+    <Loop id="kirby_frostmind_super_idle" path="super/frostmind/idle" delay="0.15" />
+    <Anim id="kirby_frostmind_super_channel" path="super/frostmind/channel" delay="0.05" />
+    <Anim id="kirby_frostmind_super_burst" path="super/frostmind/burst" delay="0.04" goto="kirby_frostmind_super_idle" />
+
+    <!-- Super Ability - Ultra Sword -->
+    <Loop id="kirby_ultrasword_super_idle" path="super/ultrasword/idle" delay="0.15" />
+    <Anim id="kirby_ultrasword_super_windup" path="super/ultrasword/windup" delay="0.05" />
+    <Anim id="kirby_ultrasword_super_cleave" path="super/ultrasword/cleave" delay="0.04" goto="kirby_ultrasword_super_idle" />
+
+    <!-- Super Ability - Knight -->
+    <Loop id="kirby_knight_super_idle" path="super/knight/idle" delay="0.15" />
+    <Anim id="kirby_knight_super_slash" path="super/knight/slash" delay="0.05" />
+    <Anim id="kirby_knight_super_finale" path="super/knight/finale" delay="0.04" goto="kirby_knight_super_idle" />
+    
+    <!-- Combat Animations -->
+    <Anim id="kirby_punchA" path="combat/punchA" delay="0.05" goto="kirby_idle" />
+    <Anim id="kirby_punchB" path="combat/punchB" delay="0.04" goto="kirby_idle" />
+    <Anim id="kirby_backflip" path="combat/backflip" delay="0.06" goto="kirby_idle" />
+    <Anim id="kirby_spin" path="combat/spin" delay="0.05" />
+    <Anim id="kirby_groundpound" path="combat/groundpound" delay="0.04" goto="kirby_idle" />
+    <Anim id="kirby_grab_enemy" path="combat/grab_enemy" delay="0.06" goto="kirby_idle" />
+    <Anim id="kirby_slide" path="combat/slide" delay="0.04" goto="kirby_idle" />
+    
+    <!-- Death Animations -->
+    <Anim id="kirby_pre_death" path="combat/pre_death" delay="0.08" goto="kirby_mid_death" />
+    <Anim id="kirby_mid_death" path="combat/mid_death" delay="0.08" goto="kirby_post_death" />
+    <Anim id="kirby_post_death" path="combat/post_death" delay="0.08" />
+    <Anim id="kirby_death" path="combat/death" delay="0.08" />
+  </kirby_player_ext>
+
+  <!-- NPCs -->
+  <madeline path="characters/madeline/" start="idle">
+    <Justify x=".5" y="1" />
+
+    <Loop id="idle" path="maddy" delay="0.1" frames="15-22" />
+
+    <Anim id="wakeup" path="maddy" delay="0.1" frames="0-5"/>
+    <Anim id="sleep" path="maddy" delay="0.1" frames="5-0"/>
+    
+    <Anim id="alert" path="alert" delay="0.08"/>
+  </madeline>
+
+    <gravestone path="characters/gravestones/" start="maddydead">
+    <Justify x=".5" y="1" />
+
+    <Loop id="maddydead" path="maddydead" delay="0.1" frames="0-1" />
+  </gravestone>
+
+  <Toriel path="characters/toriel/" start="idle">
+    <Justify x=".5" y="1" />
+
+    <Loop id="idle" path="idle" delay="0.7" />
+    <Loop id="torielwalk" path="torielwalk" delay="0.2" />
+  </Toriel>
+
+  <Magolor path="characters/Magolor/" start="idle">
+    <Justify x=".5" y="1" />
+
+    <Loop id="idle" path="idle" delay="0.7" />
+    <Loop id="run" path="run" delay="0.2" />
+    <Loop id="normal" path="magolor" delay="0.1" frames="0" />
+    <Loop id="happy" path="magolor" delay="0.15" frames="0-3" />
+    <Loop id="surprised" path="magolor" delay="0.1" frames="0" />
+    <Loop id="determined" path="magolor" delay="0.1" frames="0" />
+    <Loop id="campfire_sit" path="magolor" delay="0.2" frames="0" />
+    <Loop id="starjump_amazed" path="magolor" delay="0.12" frames="0-3" />
+  </Magolor>
+
+  <FakeSavePoint path="characters/savepoint/" start="spin">
+    <Justify x=".5" y="1" />
+
+    <Loop id="spin" path="save" delay="2.0" />
+  </FakeSavePoint>
+
+  <!-- Asriel NPC (Resurrected Kid / Pre-God Form) -->
+  <asriel path="characters/asriel/" start="idle">
+    <Justify x="0.5" y="1" />
+    
+    <!-- Base States -->
+    <Loop id="idle" path="idle" delay="0.1" frames="0-8"/>
+    <Loop id="idleA" path="idleA" delay="0.12" frames="0-6"/>
+    <Loop id="walk" path="walk" delay="0.08" frames="0-9"/>
+    <Loop id="back" path="back" delay="0.08" frames="0-21"/>
+    
+    <!-- Dialog/Cutscene Animations -->
+    <Anim id="quotes" path="quotes" delay="0.06" frames="0-27"/>
+    <Loop id="talking" path="quotes" delay="0.08" frames="0-5"/>
+    <Loop id="conflicted" path="quotes" delay="0.1" frames="6-12"/>
+    <Loop id="anguished" path="quotes" delay="0.08" frames="13-19"/>
+    <Loop id="fighting_internal" path="quotes" delay="0.06" frames="20-27"/>
+    
+    <!-- Emotional States for Cutscenes -->
+    <Loop id="sad" path="idle" delay="0.15" frames="0-3"/>
+    <Loop id="hurt" path="idleA" delay="0.1" frames="0-6"/>
+    <Anim id="transform_start" path="back" delay="0.05" frames="0-10"/>
+    <Anim id="transform_mid" path="back" delay="0.04" frames="11-17"/>
+    <Anim id="transform_end" path="back" delay="0.03" frames="18-21"/>
+    
+    <!-- Chapter 20 Specific States -->
+    <Loop id="disapointed" path="idle" delay="0.12" frames="0-4"/>
+    <Loop id="crying" path="quotes" delay="0.15" frames="20-27"/>
+    <Loop id="remembering" path="quotes" delay="0.1" frames="6-12"/>
+  </asriel>
+
+  <!-- Asriel Zero (Final Transformation Beyond God Form) -->
+  <asriel_zero path="characters/asrielgodboss/" start="idle">
+    <Justify x="0.5" y="0.5" />
+    
+    <!-- Base States -->
+    <Loop id="idle" path="boss" delay="0.05" frames="0-45"/>
+    <Loop id="transcendent" path="boss" delay="0.04" frames="0-45"/>
+    
+    <!-- Emotional States for CH20 Dialog -->
+    <Loop id="wtf" path="boss" delay="0.06" frames="0-15"/>
+    <Loop id="Feeling" path="boss" delay="0.07" frames="16-30"/>
+    <Loop id="jealous" path="boss" delay="0.05" frames="31-45"/>
+    <Loop id="frustrated" path="boss" delay="0.04" frames="0-20"/>
+    <Loop id="feelingalt" path="boss" delay="0.06" frames="20-35"/>
+    <Loop id="feelingaltA" path="boss" delay="0.06" frames="25-40"/>
+    <Loop id="feelingaltB" path="boss" delay="0.06" frames="30-45"/>
+    <Loop id="feelingaltC" path="boss" delay="0.06" frames="35-45"/>
+    
+    <!-- Final Attack States -->
+    <Anim id="feelingaltfinalbeamattack" path="beam" delay="0.03" frames="0-54" goto="beam"/>
+    <Loop id="feelingaltfinalbeamattackholdA" path="beam" delay="0.04" frames="40-54"/>
+    <Loop id="feelingaltfinalbeamattackholdB" path="beam" delay="0.03" frames="45-54"/>
+    
+    <!-- Breaking Down States -->
+    <Loop id="crying" path="boss" delay="0.15" frames="40-45"/>
+    <Anim id="breaking" path="disappear_" delay="0.05" frames="0-15" goto="crying"/>
+    
+    <!-- Transformation Effects -->
+    <Anim id="appear" path="fadein_" delay="0.04" frames="0-19" goto="idle"/>
+    <Anim id="disappear" path="fadeout_" delay="0.04" frames="0-19"/>
+  </asriel_zero>
+
+  <!-- Asriel Kid (Post-Redemption Child Form) -->
+  <asriel_kid path="characters/asriel/" start="idle">
+    <Justify x="0.5" y="1" />
+    
+    <Loop id="idle" path="idle" delay="0.12" frames="0-8"/>
+    <Loop id="crying" path="quotes" delay="0.15" frames="20-27"/>
+    <Loop id="relieved" path="idle" delay="0.1" frames="0-4"/>
+    <Loop id="hopeful" path="idleA" delay="0.1" frames="0-6"/>
+  </asriel_kid>
+
+  <!-- Asriel Angel of Death Boss (2-Phase Hyperform) -->
+  <asriel_angelofdeath path="characters/asrielangelofdeathboss/" start="idle">
+    <Justify x="0.5" y="0.5" />
+    
+    <!-- Phase 1: Angel of Death Form -->
+    <Loop id="idle" path="idle" delay="0.05" frames="0-30"/>
+    <Loop id="hover" path="hover" delay="0.04" frames="0-20"/>
+    <Loop id="charging" path="charge" delay="0.03" frames="0-25"/>
+    <Loop id="attacking" path="attack" delay="0.04" frames="0-15"/>
+    
+    <!-- Cosmowing Background Effects (Rainbow) -->
+    <Loop id="bg_cosmowing" path="bg/cosmowing" delay="0.02" frames="0-60"/>
+    <Loop id="bg_cosmowing_intense" path="bg/cosmowing_intense" delay="0.015" frames="0-60"/>
+    
+    <!-- Body Parts with Cosmowing Effects -->
+    <Loop id="stems_idle" path="stems/idle" delay="0.05" frames="0-20"/>
+    <Loop id="stems_cosmowing" path="stems/cosmowing" delay="0.02" frames="0-40"/>
+    
+    <Loop id="shoulder_idle" path="shoulder/idle" delay="0.05" frames="0-15"/>
+    <Loop id="shoulder_cosmowing" path="shoulder/cosmowing" delay="0.02" frames="0-35"/>
+    
+    <Loop id="orbwings_idle" path="orbwings/idle" delay="0.04" frames="0-25"/>
+    <Loop id="orbwings_cosmowing" path="orbwings/cosmowing" delay="0.02" frames="0-50"/>
+    <Loop id="orbwings_spread" path="orbwings/spread" delay="0.03" frames="0-20"/>
+    
+    <!-- Phase 1 Attacks -->
+    <Anim id="attack_ultimabullet_start" path="attacks/ultimabullet/charge" delay="0.03" frames="0-15" goto="attack_ultimabullet_hold"/>
+    <Loop id="attack_ultimabullet_hold" path="attacks/ultimabullet/hold" delay="0.04" frames="0-10"/>
+    <Anim id="attack_ultimabullet_fire" path="attacks/ultimabullet/fire" delay="0.02" frames="0-20" goto="idle"/>
+    
+    <Anim id="attack_crossshocker_start" path="attacks/crossshocker/start" delay="0.03" frames="0-12" goto="attack_crossshocker_loop"/>
+    <Loop id="attack_crossshocker_loop" path="attacks/crossshocker/loop" delay="0.04" frames="0-8"/>
+    <Anim id="attack_crossshocker_end" path="attacks/crossshocker/end" delay="0.03" frames="0-10" goto="idle"/>
+    
+    <Anim id="attack_starstormultra_start" path="attacks/starstormultra/start" delay="0.025" frames="0-18" goto="attack_starstormultra_rain"/>
+    <Loop id="attack_starstormultra_rain" path="attacks/starstormultra/rain" delay="0.03" frames="0-15"/>
+    <Anim id="attack_starstormultra_end" path="attacks/starstormultra/end" delay="0.04" frames="0-12" goto="idle"/>
+    
+    <!-- Phase 2 Transition -->
+    <Anim id="phase2_transform_start" path="transform/phase2_start" delay="0.03" frames="0-30" goto="phase2_transform_mid"/>
+    <Loop id="phase2_transform_mid" path="transform/phase2_mid" delay="0.02" frames="0-40"/>
+    <Anim id="phase2_transform_end" path="transform/phase2_end" delay="0.03" frames="0-25" goto="phase2_idle"/>
+    
+    <!-- Phase 2: Transcendent Angel -->
+    <Loop id="phase2_idle" path="phase2/idle" delay="0.04" frames="0-35"/>
+    <Loop id="phase2_hover" path="phase2/hover" delay="0.03" frames="0-25"/>
+    <Loop id="phase2_ultimate" path="phase2/ultimate" delay="0.025" frames="0-30"/>
+    
+    <!-- Phase 2 Tween Nodes (for multi-part boss) -->
+    <Loop id="phase2_head" path="phase2/parts/head" delay="0.04" frames="0-20"/>
+    <Loop id="phase2_torso" path="phase2/parts/torso" delay="0.04" frames="0-20"/>
+    <Loop id="phase2_arms_left" path="phase2/parts/arms_left" delay="0.04" frames="0-15"/>
+    <Loop id="phase2_arms_right" path="phase2/parts/arms_right" delay="0.04" frames="0-15"/>
+    <Loop id="phase2_wings_left" path="phase2/parts/wings_left" delay="0.03" frames="0-25"/>
+    <Loop id="phase2_wings_right" path="phase2/parts/wings_right" delay="0.03" frames="0-25"/>
+    <Loop id="phase2_halo" path="phase2/parts/halo" delay="0.02" frames="0-40"/>
+    
+    <!-- Phase 2 Advanced Attacks -->
+    <Anim id="attack_shockerbreaker3_start" path="attacks/shockerbreaker3/charge" delay="0.025" frames="0-20" goto="attack_shockerbreaker3_hold"/>
+    <Loop id="attack_shockerbreaker3_hold" path="attacks/shockerbreaker3/hold" delay="0.03" frames="0-12"/>
+    <Anim id="attack_shockerbreaker3_release" path="attacks/shockerbreaker3/release" delay="0.02" frames="0-30" goto="attack_shockerbreaker3_waves"/>
+    <Loop id="attack_shockerbreaker3_waves" path="attacks/shockerbreaker3/waves" delay="0.03" frames="0-18"/>
+    <Anim id="attack_shockerbreaker3_end" path="attacks/shockerbreaker3/end" delay="0.04" frames="0-15" goto="phase2_idle"/>
+    
+    <!-- Final Beam Attack (Ultimate) -->
+    <Anim id="attack_finalbeam_charge" path="attacks/finalbeam/charge" delay="0.02" frames="0-40" goto="attack_finalbeam_focus"/>
+    <Loop id="attack_finalbeam_focus" path="attacks/finalbeam/focus" delay="0.025" frames="0-20"/>
+    <Anim id="attack_finalbeam_fire" path="attacks/finalbeam/fire" delay="0.015" frames="0-60" goto="attack_finalbeam_hold"/>
+    <Loop id="attack_finalbeam_hold" path="attacks/finalbeam/hold" delay="0.02" frames="0-30"/>
+    <Anim id="attack_finalbeam_end" path="attacks/finalbeam/end" delay="0.03" frames="0-25" goto="phase2_idle"/>
+    
+    <!-- Hurt/Death States -->
+    <Anim id="hurt" path="hurt" delay="0.04" frames="0-8" goto="idle"/>
+    <Anim id="phase2_hurt" path="phase2/hurt" delay="0.04" frames="0-10" goto="phase2_idle"/>
+    <Anim id="defeat" path="defeat" delay="0.05" frames="0-45"/>
+    
+    <!-- Cosmowing Effects for Phase 2 -->
+    <Loop id="phase2_bg_cosmowing" path="bg/cosmowing_phase2" delay="0.015" frames="0-80"/>
+    <Loop id="phase2_stems_cosmowing" path="stems/cosmowing_phase2" delay="0.02" frames="0-45"/>
+    <Loop id="phase2_shoulder_cosmowing" path="shoulder/cosmowing_phase2" delay="0.02" frames="0-40"/>
+    <Loop id="phase2_orbwings_cosmowing" path="orbwings/cosmowing_phase2" delay="0.015" frames="0-60"/>
+  </asriel_angelofdeath>
+
+    <madNtheo path="characters/theo_carry_maddy/" start="idle">
+    <Justify x=".5" y="1" />
+
+    <Loop id="idle" path="idle" delay="0.7" />
+    <Loop id="walk" path="run" delay="0.2" />
+  </madNtheo>
+  
+
+  <!-- Boss Characters -->
+  <chara_boss path="characters/charaBoss/" start="idle">
+    <Justify x="0.5" y=".64" />
+    <Loop id="idle" path="boss" delay="0.06" frames="0-23"/>
+    
+    <Loop id="scaredIdle" path="scared" delay="0.06" frames="0-19"/>
+    <Anim id="scaredTransition" path="scared" delay="0.1" frames="20-29" goto="calm"/>
+    <Loop id="calm" path="scared" delay="0.06" frames="30"/>
+    <Anim id="lookUp" path="scared" delay="0.08" frames="30-30" goto="lookingUp"/>
+    <Loop id="lookingUp" path="scared" delay="0.08" frames="35"/>
+    
+    <Anim id="attack1Begin" path="boss" delay="0.06" frames="24-29" goto="attack1Loop"/>
+    <Anim id="attack1Loop" path="boss" delay="0.06" frames="30-36" goto="attack1Loop"/>
+    <Anim id="attack1Recoil" path="boss" delay="0.06" frames="40-45" goto="idle"/>
+
+    <Anim id="attack2Begin" path="charge" delay="0.06" frames="0-17" goto="attack2Aim"/>
+    <Anim id="attack2Aim" path="charge" delay="0.06" frames="18-28" goto="attack2Aim"/>
+    <Anim id="attack2Lock" path="charge" delay="0.06" frames="29-39" goto="attack2Lock"/>
+    <Anim id="attack2Recoil" path="charge" delay="0.06" frames="40-45" goto="idle"/>
+
+    <Anim id="attack3Begin" path="lightning_aim_" delay="0.06" frames="0-19" goto="attack3Recoil"/>
+    <Anim id="attack3Recoil" path="lightning" delay="0.06" frames="0-5" goto="lightningidle"/>
+
+    <Anim id="getHit" path="hit" delay="0.06" frames="0-9" goto="star"/>
+    <Loop id="star" path="hit" delay="0.06" frames="10-15"/>
+    <Anim id="recoverHit" path="hit" delay="0.06" frames="16-19" goto="idle"/>
+  </chara_boss>
+
+  <!-- Asriel God Boss (God of Hyperdeath form) -->
+  <asrielgodboss path="characters/asrielgodboss/" start="idle">
+    <Justify x="0.5" y="0.5" />
+    
+    <!-- Idle and Base States -->
+    <Loop id="idle" path="idle" delay="0.08" frames="0"/>
+    <Loop id="boss" path="boss" delay="0.06" frames="0-45"/>
+    <Anim id="shrug" path="shrug" delay="0.1" frames="0" goto="idle"/>
+    
+    <!-- Appearance/Disappearance -->
+    <Anim id="appear" path="appear" delay="0.06" frames="0-5" goto="idle"/>
+    <Anim id="disappear" path="disappear_" delay="0.06" frames="0-26"/>
+    <Anim id="fadein" path="fadein_" delay="0.06" frames="0-19" goto="idle"/>
+    <Anim id="fadeout" path="fadeout_" delay="0.06" frames="0-19"/>
+    
+    <!-- Attack Animations -->
+    <Anim id="castsp" path="castsp" delay="0.05" frames="0-20" goto="idle"/>
+    <Anim id="mch" path="mch" delay="0.05" frames="0-16" goto="idle"/>
+    <Anim id="at_mch" path="at_mch" delay="0.06" frames="0-4" goto="idle"/>
+    <Anim id="at_sw" path="at_sw" delay="0.06" frames="0-2" goto="idle"/>
+    <Anim id="sum_mch" path="sum_mch" delay="0.06" frames="0-4" goto="idle"/>
+    <Anim id="sum_sw" path="sum_sw" delay="0.06" frames="0-4" goto="idle"/>
+    
+    <!-- Beam Attack -->
+    <Anim id="beamStart" path="beamStart" delay="0.06" frames="0-4" goto="beam"/>
+    <Loop id="beam" path="beam" delay="0.04" frames="0-54"/>
+    
+    <!-- Lightning Attack -->
+    <Anim id="lightning_aim" path="lightning_aim_" delay="0.05" frames="0-20" goto="lightning_strike"/>
+    <Anim id="lightning_strike" path="lightning_strike_" delay="0.04" frames="0-9" goto="idle"/>
+    <Anim id="bigger_lightning_aim" path="bigger_lightning_aim_" delay="0.05" frames="0-20" goto="bigger_lightning_strike"/>
+    <Anim id="bigger_lightning_strike" path="bigger_lightning_strike_" delay="0.04" frames="0-9" goto="idle"/>
+    
+    <!-- Stars and Projectiles -->
+    <Loop id="star" path="star" delay="0.08" frames="0-1"/>
+    <Loop id="starb" path="starb" delay="0.08" frames="0-1"/>
+    <Loop id="starc" path="starc" delay="0.08" frames="0"/>
+    <Anim id="star_impact" path="star_impact_" delay="0.04" frames="0-21"/>
+    
+    <!-- Shockwave Effects -->
+    <Anim id="shockwave" path="shockwave_" delay="0.05" frames="0-2"/>
+    <Anim id="airwave" path="airwave" delay="0.06" frames="0" goto="airwavedisappear"/>
+    <Anim id="airwavedisappear" path="airwavedisappear" delay="0.06" frames="0-2"/>
+    <Loop id="groundwave" path="groundwave_" delay="0.06" frames="0-2"/>
+    <Anim id="groundwavedisappear" path="groundwavedisappear_" delay="0.04" frames="0-26"/>
+    
+    <!-- Hyper Goner -->
+    <Loop id="hypergoner" path="hypergoner" delay="0.1" frames="0"/>
+    <Anim id="hypergoner_inhale" path="hypergoner_inhale" delay="0.06" frames="0-11" goto="hypergoner_laughing"/>
+    <Loop id="hypergoner_laughing" path="hypergoner_laughing" delay="0.08" frames="0"/>
+    
+    <!-- Hyper Goner Debris -->
+    <Loop id="hg_debris" path="hg_debris" delay="0.1" frames="0"/>
+    <Loop id="hg_debrisB" path="hg_debrisB" delay="0.1" frames="0"/>
+    <Loop id="hg_debrisC" path="hg_debrisC" delay="0.1" frames="0"/>
+    
+    <!-- Black Hole -->
+    <Loop id="blackhole" path="blackhole" delay="0.1" frames="0"/>
+    
+    <!-- Trails -->
+    <Loop id="trails" path="trails" delay="0.1" frames="0"/>
+    
+    <!-- Sword (for tween attacks) -->
+    <Loop id="sword" path="sword" delay="0.1" frames="0"/>
+  </asrielgodboss>
+  
+  <!-- Asriel God Boss Sword (separate entity for tweening) -->
+  <asrielgodboss_sword path="characters/asrielgodboss/" start="idle">
+    <Justify x="0.5" y="0.5" />
+    <Loop id="idle" path="sword" delay="0.1" frames="0"/>
+    <Loop id="spin" path="sword" delay="0.05" frames="0"/>
+    <Loop id="slash" path="sword" delay="0.04" frames="0"/>
+  </asrielgodboss_sword>
+
+  <chara_projectile path="characters/charaBoss/" start="charge">
+    <Justify x=".5" y=".5" />
+    <Anim id="charge" path="projectile" delay="0.06" frames="0-3"  goto="loop"/>
+    <Loop id="loop" path="projectile" delay="0.06" frames="4-12"/>
+  </chara_projectile>
+
+  <!-- Whispy Woods Boss (Kirby Game Boy Classic) -->
+  <whispy_woods path="characters/whispyWoods/" start="idle">
+    <Justify x="0.5" y="1.0" />
+    
+    <!-- Idle and base states -->
+    <Loop id="idle" path="idle" delay="0.12" frames="0-7"/>
+    <Loop id="enrage" path="enrage" delay="0.08" frames="0-11"/>
+    <Loop id="defeated" path="defeated" delay="0.1" frames="0-9"/>
+    
+    <!-- Attack animations -->
+    <Anim id="attack_apple" path="attack_apple" delay="0.08" frames="0-11" goto="idle"/>
+    <Anim id="attack_wind" path="attack_wind" delay="0.1" frames="0-15" goto="idle"/>
+    <Anim id="attack_root" path="attack_root" delay="0.08" frames="0-13" goto="idle"/>
+    <Anim id="attack_leaf" path="attack_leaf" delay="0.08" frames="0-11" goto="idle"/>
+    <Anim id="attack_puff" path="attack_puff" delay="0.06" frames="0-8" goto="idle"/>
+    
+    <!-- Enraged attacks -->
+    <Anim id="attack_poison" path="attack_poison" delay="0.08" frames="0-15" goto="idle"/>
+    <Anim id="attack_megawind" path="attack_megawind" delay="0.1" frames="0-19" goto="idle"/>
+  </whispy_woods>
+  
+  <chara_beam path="characters/charaBoss/" start="charge">
+    <Justify x="0" y=".5" />
+    <Loop id="charge" path="beam" delay="0.06" frames="0-13"/>
+    <Anim id="lock" path="beam" delay="0.03" frames="14-25"/>
+    <Anim id="shoot" path="beam" delay="0.04" frames="26-36"/>
+  </chara_beam>
+  
+  <chara_beam_start path="characters/charaBoss/" start="shoot">
+    <Justify x="0" y=".5" />
+    <Anim id="shoot" path="beamStart" delay="0.06"/>
+  </chara_beam_start>
+  
+  <chara_lightning_charge path="characters/charaBoss/" start="once">
+    <Justify y=".5" x="0"/>
+    <Anim path="lightning" delay="0.03" id="once" frames="0-6"/>  
+  </chara_lightning_charge>
+  
+  <chara_lightningv_charge path="characters/charaBoss/" start="once">
+    <Justify y="0" x=".5"/>
+    <Anim path="lightningV" delay="0.03" id="once" frames="0-6"/>  
+  </chara_lightningv_charge>
+  
+  <chara_lightning_strike path="characters/charaBoss/" start="aim">
+    <Anim path="lightning_aim_" delay="0.03" id="aim"/>
+    <Anim path="lightning_strike_" delay="0.03" id="strike"/>
+  </chara_lightning_strike>
+
+  <!-- ================================================================ -->
+  <!--                       COLLECTABLE SPRITES                       -->
+  <!-- ================================================================ -->
+
+  <strawberry path="collectables/strawberry/" start="idle">
+    <Center />
+    
+    <Loop id="idle" path="normal" delay=".1" frames="0-6,0-6,0-6,0-6,0-7" />
+    <Loop id="noFlash" path="normal" delay=".1" frames="0-6"/>
+    <Anim id="collect" path="normal" delay=".07" frames="7-11"/>
+    <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
+	  
+    <Anim id="fade0" path="normal" delay=".08" frames="12-14,14*10,15-19"/>
+    <Anim id="fade1" path="normal" delay=".07" frames="20-22,22*10,23-26"/>
+    <Anim id="fade2" path="normal" delay=".07" frames="28-30,30*10,31-34"/>
+    <Anim id="fade3" path="normal" delay=".07" frames="36-38,38*10,39-42"/>
+    <Anim id="fade4" path="normal" delay=".07" frames="44-46,46*10,47-50"/>
+	  <Anim id="fade5" path="normal" delay=".07" frames="52,53,54,53,54,53,54,53,54,53,54,53,54-59"/>
+	  <Anim id="fade_wow" path="wow/normal" delay=".1" frames="52-66"/>
+  </strawberry>
+
+  <ghostberry path="collectables/ghostberry/" start="idle">
+    <Center />
+
+    <Loop id="idle" path="idle" delay=".08" frames="0-6,0-6,0-6,0-6,0-7" />
+    <Anim id="collect" path="idle" delay=".07" frames="7-11"/>
+    <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
+  </ghostberry>
+	
+  <goldberry path="collectables/goldberry/" start="idle">
+    <Center />
+
+    <Loop id="idle" path="idle" delay=".08" frames="0-5,0-5,0-5,0-5,0-7" />
+    <Anim id="collect" path="idle" delay=".07" frames="7-11"/>
+    <Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
+  </goldberry>
+
+	<goldghostberry path="collectables/ghostgoldberry/" start="idle">
+		<Center />
+
+		<Loop id="idle" path="idle" delay=".08" frames="0-6,0-6,0-6,0-6,0-7" />
+		<Anim id="collect" path="idle" delay=".07" frames="7-11"/>
+		<Loop id="flap" path="wings" delay=".08" frames="0-8,0-8,0-7,9" />
+	</goldghostberry>
+
+  <moonberry path="collectables/moonberry/" start="idle">
+    <Center />
+    
+    <Loop id="idle" path="normal" delay=".1" frames="0-47" />
+    <Anim id="collect" path="normal" delay=".07" frames="48-51"/>
+  </moonberry>
+
+  <moonghostberry path="collectables/moonberry/" start="idle">
+    <Center />
+    
+    <Loop id="idle" path="ghost" delay=".1" frames="0-47" />
+    <Anim id="collect" path="ghost" delay=".07" frames="48-51"/>
+  </moonghostberry>
+
+  <pinkplatinumberry path="collectables/maggy/pinkplatberry/" start="idle">
+    <Center />
+    
+    <Loop id="idle" path="idle" delay=".1" frames="0-9" />
+    <Anim id="collect" path="collect" delay=".07" frames="0-3"/>
+    <Loop id="ghost" path="ghost" delay=".1" frames="0-9" />
+    <Anim id="points" path="collect" delay=".07" frames="0-3"/>
+  </pinkplatinumberry>
+
+  <popstarberry path="collectables/maggy/popstarberry/" start="idle">
+    <Center />
+    
+    <Loop id="idle" path="collect/000" delay=".1" frames="0-6,0-6,0-6,0-6,0-7" />
+    <Anim id="collect" path="collect/000" delay=".07" frames="7-11"/>
+    <Anim id="spins" path="spins/000" delay=".08" frames="0-8,0-8,0-7,9" />
+    <Anim id="collectghost" path="collect/ghost/000" delay=".07" frames="7-11"/>
+    <Anim id="spinsghost" path="spins/ghost/000" delay=".08" frames="0-8,0-8,0-7,9" />
+  </popstarberry>
+
+  <voidstarberry path="collectables/maggy/voidstarberry/" start="idle">
+    <Center />
+    
+    <Loop id="idle" path="collect/000" delay=".12" frames="0-6,0-6,0-6,0-6,0-7" />
+    <Anim id="collect" path="collect/000" delay=".08" frames="7-11"/>
+    <Anim id="spins" path="spins/000" delay=".10" frames="0-8,0-8,0-7,9" />
+    <Anim id="collectghost" path="collect/ghost/000" delay=".08" frames="7-11"/>
+    <Anim id="spinsghost" path="spins/ghost/000" delay=".10" frames="0-8,0-8,0-7,9" />
+  </voidstarberry>
+
+  <kirbflag path="collectables/strawberry/" start="idle">
+    <Center />
+    <Loop id="idle" path="normal" delay=".08" frames="0" />
+    <Anim id="collect" path="normal" delay=".05" frames="0" />
+  </kirbflag>
+
+  <cassette path="collectables/cassette/" start="idle">
+    <Center />
+	<Anim id="idle" path="idle" delay="0.07" frames="0-12,0*30" goto="pulse"/>
+	<Anim id="spin" path="idle" delay="0.07" frames="0-12" goto="spin"/>
+	<Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="idle"/>
+  </cassette>
+	
+  <cassetteGhost path="collectables/cassette/" start="idle">
+    <Center />
+	<Anim id="idle" path="ghost" delay="0.07" frames="0-12,0*30" goto="pulse"/>
+	<Anim id="spin" path="ghost" delay="0.07" frames="0-12" goto="spin"/>
+	<Anim id="pulse" path="ghost" delay="0.04" frames="13-18" goto="idle"/>
+  </cassetteGhost>
+
+	<Tape path="collectables/maggy/tape/" start="idle">
+		<Center />
+		<Anim id="idle" path="idle" delay="0.07" frames="0-12,0*30" goto="pulse"/>
+		<Anim id="spin" path="idle" delay="0.07" frames="0-12" goto="spin"/>
+		<Anim id="pulse" path="idle" delay="0.04" frames="13-18" goto="idle"/>
+	</Tape>
+
+	<TapeGhost path="collectables/maggy/tape/" start="idle">
+		<Center />
+		<Anim id="idle" path="ghost" delay="0.07" frames="0-12,0*30" goto="pulse"/>
+		<Anim id="spin" path="ghost" delay="0.07" frames="0-12" goto="spin"/>
+		<Anim id="pulse" path="ghost" delay="0.04" frames="13-18" goto="idle"/>
+	</TapeGhost>
+
+  <!-- Berry Seeds -->
+  <strawberrySeed path="collectables/strawberry/">
+    <Center />
+
+    <Loop id="idle" path="seed" frames="0*19,1" delay="0.1" />
+    <Loop id="noFlash" path="seed" frames="0" />
+  </strawberrySeed>
+	
+  <ghostberrySeed path="collectables/ghostberry/">
+    <Center />
+
+    <Loop id="idle" path="seed" frames="0*19,1" delay="0.1" />
+    <Loop id="noFlash" path="seed" frames="0" />
+  </ghostberrySeed>
+	
+  <goldberrySeed path="collectables/goldberry/">
+    <Center />
+
+    <Loop id="idle" path="seed" frames="0*19,1" delay="0.1" />
+    <Loop id="noFlash" path="seed" frames="0" />
+  </goldberrySeed>
+
+	<heartgem0 path="collectables/maggy/heartgem/0/">
+		<Center />
+
+		<Loop id="idle" path="" frames="0" />
+		<Loop id="spin" path="" frames="0*10,1-13" delay="0.1"/>
+		<Loop id="fastspin" path="" delay="0.1"/>
+	</heartgem0>
+
+	<heartgem1 path="collectables/maggy/heartGem/1/">
+		<Center />
+
+		<Loop id="idle" path="" frames="0" />
+		<Loop id="spin" path="" frames="0*10,1-13" delay="0.1"/>
+		<Loop id="fastspin" path="" delay="0.1"/>
+	</heartgem1>
+
+	<heartgem2 path="collectables/maggy/heartgem/2/">
+		<Center />
+
+		<Loop id="idle" path="" frames="0" />
+		<Loop id="spin" path="" frames="0*10,1-13" delay="0.1"/>
+		<Loop id="fastspin" path="" delay="0.1"/>
+	</heartgem2>
+
+	<heartgem3 path="collectables/maggy/heartgem/3/">
+		<Center />
+
+		<Loop id="idle" path="" frames="0" />
+		<Loop id="spin" path="" frames="0*10,1-13" delay="0.1"/>
+		<Loop id="fastspin" path="" delay="0.1"/>
+	</heartgem3>
+	
+	<heartgem4 path="collectables/maggy/heartGem/4/">
+		<Center />
+
+		<Loop id="idle" path="white" frames="0" />
+		<Loop id="spin" path="white" frames="0*10,1-13" delay="0.1"/>
+		<Loop id="fastspin" path="white" delay="0.1"/>
+	</heartgem4>
+	
+	<heartGemGhost path="collectables/maggy/heartGem/">
+		<Center />
+
+		<Loop id="idle" path="ghost" frames="0" />
+		<Loop id="spin" path="ghost" frames="0*10,1-13" delay="0.1"/>
+		<Loop id="fastspin" path="ghost" delay="0.1"/>
+	</heartGemGhost>
+
+	<!-- ================================================================ -->
+	<!--              HEART STAFF SPRITES (Kirby Star Allies)            -->
+	<!-- ================================================================ -->
+	
+	<!-- Heart Staff - Red (Blazing Heart Staff) -->
+	<heartstaff_red path="collectables/heartstaff/red/">
+		<Center />
+		<Loop id="idle" path="" frames="0*10,1-5" delay="0.12"/>
+		<Loop id="spin" path="" frames="0-11" delay="0.08"/>
+		<Anim id="collect" path="" frames="0-11,11,11" delay="0.05" goto="spin"/>
+	</heartstaff_red>
+	
+	<!-- Heart Staff - Blue (Glacial Heart Staff) -->
+	<heartstaff_blue path="collectables/heartstaff/blue/">
+		<Center />
+		<Loop id="idle" path="" frames="0*10,1-5" delay="0.12"/>
+		<Loop id="spin" path="" frames="0-11" delay="0.08"/>
+		<Anim id="collect" path="" frames="0-11,11,11" delay="0.05" goto="spin"/>
+	</heartstaff_blue>
+	
+	<!-- Heart Staff - Yellow (Spark Heart Staff) -->
+	<heartstaff_yellow path="collectables/heartstaff/yellow/">
+		<Center />
+		<Loop id="idle" path="" frames="0*10,1-5" delay="0.12"/>
+		<Loop id="spin" path="" frames="0-11" delay="0.08"/>
+		<Anim id="collect" path="" frames="0-11,11,11" delay="0.05" goto="spin"/>
+	</heartstaff_yellow>
+	
+	<!-- Heart Staff - Green (Nature Heart Staff) -->
+	<heartstaff_green path="collectables/heartstaff/green/">
+		<Center />
+		<Loop id="idle" path="" frames="0*10,1-5" delay="0.12"/>
+		<Loop id="spin" path="" frames="0-11" delay="0.08"/>
+		<Anim id="collect" path="" frames="0-11,11,11" delay="0.05" goto="spin"/>
+	</heartstaff_green>
+	
+	<!-- Heart Staff - Purple (Void Heart Staff) -->
+	<heartstaff_purple path="collectables/heartstaff/purple/">
+		<Center />
+		<Loop id="idle" path="" frames="0*10,1-5" delay="0.12"/>
+		<Loop id="spin" path="" frames="0-11" delay="0.08"/>
+		<Anim id="collect" path="" frames="0-11,11,11" delay="0.05" goto="spin"/>
+	</heartstaff_purple>
+	
+	<!-- Heart Staff - Orange (Radiant Heart Staff) -->
+	<heartstaff_orange path="collectables/heartstaff/orange/">
+		<Center />
+		<Loop id="idle" path="" frames="0*10,1-5" delay="0.12"/>
+		<Loop id="spin" path="" frames="0-11" delay="0.08"/>
+		<Anim id="collect" path="" frames="0-11,11,11" delay="0.05" goto="spin"/>
+	</heartstaff_orange>
+	
+	<!-- Heart Staff - Pink (Love Heart Staff - Final) -->
+	<heartstaff_pink path="collectables/heartstaff/pink/">
+		<Center />
+		<Loop id="idle" path="" frames="0*10,1-5" delay="0.12"/>
+		<Loop id="spin" path="" frames="0-11" delay="0.08"/>
+		<Anim id="collect" path="" frames="0-11,11,11" delay="0.05" goto="spin"/>
+	</heartstaff_pink>
+	
+	<!-- Heart Staff Ghost (collected version) -->
+	<heartstaff_ghost path="collectables/heartstaff/">
+		<Center />
+		<Loop id="idle" path="ghost" frames="0" delay="0.1"/>
+		<Loop id="spin" path="ghost" frames="0-11" delay="0.1"/>
+	</heartstaff_ghost>
+
+  <!-- ================================================================ -->
+  <!--                        OBJECT SPRITES                           -->
+  <!-- ================================================================ -->
+
+  <!-- Environment Objects -->
+
+  <campfire path="objects/campfire/" start="idle">
+    <Justify x=".5" y="1" />
+    
+    <Anim id="idle" path="fire" delay="0.1" frames="0"/>
+    <Anim id="start" path="fire" delay="0.1" frames="0-6" goto="burn"/>
+    <Loop id="burn" path="fire" delay="0.09" frames="7-15"/>
+    <Anim id="startDream" path="fire" delay="0.1" frames="0-6" goto="dreamy"/>
+    <Loop id="burnDream" path="dream" delay="0.09" frames="0-8" goto="dreamy"/>
+    <Loop id="smoking" path="smoking" delay="0.09" frames="0-7"/>
+  </campfire>
+
+  <checkpoint_highlight path="objects/checkpoint/" start="off">
+    <Justify x=".5" y="1" />
+
+    <Anim id="off" path="highlight" delay="0.08" frames="0"/>
+    <Anim id="turnOn" path="highlight" delay="0.05" goto="on"/>
+    <Loop id="on" path="highlight" delay="0.05" frames="9"/>
+  </checkpoint_highlight>
+
+  <checkpoint_flash path="objects/checkpoint/" start="flash">
+    <Justify x=".5" y="1" />
+    <Loop id="flash" path="flash" frames="7*10,0-7,7*60" delay="0.05"/>
+  </checkpoint_flash>
+
+  <payphone path="cutscenes/payphone/" start="idle">
+    <Justify x=".5" y="1" />
+    
+    <Loop id="idle" path="phone" delay="0.1" frames="0"/>
+    <Anim id="pickUp" path="phone" delay="0.08" frames="1-11"/>
+    <Loop id="talkPhone" path="phone" delay="0.08" frames="11"/>
+    <Anim id="jumpBack" path="phone" delay="0.08" frames="12-17"/>
+    <Anim id="scare" path="phone" delay="0.08" frames="18-21"/>
+    <Anim id="transform" path="phone" delay="0.08" frames="22-45" />
+    <Anim id="eat" path="phone" delay="0.08" frames="46-73,83*2,84*2,85*2,86*2,87*2,74-82"/>
+    <Loop id="monsterIdle" path="phone" delay="0.2" frames="83-87"/>
+  </payphone>
+
+  <key path="collectables/key/" start="idle">
+    <Justify x=".5" y=".5" />
+    <Loop id="idle" path="idle" delay="0.1" frames="0-13"/>
+    <Anim id="enter" path="enter" delay="0.1"/>
+  </key>
+
+  <!-- Special Collectables -->
+  <madeline_crystal path="collectables/maggy/maddycrystal/" start="idle">
+    <Origin x="32" y="42"/>
+    <Loop id="idle" path="idle" delay="0.08"/>
+    <Anim id="shatter" path="shatter" delay="0.08" goto="shattered"/>
+    <Loop id="shattered" path="shatter" frames="16" delay="0.08"/>
+  </madeline_crystal>
+
+  <!-- ================================================================ -->
+  <!--                        OBJECT SPRITES                           -->
+  <!-- ================================================================ -->
+
+  <!-- Environment Objects -->
+  <lockdoor_wood path="objects/door/lockdoor" start="idle">
+    <Justify x="0.5" y="0.5" />
+    <Loop id="idle" path="" delay="0.1" frames="0"/>
+    <Anim id="open" path="" delay="0.06" frames="0-9"/>
+    <Anim id="burst" path="" delay="0.06" frames="10-18"/>
+  </lockdoor_wood>
+  
+  <lockdoor_temple_a path="objects/door/lockdoorTempleA" start="idle">
+    <Justify x="0.5" y="0.5" />
+    <Loop id="idle" path="" delay="0.1" frames="0"/>
+    <Anim id="open" path="" delay="0.06" frames="0-9"/>
+    <Anim id="burst" path="" delay="0.06" frames="10-18"/>
+  </lockdoor_temple_a>
+  
+  <lockdoor_temple_b path="objects/door/lockdoorTempleB" start="idle">
+    <Justify x="0.5" y="0.5" />
+    <Loop id="idle" path="" delay="0.1" frames="0"/>
+    <Anim id="open" path="" delay="0.06" frames="0-9"/>
+    <Anim id="burst" path="" delay="0.06" frames="10-18"/>
+  </lockdoor_temple_b>
+  
+  <lockdoor_moon path="objects/door/moonDoor" start="idle">
+    <Justify x="0.5" y="0.5" />
+    <Anim id="appear" path="" delay="0.05" frames="0-10"/>
+    <Loop id="idle" path="" delay="0.08" frames="11-24"/>
+    <Anim id="open" path="" delay="0.06" frames="25-32"/>
+    <Anim id="burst" path="" delay="0.06" frames="33-43"/>
+  </lockdoor_moon>
+  
+  <door path="objects/door/" start="idle">
+    <Justify x=".5" y="1" />
+
+    <Loop id="idle" path="door" delay="0.1" frames="0"/>
+    <Anim id="open" path="door" delay="0.05" frames="4,2,1" goto="close"/>
+    <Anim id="close" path="door" delay="0.05" frames="1,1,1,1,1-4" goto="idle"/>
+  </door>
+  
+  <metaldoor path="objects/door/" start="idle">
+    <Justify x=".5" y="1" />
+
+    <Loop id="idle" path="metaldoor" delay="0.1" frames="0"/>
+    <Anim id="open" path="metaldoor" delay="0.05" frames="4,2,1" goto="close"/>
+    <Anim id="close" path="metaldoor" delay="0.05" frames="1,1,1,1,1-4" goto="idle"/>
+  </metaldoor>
+
+  <ghost_door path="objects/door/" start="idle">
+    <Justify x=".5" y=".5" />
+
+    <Loop id="idle" path="ghost_door" delay="0.06" frames="0-19"/>
+    <Anim id="open" path="ghost_door" delay="0.06" frames="20-28"/>
+  </ghost_door>
+  
+  <trapdoor path="objects/door/" start="idle">
+    <Justify x="0" y="0" />
+
+    <Loop id="idle" path="trap" delay="0.1" frames="0"/>
+    <Anim id="open" path="trap" delay="0.05" frames="0,1,2,3,3,4,5,6,7"/>
+    <Anim id="open_partial" path="trap" delay="0.05" frames="0,1,2,3,4"/>
+  </trapdoor>
+
+  <glass path="objects/mirror/" start="idle">
+    <Justify x=".5" y="1" />
+    
+    <Loop id="idle" path="glassbg" delay="0.08" frames="0"/>
+    <Anim id="break" path="glassbreak" delay="0.08" frames="0-8" goto="broken"/>
+    <Loop id="broken" path="glassbreak" delay="0.08" frames="9"/>
+  </glass>  
+
+  <clutterCabinet path="objects/resortclutter/" start="idle">
+    <Justify x=".5" y="0.5" />
+    
+    <Loop id="idle" path="cabinet" delay="0.09" frames="0"/>
+    <Anim id="open" path="cabinet" delay="0.08" frames="0-2" goto="opened"/>
+    <Loop id="opened" path="cabinet" delay="0.09" frames="2-7"/>
+    <Anim id="close" path="cabinet" delay="0.08" frames="8-15" goto="idle"/>
+  </clutterCabinet>
+
+  <clutterSwitch path="objects/resortclutter/" start="idle">
+    <Justify x=".5" y="1" />
+
+    <Loop id="idle" path="clutter_button" delay="0.09" frames="0-7" />
+    <Loop id="active" path="clutter_button" delay="0.09" frames="19-27" />
+    <Anim id="break" path="clutter_button" delay="0.08" frames="8-18" goto="active"/>
+  </clutterSwitch>
+  
+  <lookout path="objects/lookout/" start="idle">
+    <Justify x=".5" y="1" />
+    
+    <Loop id="idle" path="lookout" delay="0.1" frames="5*9,6"/>
+    <Anim id="lookRight" path="lookout" delay="0.08" frames="0-4" goto="looking"/>
+    <Anim id="lookLeft" path="lookout" delay="0.08" frames="15-17,3,4" goto="looking"/>
+    <Loop id="looking" path="lookout" delay="0.08" frames="4"/>
+    <Loop id="lookingUp" path="lookout" frames="7"/>
+    <Loop id="lookingUpRight" path="lookout" frames="8"/>
+    <Loop id="lookingRight" path="lookout" frames="9"/>
+    <Loop id="lookingDownRight" path="lookout" frames="10"/>
+    <Loop id="lookingDown" path="lookout" frames="11"/>
+    <Loop id="lookingDownLeft" path="lookout" frames="12"/>
+    <Loop id="lookingLeft" path="lookout" frames="13"/>
+    <Loop id="lookingUpLeft" path="lookout" frames="14"/>
+
+    <Loop id="badeline_idle" path="badeline" delay="0.1" frames="5*9,6"/>
+    <Anim id="badeline_lookRight" path="badeline" delay="0.08" frames="0-4" goto="badeline_looking"/>
+    <Anim id="badeline_lookLeft" path="badeline" delay="0.08" frames="15-17,3,4" goto="badeline_looking"/>
+    <Loop id="badeline_looking" path="badeline" delay="0.08" frames="4"/>
+    <Loop id="badeline_lookingUp" path="badeline" frames="7"/>
+    <Loop id="badeline_lookingUpRight" path="badeline" frames="8"/>
+    <Loop id="badeline_lookingRight" path="badeline" frames="9"/>
+    <Loop id="badeline_lookingDownRight" path="badeline" frames="10"/>
+    <Loop id="badeline_lookingDown" path="badeline" frames="11"/>
+    <Loop id="badeline_lookingDownLeft" path="badeline" frames="12"/>
+    <Loop id="badeline_lookingLeft" path="badeline" frames="13"/>
+    <Loop id="badeline_lookingUpLeft" path="badeline" frames="14"/>
+
+    <Loop id="nobackpack_idle" path="nobackpack" delay="0.1" frames="5*9,6"/>
+    <Anim id="nobackpack_lookRight" path="nobackpack" delay="0.08" frames="0-4" goto="nobackpack_looking"/>
+    <Anim id="nobackpack_lookLeft" path="nobackpack" delay="0.08" frames="15-17,3,4" goto="nobackpack_looking"/>
+    <Loop id="nobackpack_looking" path="nobackpack" delay="0.08" frames="4"/>
+    <Loop id="nobackpack_lookingUp" path="nobackpack" frames="7"/>
+    <Loop id="nobackpack_lookingUpRight" path="nobackpack" frames="8"/>
+    <Loop id="nobackpack_lookingRight" path="nobackpack" frames="9"/>
+    <Loop id="nobackpack_lookingDownRight" path="nobackpack" frames="10"/>
+    <Loop id="nobackpack_lookingDown" path="nobackpack" frames="11"/>
+    <Loop id="nobackpack_lookingDownLeft" path="nobackpack" frames="12"/>
+    <Loop id="nobackpack_lookingLeft" path="nobackpack" frames="13"/>
+    <Loop id="nobackpack_lookingUpLeft" path="nobackpack" frames="14"/>
+  </lookout>
+
+  <flutterBird path="scenery/flutterbird/" start="idle">
+    <Justify x="0.5" y="1"/>
+    <Loop id="idle" path="idle" delay="0.1" frames="0"/>
+    <Loop id="fly" path="flap" delay="0.1" frames="0,1"/>
+  </flutterBird>
+  
+  <swapBlockLight path="objects/swapblock/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="midBlock" delay="0.08" frames="0-3"/>
+  </swapBlockLight>
+  <swapBlockLightRed path="objects/swapblock/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="midBlockRed" delay="0.08" frames="0-3"/>
+  </swapBlockLightRed>
+
+  <swapBlockLightMoon path="objects/swapblock/moon/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="midBlock" delay="0.08" frames="0-3"/>
+  </swapBlockLightMoon>
+  <swapBlockLightRedMoon path="objects/swapblock/moon/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="midBlockRed" delay="0.08" frames="0-3"/>
+  </swapBlockLightRedMoon>
+
+  <swapBlockPathLight path="objects/swapblock/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="pathLights" delay="0.06" frames="0"/>
+    <Anim id="flash" path="pathLights" delay="0.06" frames="0-4" goto="idle"/>
+  </swapBlockPathLight>
+
+  <templegate_default path="objects/door/" start="idle">
+    <Justify x="0.5" y="0"/>
+    <Loop id="idle" path="templeDoor" delay="0.1" frames="0"/>
+    <Anim id="open" path="templeDoor" delay="0.1" frames="6-14" goto="idle"/>
+    <Anim id="hit" path="templeDoor" delay="0.08" frames="0-4" goto="idle"/>
+  </templegate_default>
+
+  <templegate_mirror path="objects/door/" start="idle">
+    <Justify x="0.5" y="0"/>
+    <Loop id="idle" path="templeDoorB" delay="0.1" frames="0"/>
+    <Anim id="open" path="templeDoorB" delay="0.1" frames="6-14" goto="idle"/>
+    <Anim id="hit" path="templeDoorB" delay="0.08" frames="0-4" goto="idle"/>
+  </templegate_mirror>
+
+  <templegate_theo path="objects/door/" start="idle">
+    <Justify x="0.5" y="0"/>
+    <Loop id="idle" path="templeDoorC" delay="0.1" frames="0"/>
+    <Anim id="open" path="templeDoorC" delay="0.1" frames="6-14" goto="idle"/>
+    <Anim id="hit" path="templeDoorC" delay="0.08" frames="0-4" goto="idle"/>
+  </templegate_theo>
+
+  <dashSwitch_default path="objects/temple/dashButton" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="" delay="0.08" frames="0-20"/>
+    <Loop id="pushed" path="" delay="0.08" frames="27"/>
+    <Anim id="push" path="" delay="0.07" frames="21-27" goto="pushed"/>
+  </dashSwitch_default>
+
+  <dashSwitch_mirror path="objects/temple/dashButtonMirror" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="" delay="0.08" frames="0-20"/>
+    <Loop id="pushed" path="" delay="0.08" frames="27"/>
+    <Anim id="push" path="" delay="0.07" frames="21-27" goto="pushed"/>
+  </dashSwitch_mirror>
+
+  <gondola path="objects/gondola/" start="idle">
+    <Loop id="idle" path="front" delay="0.1"/>
+    <Loop id="pull" path="pull" delay="0.08" frames="6-0,1,2"/>
+  </gondola>
+  
+  <booster path="objects/booster/" start="loop">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="loop" path="booster" delay="0.1" frames="0-4"/>
+    <Loop id="inside" path="booster" delay="0.1" frames="5-8"/>
+    <Loop id="spin" path="booster" delay="0.06" frames="18-25"/>
+    <Anim id="pop" path="booster" delay="0.08" frames="9-17"/>
+  </booster>
+  <boosterRed path="objects/booster/" start="loop">
+    <Justify x="0.5" y="0.5"/>
+    <Anim id="appear" path="boosterRed" delay="0.08" frames="26-34" goto="loop"/>
+    <Loop id="loop" path="boosterRed" delay="0.1" frames="0-4"/>
+    <Loop id="inside" path="boosterRed" delay="0.1" frames="5-8"/>
+    <Loop id="spin" path="boosterRed" delay="0.06" frames="18-25"/>
+    <Anim id="pop" path="boosterRed" delay="0.08" frames="9-17"/>
+  </boosterRed>
+	<greyBooster path="objects/greybooster/" start="loop">
+		<Justify x="0.5" y="0.5"/>
+		<Anim id="appear" path="greybooster" delay="0.08" frames="26-34" goto="loop"/>
+		<Loop id="loop" path="greybooster" delay="0.1" frames="0-4"/>
+		<Loop id="inside" path="greybooster" delay="0.1" frames="5-8"/>
+		<Loop id="spin" path="greybooster" delay="0.06" frames="18-25"/>
+		<Anim id="pop" path="greybooster" delay="0.08" frames="9-17"/>
+	</greyBooster>
+
+  <flyFeather path="objects/flyFeather/" start="loop">
+    <Justify x="0.5" y="0.5"/>
+    <Anim id="loop" path="idle" delay="0.06" frames="0-20" goto="flash"/>
+    <Anim id="flash" path="flash" delay="0.06"  frames="0-20" goto="loop"/>
+  </flyFeather>
+
+  <!-- ================================================================ -->
+  <!--                         REFILL SPRITES                          -->
+  <!-- ================================================================ -->
+
+  <!-- Standard Refill (1 dash) -->
+  <refill path="objects/refill/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.1" frames="0-4"/>
+    <Anim id="spin" path="idle" delay="0.06" frames="0-4" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+  </refill>
+
+  <refillFlash path="objects/refill/" start="flash">
+    <Justify x="0.5" y="0.5"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+  </refillFlash>
+
+  <!-- Two Dash Refill -->
+  <refillTwo path="objects/refillTwo/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.08" frames="0-12"/>
+    <Anim id="spin" path="idle" delay="0.06" frames="0-12" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+  </refillTwo>
+
+  <refillTwoFlash path="objects/refillTwo/" start="flash">
+    <Justify x="0.5" y="0.5"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+  </refillTwoFlash>
+
+  <!-- Solar Refill (3 dash) -->
+  <solarrefill path="objects/solarrefill/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.08" frames="0"/>
+    <Anim id="spin" path="idle" delay="0.06" frames="0" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0"/>
+  </solarrefill>
+
+  <solarrefillFlash path="objects/solarrefill/" start="flash">
+    <Justify x="0.5" y="0.5"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0"/>
+  </solarrefillFlash>
+
+  <!-- Lunar Refill (4 dash) -->
+  <lunarrefill path="objects/lunarrefill/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.08" frames="0"/>
+    <Anim id="spin" path="idle" delay="0.06" frames="0" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0"/>
+  </lunarrefill>
+
+  <lunarrefillFlash path="objects/lunarrefill/" start="flash">
+    <Justify x="0.5" y="0.5"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0"/>
+  </lunarrefillFlash>
+
+  <!-- Black Hole Refill (5 dash) -->
+  <blackholerefill path="objects/blackholerefill/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.08" frames="0"/>
+    <Anim id="spin" path="idle" delay="0.06" frames="0" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0"/>
+  </blackholerefill>
+
+  <blackholerefillFlash path="objects/blackholerefill/" start="flash">
+    <Justify x="0.5" y="0.5"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0"/>
+  </blackholerefillFlash>
+
+  <!-- Save Star Refill (10+ dash) -->
+  <savestarrefill path="objects/savestarrefill/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.08" frames="0-3"/>
+    <Anim id="spin" path="idle" delay="0.06" frames="0-3" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0-6"/>
+  </savestarrefill>
+
+  <savestarrefillFlash path="objects/savestarrefill/" start="flash">
+    <Justify x="0.5" y="0.5"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0-6"/>
+  </savestarrefillFlash>
+
+  <!-- ================================================================ -->
+  <!--                    CHARACTER REFILL SPRITES                     -->
+  <!-- ================================================================ -->
+
+  <!-- Kirby Character Refill - Pink star-shaped crystal -->
+  <characterRefillKirby path="objects/characterRefill/kirby/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.1" frames="0-5"/>
+    <Anim id="spin" path="idle" delay="0.06" frames="0-5" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+  </characterRefillKirby>
+
+  <!-- Madeline Character Refill - Red hair-themed crystal -->
+  <characterRefillMadeline path="objects/characterRefill/madeline/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.1" frames="0-4"/>
+    <Anim id="spin" path="idle" delay="0.06" frames="0-4" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+  </characterRefillMadeline>
+
+  <!-- Badeline Character Refill - Purple dream crystal -->
+  <characterRefillBadeline path="objects/characterRefill/badeline/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.08" frames="0-6"/>
+    <Anim id="spin" path="idle" delay="0.05" frames="0-6" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+  </characterRefillBadeline>
+
+  <!-- Theo Character Refill - Blue selfie-themed crystal -->
+  <characterRefillTheo path="objects/characterRefill/theo/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.1" frames="0-4"/>
+    <Anim id="spin" path="idle" delay="0.06" frames="0-4" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+  </characterRefillTheo>
+
+  <!-- Granny Character Refill - Silver mountain elder crystal -->
+  <characterRefillGranny path="objects/characterRefill/granny/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.12" frames="0-4"/>
+    <Anim id="spin" path="idle" delay="0.08" frames="0-4" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+  </characterRefillGranny>
+
+  <!-- Oshiro Character Refill - Ghost resort-themed crystal -->
+  <characterRefillOshiro path="objects/characterRefill/oshiro/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.1" frames="0-5"/>
+    <Anim id="spin" path="idle" delay="0.06" frames="0-5" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+    <Anim id="ghostly" path="ghostly" delay="0.08" frames="0-7" goto="idle"/>
+  </characterRefillOshiro>
+
+  <!-- Chara Character Refill - Red Undertale soul crystal -->
+  <characterRefillChara path="objects/characterRefill/chara/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.08" frames="0-4"/>
+    <Anim id="spin" path="idle" delay="0.05" frames="0-4" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.04" frames="0-5"/>
+    <Anim id="pulse" path="pulse" delay="0.06" frames="0-3" goto="idle"/>
+  </characterRefillChara>
+
+  <!-- Frisk Character Refill - Yellow Undertale soul crystal -->
+  <characterRefillFrisk path="objects/characterRefill/frisk/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.1" frames="0-4"/>
+    <Anim id="spin" path="idle" delay="0.06" frames="0-4" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+  </characterRefillFrisk>
+
+  <!-- Ralsei Character Refill - Green Deltarune soul crystal -->
+  <characterRefillRalsei path="objects/characterRefill/ralsei/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.1" frames="0-5"/>
+    <Anim id="spin" path="idle" delay="0.06" frames="0-5" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+    <Anim id="heal" path="heal" delay="0.08" frames="0-6" goto="idle"/>
+  </characterRefillRalsei>
+
+  <!-- Asriel Character Refill - Rainbow/angel crystal -->
+  <characterRefillAsriel path="objects/characterRefill/asriel/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.08" frames="0-7"/>
+    <Anim id="spin" path="idle" delay="0.05" frames="0-7" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.04" frames="0-6"/>
+    <Anim id="rainbow" path="rainbow" delay="0.06" frames="0-11" goto="idle"/>
+  </characterRefillAsriel>
+
+  <!-- Meta Knight Character Refill - Dark blue sword crystal -->
+  <characterRefillMetaKnight path="objects/characterRefill/metaknight/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.08" frames="0-5"/>
+    <Anim id="spin" path="idle" delay="0.05" frames="0-5" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+    <Anim id="slash" path="slash" delay="0.04" frames="0-4" goto="idle"/>
+  </characterRefillMetaKnight>
+
+  <!-- King Dedede Character Refill - Royal blue hammer crystal -->
+  <characterRefillDedede path="objects/characterRefill/dedede/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.1" frames="0-5"/>
+    <Anim id="spin" path="idle" delay="0.06" frames="0-5" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+  </characterRefillDedede>
+
+  <!-- Magolor Character Refill - Purple/orange Lor Starcutter crystal -->
+  <characterRefillMagolor path="objects/characterRefill/magolor/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.08" frames="0-6"/>
+    <Anim id="spin" path="idle" delay="0.05" frames="0-6" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+    <Anim id="warp" path="warp" delay="0.06" frames="0-5" goto="idle"/>
+  </characterRefillMagolor>
+
+  <!-- Mage Kirby Character Refill - Cyan magic/beam crystal -->
+  <characterRefillMageKirby path="objects/characterRefill/magekirby/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.08" frames="0-5"/>
+    <Anim id="spin" path="idle" delay="0.05" frames="0-5" goto="idle"/>
+    <Anim id="flash" path="flash" delay="0.05" frames="0-5"/>
+    <Anim id="magic" path="magic" delay="0.06" frames="0-7" goto="idle"/>
+  </characterRefillMageKirby>
+
+  <glider path="objects/glider/" start="idle">
+    <Justify x="0.5" y="0.58"/>
+    <Loop id="idle" path="idle" delay="0.1"/>
+    <Loop id="held" path="held" delay="0.1"/>
+    <Anim id="fall" path="fall" delay="0.06" goto="fallLoop"/>
+    <Loop id="fallLoop" path="fallLoop" delay="0.06"/>
+    <Anim id="death" path="death" delay="0.06"/>
+  </glider>
+
+  <torch path="objects/temple/" start="off">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="off" path="torch" delay="0.1" frames="0"/>
+    <Anim id="turnOn" path="torch" delay="0.08" frames="1-3" goto="on"/>
+    <Loop id="on" path="torch" delay="0.08" frames="3-8"/>
+  </torch>
+
+  <litTorch path="objects/temple/" start="off">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="off" path="litTorch" delay="0.1" frames="0"/>
+    <Anim id="turnOn" path="litTorch" delay="0.08" frames="1-3" goto="on"/>
+    <Loop id="on" path="litTorch" delay="0.08" frames="3-8"/>
+  </litTorch>
+
+  <breakerBox path="objects/breakerBox/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.1"/>
+    <Anim id="open" path="open" delay="0.06" frames="1-3" goto="opened"/>
+    <Loop id="opened" path="opened" delay="0.06"/>
+    <Anim id="break" path="break" delay="0.06"/>
+  </breakerBox>
+
+  <powergen path="objects/powergen/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="idle" delay="0.1"/>
+    <Anim id="open" path="open" delay="0.06" frames="1-3" goto="opened"/>
+    <Loop id="opened" path="opened" delay="0.06"/>
+    <Anim id="break" path="break" delay="0.06"/>
+  </powergen>
+
+  <seeker path="characters/monsters/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="predator" delay="0.08" frames="0-19"/>
+    <Loop id="search" path="predator" delay="0.08" frames="0-19,20-39"/>
+    <Anim id="spot" path="predator" delay="0.07" frames="40-43" goto="spotted"/>
+    <Loop id="spotted" path="predator" delay="0.07" frames="44-48"/>
+    <Anim id="windUp" path="predator" delay="0.07" frames="103-107" goto="attacking"/>
+    <Loop id="attacking" path="predator" delay="0.07" frames="49-53"/>
+    <Anim id="takeHit" path="predator" delay="0.07" frames="108-121" goto="stunned"/>
+    <Loop id="stunned" path="predator" delay="0.07" frames="122,123" />
+    <Loop id="pulse" path="predator" delay="0.04" frames="144-151" />
+    <Anim id="recover" path="rebirth" delay="0.07"/>
+    <Anim id="skid" path="predator" delay="0.07" frames="129-133" goto="attacking"/>
+    <Loop id="dazed" path="predator" delay="0.07" frames="134-143" />
+    
+    <Anim id="hatch" path="predator" delay="0.05" frames="75-102" goto="idle"/>
+    <Loop id="statue" path="predator" delay="0.07" frames="75" />
+
+    <Anim id="flipMouth" path="predator" delay="0.05" frames="61-63" goto="spotted"/>
+    <Anim id="flipEyes" path="predator" delay="0.05" frames="68-74" goto="search"/>
+  </seeker>
+	
+  <seekerShockWave path="characters/monsters/" start="shockwave">
+	<Center/>
+    <Anim id="shockwave" path="Shockwave" delay="0.05"/>
+  </seekerShockWave>
+
+  <cloud path="objects/clouds/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="cloud" delay="0.08" frames="0"/>
+  </cloud>
+  
+  <cloudRemix path="objects/clouds/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="cloudRemix" delay="0.08" frames="0"/>
+  </cloudRemix>
+
+  <cloudFragile path="objects/clouds/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="fragile" delay="0.08" frames="0"/>
+    <Anim id="fade" path="fragile" delay="0.08" frames="0-5"/>
+    <Anim id="spawn" path="fragile" delay="0.06" frames="6-12"/>
+  </cloudFragile>
+
+  <cloudFragileRemix path="objects/clouds/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="fragileRemix" delay="0.08" frames="0"/>
+    <Anim id="fade" path="fragileRemix" delay="0.08" frames="0-5"/>
+    <Anim id="spawn" path="fragileRemix" delay="0.06" frames="6-12"/>
+  </cloudFragileRemix>
+
+  <tentacles path="danger/tentacles" start="0">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="0" path="" delay="0.08" frames="0-5"/>
+    <Loop id="1" path="" delay="0.08" frames="6-10"/>
+    <Loop id="2" path="" delay="0.08" frames="11-16"/>
+  </tentacles>
+
+  <templeBlade path="danger/blade" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle" path="" delay="0.08" frames="0"/>
+    <Anim id="spin" path="" delay="0.06" frames="1-5" goto="idle"/>
+  </templeBlade>
+
+  <moonBlade path="danger/starfish" start="idle0">
+    <Justify x="0.5" y="0.5"/>
+    <Loop id="idle0" path="" delay="0.08" frames="0"/>
+    <Anim id="spin0" path="" delay="0.06" frames="1-6" goto="idle1"/>
+    
+    <Loop id="idle1" path="" delay="0.08" frames="7"/>
+    <Anim id="spin1" path="" delay="0.06" frames="8-13" goto="idle2"/>
+    
+    <Loop id="idle2" path="" delay="0.08" frames="14"/>
+    <Anim id="spin2" path="" delay="0.06" frames="15-20" goto="idle0"/>
+  </moonBlade>
+
+  <temple_portal_curtain path="objects/temple/portal/portalcurtain" start="idle">
+    <Center/>
+    <Loop id="idle" path="" delay="0" frames="0"/>
+    <Anim id="fall" path="" delay="0.08" frames="0-7" goto="fallen"/>
+    <Loop id="fallen" path="" delay="0" frames="7"/>
+  </temple_portal_curtain>
+
+  <snowball path="danger/" start="spin">
+    <Center/>
+    <Loop id="spin" path="snowball" delay="0.08" frames="0-11"/>
+    <Anim id="break" path="snowball" delay="0.04" frames="12-16"/>
+  </snowball>
+
+  <temple_eyeball path="danger/templeeye/" start="idle">
+    <Center/>
+    <Loop id="idle" path="body" frames="0" delay="0.08"/>
+    <Anim id="burst" path="body" frames="1,2,1,2,1,2,1-16" delay="0.08"/>
+  </temple_eyeball>
+
+  <crushblock_face path="objects/crushblock/" start="idle">
+      <Center/>
+      <Loop id="idle" path="idle_face" delay="0.08"/>
+      <Anim id="hurt" path="hurt" frames="3-12" delay="0.08" goto="idle"/>
+      <Anim id="hit" path="hit" delay="0.08"/>
+      <Loop id="left" path="hit_left" delay="0.08"/>
+      <Loop id="right" path="hit_right" delay="0.08"/>
+      <Loop id="up" path="hit_up" delay="0.08"/>
+      <Loop id="down" path="hit_down" delay="0.08"/>
+  </crushblock_face>
+
+<giant_crushblock_face path="objects/crushblock/" start="idle">
+      <Center/>
+      <Loop id="idle" path="giant_block" frames="0" delay="0.08"/>
+      <Anim id="hurt"  path="giant_block" frames="8-12" delay="0.08" goto="idle"/>
+      <Anim id="hit" path="giant_block" frames="0-5" delay="0.08"/>
+      <Loop id="right" path="giant_block" frames="6,7"  delay="0.08"/>
+  </giant_crushblock_face>
+
+  <bumper path="objects/bumper/" start="idle">
+      <Center/>
+      <Anim id="on" path="idle" frames="42-44" delay="0.06" goto="idle"/>
+      <Loop id="idle" path="idle" frames="0-33" delay="0.06"/>
+      <Anim id="hit" path="idle" frames="34-42" delay="0.06" goto="off"/>
+      <Loop id="off" path="idle" frames="42" delay="0.06"/>
+  </bumper>
+
+  <bumper_evil path="objects/bumper/" start="idle">
+      <Center/>
+      <Anim id="on" path="evil" frames="40-42" delay="0.06" goto="idle"/>
+      <Loop id="idle" path="evil" frames="0-31" delay="0.06"/>
+      <Anim id="hit" path="evil" frames="32-40" delay="0.06" goto="off"/>
+      <Loop id="off" path="evil" frames="40" delay="0.06"/>
+  </bumper_evil>
+
+  <charaboost path="objects/charaboost/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Anim id="idle" path="idle" frames="0-5" delay="0.08" goto="idle:10,flash:2,blink"/>
+    <Anim id="flash" path="idle" frames="6-11" delay="0.08" goto="idle"/>
+    <Anim id="blink" path="idle" frames="12-25" delay="0.08" goto="idle"/>
+    <Anim id="charaboost" path="charaboost" frames="0-3" delay="0.08"/>
+  </charaboost>
+
+  <ralseiBoost path="objects/ralseiboost/" start="idle">
+    <Justify x="0.5" y="0.5"/>
+    <Anim id="idle" path="idle" frames="0-5" delay="0.08" goto="idle:10,flash:2,blink"/>
+    <Anim id="flash" path="idle" frames="6-11" delay="0.08" goto="idle"/>
+    <Anim id="blink" path="idle" frames="12-25" delay="0.08" goto="idle"/>
+  </ralseiBoost>
+
+  <DeltaBerry path="collectables/deltaberry/" start="idle">
+    <Center />
+    
+    <Loop id="idle" path="normal" delay=".1" frames="0-1" />
+    <Anim id="collect" path="normal" delay=".07" frames="2-92"/>
+  </DeltaBerry>
+
+  <GhostDeltaBerry path="collectables/ghostdeltaberry/" start="idle">
+    <Center />
+    
+    <Loop id="idle" path="ghostnormal" delay=".1" frames="0-1" />
+    <Anim id="collect" path="ghostnormal" delay=".07" frames="2-92"/>
+  </GhostDeltaBerry>
+
+  <!-- Removed duplicate kirby_player definition - see main kirby_player above -->
+
+<!-- Kirby Player Sprites Extension -->
+<kirby_player_ext path="characters/kirby/" start="kirby_idle">
+    <Origin x="16" y="32" />
+    
+    <!-- Basic Animations -->
+    <Loop id="kirby_idle" path="idle" delay="0.15" />
+    <Anim id="kirby_walk" path="walk" delay="0.08" />
+    <Anim id="kirby_run" path="run" delay="0.06" />
+    <Anim id="kirby_jump" path="jump" delay="0.1" />
+    <Anim id="kirby_fall" path="fall" delay="0.1" />
+    
+    <!-- Kirby Abilities -->
+    <Anim id="kirby_inhale" path="inhale" delay="0.05" />
+    <Loop id="kirby_hover" path="hover" delay="0.1" />
+    <Anim id="kirby_spit" path="spit" delay="0.05" />
+    <Anim id="kirby_damage" path="damage" delay="0.08" goto="kirby_idle" />
+    
+    <!-- Transformation Animations -->
+    <Anim id="kirby_transform_in" path="transform_in" delay="0.06" goto="kirby_idle" />
+    <Anim id="kirby_transform_out" path="transform_out" delay="0.06" />
+    
+    <!-- Power States - Fire -->
+    <Loop id="kirby_fire_idle" path="fire/idle" delay="0.15" />
+    <Anim id="kirby_fire_walk" path="fire/walk" delay="0.08" />
+    <Anim id="kirby_fire_attack" path="fire/attack" delay="0.04" goto="kirby_fire_idle" />
+    <Anim id="kirby_fire_breath" path="fire/breath" delay="0.03" goto="kirby_fire_idle" />
+    <Anim id="kirby_fire_dashball" path="fire/dashball" delay="0.1" />
+    
+    <!-- Power States - Ice -->
+    <Loop id="kirby_ice_idle" path="ice/idle" delay="0.15" />
+    <Anim id="kirby_ice_walk" path="ice/walk" delay="0.08" />
+    <Anim id="kirby_ice_attack" path="ice/attack" delay="0.06" goto="kirby_ice_idle" />
+    <Anim id="kirby_ice_shard" path="ice/shard" delay="0.05" goto="kirby_ice_idle" />
+    <Anim id="kirby_ice_slide" path="ice/slide" delay="0.1" goto="kirby_ice_idle" />
+    <Anim id="kirby_ice_breath" path="ice/breath" delay="0.1" goto="kirby_ice_idle" />
+
+    
+    <!-- Power States - Spark -->
+    <Loop id="kirby_spark_idle" path="spark/idle" delay="0.12" />
+    <Anim id="kirby_spark_walk" path="spark/walk" delay="0.08" />
+    <Anim id="kirby_spark_attack" path="spark/attack" delay="0.03" goto="kirby_spark_idle" />
+    <Anim id="kirby_spark_shield" path="spark/shield" delay="0.05" goto="kirby_spark_idle" />
+    <Anim id="kirby_spark_charge" path="spark/charge" delay="0.1" goto="kirby_spark_idle" />
+    <Anim id="kirby_spark_release" path="spark/release" delay="0.1" goto="kirby_spark_idle" />
+    
+    <!-- Power States - Stone -->
+    <Loop id="kirby_stone_idle" path="stone/idle" delay="0.2" />
+    <Anim id="kirby_stone_walk" path="stone/walk" delay="0.1" />
+    <Anim id="kirby_stone_transform" path="stone/transform" delay="0.05" />
+    <Loop id="kirby_stone_form" path="stone/form" delay="0.3" />
+    <Anim id="kirby_stone_shatter" path="stone/shatter" delay="0.05" goto="kirby_idle" />
+    <Anim id="kirby_stone_prebigform" path="stone/prebigform" delay="0.05" goto="kirby_idle" />
+    <Anim id="kirby_stone_bigformgroundpound" path="stone/bigformgroundpound" delay="0.05" goto="kirby_bigform_idle" />
+    <Loop id="kirby_bigform_shatter" path="stone/bigformshatter" delay="0.02" goto="kirby_idle" />
+    
+    <!-- Power States - Sword -->
+    <Loop id="kirby_sword_idle" path="sword/idle" delay="0.15" />
+    <Anim id="kirby_sword_walk" path="sword/walk" delay="0.08" />
+    <Anim id="kirby_sword_attack1" path="sword/attack1" delay="0.04" goto="kirby_sword_idle" />
+    <Anim id="kirby_sword_attack2" path="sword/attack2" delay="0.05" goto="kirby_sword_idle" />
+    <Anim id="kirby_sword_spin" path="sword/spin" delay="0.03" goto="kirby_sword_idle" />
+    <Anim id="kirby_sword_dash" path="sword/dash" delay="0.1" goto="kirby_sword_idle" />
+    <Anim id="kirby_sword_parry" path="sword/parry" delay="0.05" goto="kirby_sword_idle" />
+    <Anim id="kirby_sword_sliceup" path="sword/sliceup" delay="0.05" goto="kirby_sword_finalslice" />
+    <Anim id="kirby_sword_finalslice" path="sword/finalslice" delay="0.04" goto="kirby_sword_idle" />
+    
+    <!-- Combat Animations -->
+    <Anim id="kirby_punchA" path="combat/punchA" delay="0.05" goto="kirby_idle" />
+    <Anim id="kirby_punchB" path="combat/punchB" delay="0.04" goto="kirby_idle" />
+    <Anim id="kirby_backflip" path="combat/backflip" delay="0.06" goto="kirby_idle" />
+    <Anim id="kirby_spin" path="combat/spin" delay="0.05" />
+    <Anim id="kirby_groundpound" path="combat/groundpound" delay="0.04" goto="kirby_idle" />
+    <Anim id="kirby_grab_enemy" path="combat/grab_enemy" delay="0.06" goto="kirby_idle" />
+    <Anim id="kirby_slide" path="combat/slide" delay="0.04" goto="kirby_idle" />
+    
+    <!-- Death Animations -->
+    <Anim id="kirby_pre_death" path="combat/pre_death" delay="0.08" goto="kirby_mid_death" />
+    <Anim id="kirby_mid_death" path="combat/mid_death" delay="0.08" goto="kirby_post_death" />
+    <Anim id="kirby_post_death" path="combat/post_death" delay="0.08" />
+    <Anim id="kirby_death" path="combat/death" delay="0.08" />
+</kirby_player_ext>
+
+  <!-- ================================================================ -->
+  <!--                        EFFECT SPRITES                           -->
+  <!-- ================================================================ -->
+
+  <!-- Kirby Effects -->
+  <kirby_effects path="effects/kirby/" start="stars">
+    <Origin x="8" y="8" />
+    
+    <Anim id="stars" path="stars" delay="0.04" />
+    <Anim id="inhale_effect" path="inhale_effect" delay="0.03" />
+    <Anim id="transformation" path="transformation" delay="0.05" />
+    <Loop id="power_aura" path="power_aura" delay="0.08" />
+    <Anim id="damage_stars" path="damage_stars" delay="0.06" />
+  </kirby_effects>
+
+  <!-- Flowey NPC -->
+  <flowey path="flowey/" start="idle">
+    <Center />
+    
+    <Loop id="idle" path="normal" delay="0.1" frames="0" />
+    <Loop id="popin" path="normal" delay="0.1" frames="0" />
+    <Loop id="knockout" path="normal" delay="0.1" frames="0" />
+    <Loop id="grin" path="grin" delay="0.1" frames="0-1" />
+    <Loop id="laugh" path="laugh" delay="0.1" frames="0-2" />
+    <Loop id="pissed" path="pissed" delay="0.1" frames="0-1" />
+    <Loop id="shout" path="shout" delay="0.1" frames="0-1" />
+    <Loop id="evil" path="evil" delay="0.1" frames="0-1" />
+  </flowey>
+
+  <!-- Kirby NPC -->
+  <kirby path="characters/kirby/" start="idle">
+    <Center />
+    
+    <Loop id="idle" path="idle" delay="0.15" frames="0" />
+    <Loop id="walk" path="walk" delay="0.08" frames="0" />
+  </kirby>
+
+  <!-- Theo NPC -->
+  <theo path="characters/theo/" start="idle">
+    <Center />
+    
+    <Loop id="idle" path="theo" delay="0.1" frames="0" />
+    <Loop id="walk" path="run" delay="0.1" frames="0" />
+  </theo>
+
+  <!-- Star Bullet -->
+  <star_bullet path="star/" start="idle">
+    <Center />
+    
+    <Loop id="idle" path="normal" delay="0.1" frames="0" />
+    <Loop id="fly" path="normal" delay="0.1" frames="0" />
+    <Loop id="knockout" path="normal" delay="0.1" frames="0" />
+  </star_bullet>
+
+  <!-- ================================================================ -->
+  <!--                         UI SPRITES                              -->
+  <!-- ================================================================ -->
+
+  <!-- Kirby UI -->
+  <kirby_ui path="gui/kirby/" start="heart_full">
+    <Origin x="6" y="6" />
+    
+    <Justification x="0.5" y="0.5" />
+    <Anim id="heart_full" path="heart_full" delay="0.1" />
+    <Anim id="heart_empty" path="heart_empty" delay="0.1" />
+    <Anim id="heart_half" path="heart_half" delay="0.1" />
+    <Loop id="heart_beat" path="heart_beat" delay="0.2" />
+  </kirby_ui>
+
 </Sprites>

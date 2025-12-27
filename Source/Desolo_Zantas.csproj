@@ -1,0 +1,104 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <AssemblyName>Desolo_Zantas</AssemblyName>
+        <RootNamespace>DesoloZantas.Core</RootNamespace>
+    <!-- Direct build output to the mod's Code folder so Everest loads the updated DLL automatically -->
+    <OutputPath>..\Code\</OutputPath>
+        <EnableDynamicLoading>true</EnableDynamicLoading>
+        <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+        <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+        <LangVersion>preview</LangVersion>
+        <Platforms>AnyCPU;x86</Platforms>
+        <Configurations>Debug;Release;Beta</Configurations>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    </PropertyGroup>
+
+    <!-- Container build properties -->
+    <PropertyGroup Condition="'$(CONTAINER_BUILD)' == 'true'">
+        <DefineConstants>$(DefineConstants);CONTAINER_BUILD</DefineConstants>
+        <UseMockAssemblies>true</UseMockAssemblies>
+        <OutputPath>..\Code\net48\</OutputPath>
+    </PropertyGroup>
+    <ItemGroup>
+      <Compile Remove="Core\obj\**" />
+      <EmbeddedResource Remove="Core\obj\**" />
+      <None Remove="Core\obj\**" />
+    </ItemGroup>
+
+    <!-- Normal Celeste references (when not using mocks) -->
+    <ItemGroup Condition="'$(UseMockAssemblies)' != 'true'">
+        <Reference Include="Celeste">
+            <HintPath>$(SteamInstallPath)\steamapps\common\Celeste\Celeste.exe</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="FNA">
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="MMHOOK_Celeste">
+            <HintPath>$(SteamInstallPath)\steamapps\common\Celeste\MMHOOK_Celeste.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="SkinModHelperPlus">
+            <HintPath>Source\Core\lib-stripped\SkinModHelperPlus.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+    </ItemGroup>
+
+    <!-- Mock assembly references (for container builds) -->
+    <ItemGroup Condition="'$(UseMockAssemblies)' == 'true'">
+        <Reference Include="Celeste">
+            <HintPath>MockLibs\Celeste.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="FNA">
+            <HintPath>MockLibs\FNA.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="Microsoft.CSharp" />
+        <Reference Include="MMHOOK_Celeste">
+            <HintPath>MockLibs\MMHOOK_Celeste.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <!-- SkinModHelper mock for container builds -->
+        <Reference Include="SkinModHelper">
+            <HintPath>MockLibs\SkinModHelper.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="SkinModHelperPlus" Condition="Exists('MockLibs\SkinModHelperPlus.dll')">
+            <HintPath>MockLibs\SkinModHelperPlus.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Mono.Cecil" Version="0.11.5" />
+        <PackageReference Include="MonoMod.RuntimeDetour" Version="22.1.29.1" />
+        <PackageReference Include="MonoMod.Utils" Version="22.1.29.1" />
+        <PackageReference Include="YamlDotNet" Version="16.2.1" />
+        <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="NLua" Version="1.7.3" />
+        <PackageReference Include="MonoGame.ImGuiNet" Version="1.0.5" />
+    </ItemGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>portable</DebugType>
+        <Optimize>false</Optimize>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)'=='Beta'">
+      <DebugSymbols>true</DebugSymbols>
+      <DebugType>portable</DebugType>
+      <Optimize>false</Optimize>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)'=='Release'">
+      <DebugSymbols>false</DebugSymbols>
+      <DebugType>none</DebugType>
+      <Optimize>true</Optimize>
+      <DefineConstants>RELEASE</DefineConstants>
+    </PropertyGroup>
+</Project>

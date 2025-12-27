@@ -1,0 +1,2 @@
+function onBegin() player.StateMachine.State = 11 helpers.playPuppetAnim("defeat") playSound("event:/meterminator_defeat") wait(1.0) helpers.sayExt("METERMINATOR_DEFEAT") helpers.removeBoss(true) setFlag("boss_meterminator_defeated", true) player.StateMachine.State = 0 end
+function onEnd(level, wasSkipped) if wasSkipped then helpers.removeBoss(true) setFlag("boss_meterminator_defeated", true) player.StateMachine.State = 0 end end

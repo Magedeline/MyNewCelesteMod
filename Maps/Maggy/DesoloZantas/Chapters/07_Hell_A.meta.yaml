@@ -1,0 +1,80 @@
+Icon: areas/hell
+Interlude: true
+TitleBaseColor: 8b0000
+TitleAccentColor: ff4500
+TitleTextColor: ffffff
+IntroType: None
+Dreaming: false
+ColorGrade: hell
+Wipe: Celeste.FadeWipe
+DarknessAlpha: 0.35
+BloomBase: 0.4
+BloomStrength: 1.6
+Jumpthru: core
+CassetteNoteColor: ff6633
+CassetteSong: event:/Ingeste/music/Cassette/07_hell
+Modes:
+  - AudioState:
+      Music: event:/Ingeste/music/lvl7/normal
+      Ambience: event:/Ingeste/env/07_interior_main
+    Inventory: Default
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/BSide/07_hell
+      Ambience: event:/Ingeste/env/07_interior_main
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/CSide/07_hell
+      Ambience: event:/Ingeste/env/07_interior_main
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/CSide/07_hell
+      Ambience: event:/Ingeste/env/07_interior_main
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+Mountain:
+    Idle:
+        Position: [ 1.850, 12.450, 18.680 ]
+        Target: [ 0.920, 11.480, 17.120 ]
+    Select:
+        Position: [ 0.480, 9.950, 19.020 ]
+        Target: [ 1.780, 9.850, 17.560 ]
+    Zoom:
+        Position: [ 2.180, 10.350, 15.880 ]
+        Target: [ 2.020, 9.380, 14.180 ]
+    Cursor: [ 1.882947, 10.118691, 13.955817 ]
+    State: 0
+CompleteScreen:
+    Atlas: "DesoloZantas"
+    Scale: 2
+    Start: [ -10.0, 2000.0 ]
+    Center: [ -10.0, 1200.0 ]
+    Title:
+        ASide: 'AREACOMPLETE_NORMAL'
+        BSide: 'AREACOMPLETE_BSIDE'
+        CSide: 'AREACOMPLETE_CSIDE'
+        DSide: 'AREACOMPLETE_DSIDE'
+        FullClear: 'AREACOMPLETE_NORMAL_FULLCLEAR'
+    Layers:
+      - Type: "layer"
+        Images: [ "hell_01" ]
+        Position: [ 0.0, 0.0 ]
+        Scroll: [ 0.0 ]
+        Scale: 2
+      - Type: "layer"
+        Images: [ "hell_02" ]
+        Position: [ -800.0, -700.0 ]
+        Scroll: [ 0.02 ]
+        Scale: 2
+      - Type: "ui"
+        Scroll: [ 0.62 ]
+      - Type: "layer"
+        Images: [ "hell_03" ]
+        Position: [ -800.0, -700.0 ]
+        Scroll: [ 0.04 ]
+        Scale: 2

@@ -1,0 +1,22 @@
+skinName: "Kirby"
+spritePath: "Kirby/Kirby"
+
+hair:
+  enabled: false
+
+effects:
+  - name: "sparkle"
+    trigger: "dash"
+    color: "#FFB7C5"
+  - name: "puff"
+    trigger: "jump"
+    color: "#FFFFFF"
+
+animations:
+  idle: "idle"
+  walk: "runSlow"
+  run: "runFast"
+  jump: "jumpSlow"
+  dash: "dash"
+  climb: "climbUp"
+  fall: "fallSlow"

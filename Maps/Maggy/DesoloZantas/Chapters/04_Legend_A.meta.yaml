@@ -1,0 +1,88 @@
+Icon: areas/cliffside
+Interlude: true
+TitleBaseColor: ff6b47
+TitleAccentColor: 8d2a72
+TitleTextColor: ffffff
+IntroType: None
+Dreaming: false
+ColorGrade: none
+Wipe: Celeste.WindWipe
+DarknessAlpha: 0.2
+BloomBase: 0.15
+BloomStrength: 1.1
+Jumpthru: cliffside
+CassetteNoteColor: eb4bd9
+CassetteSong: event:/Ingeste/music/Cassette/04_legend
+Modes:
+  - AudioState:
+      Music: event:/Ingeste/music/lvl4/main
+      Ambience: event:/Ingeste/env/04_dream
+    Inventory: Default
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/BSide/04_legend
+      Ambience: event:/Ingeste/env/04_dream
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/CSide/04_legend
+      Ambience: event:/Ingeste/env/04_dream
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+  - AudioState:
+      Music: event:/Ingeste/music/CSide/04_legend
+      Ambience: event:/Ingeste/env/04_dream
+    Inventory: Default
+    HeartIsEnd: true
+    SeekerSlowdown: false
+Mountain:
+    Idle:
+        Position: [ 12.180, 10.420, 6.850 ]
+        Target: [ 10.480, 9.840, 5.980 ]
+    Select:
+        Position: [ 10.980, 7.430, 7.690 ]
+        Target: [ 9.220, 7.610, 6.770 ]
+    Zoom:
+        Position: [ 8.590, 6.940, 4.930 ]
+        Target: [ 7.080, 7.180, 3.640 ]
+    Cursor: [ 6.040306, 8.358777, 4.463843 ]
+    State: 2
+CompleteScreen:
+    Atlas: "DesoloZantas"
+    Start: [ 200.0, 1050.0 ]
+    Center: [ 200.0, 250.0 ]
+    Title:
+        ASide: 'AREACOMPLETE_NORMAL'
+        BSide: 'AREACOMPLETE_BSIDE'
+        CSide: 'AREACOMPLETE_CSIDE'
+        DSide: 'AREACOMPLETE_DSIDE'
+        FullClear: 'AREACOMPLETE_NORMAL_FULLCLEAR'
+    Layers:
+      - Type: "layer"
+        Images: [ "legend_complete_bg" ]
+        Position: [ 0.0, 0.0 ]
+        Scroll: [ 0.0 ]
+        Scale: 2
+      - Type: "layer"
+        Images: [ "legend_complete_cliffs" ]
+        Position: [ 0.0, -25.0 ]
+        Scroll: [ 0.02 ]
+        Scale: 2
+      - Type: "layer"
+        Images: [ "legend_complete_ruins" ]
+        Position: [ 0.0, -20.0 ]
+        Scroll: [ 0.04 ]
+        Scale: 2
+      - Type: "layer"
+        Images: [ "legend_complete_hero" ]
+        Position: [ 0.0, 0.0 ]
+        Scroll: [ 0.08 ]
+        Scale: 2
+      - Type: "layer"
+        Images: [ "legend_complete_fg" ]
+        Position: [ 0.0, 0.0 ]
+        Scroll: [ 0.12 ]
+      - Type: "ui"
+        ScrollX: [ 0.2 ]
