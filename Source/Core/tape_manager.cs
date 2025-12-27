@@ -334,7 +334,8 @@ namespace DesoloZantas.Core.Core
         }
 
         public static bool CollectTapeFromLua(string areaKeySid, string levelName, string side) {
-            if (AreaDataExt.Get(areaKeySid, out var areaData)) {
+            var areaData = AreaData.Get(areaKeySid);
+            if (areaData != null) {
                 var areaKey = areaData.ToKey();
                 char sideChar = string.IsNullOrEmpty(side) ? 'A' : side[0];
                 sideChar = ValidateSide(sideChar);
@@ -343,7 +344,8 @@ namespace DesoloZantas.Core.Core
             return false;
         }
         public static bool UnlockSideFromLua(string areaKeySid, string side) {
-            if (AreaDataExt.Get(areaKeySid, out var areaData)) {
+            var areaData = AreaData.Get(areaKeySid);
+            if (areaData != null) {
                 var areaKey = areaData.ToKey();
                 char sideChar = string.IsNullOrEmpty(side) ? 'A' : side[0];
                 sideChar = ValidateSide(sideChar);
@@ -352,7 +354,8 @@ namespace DesoloZantas.Core.Core
             return false;
         }
         public static int GetTapeCountFromLua(string areaKeySid, string side) {
-            if (AreaDataExt.Get(areaKeySid, out var areaData)) {
+            var areaData = AreaData.Get(areaKeySid);
+            if (areaData != null) {
                 var areaKey = areaData.ToKey();
                 char sideChar = string.IsNullOrEmpty(side) ? 'A' : side[0];
                 sideChar = ValidateSide(sideChar);
@@ -361,7 +364,8 @@ namespace DesoloZantas.Core.Core
             return 0;
         }
         public static bool GetSideUnlockedFromLua(string areaKeySid, string side) {
-            if (AreaDataExt.Get(areaKeySid, out var areaData)) {
+            var areaData = AreaData.Get(areaKeySid);
+            if (areaData != null) {
                 var areaKey = areaData.ToKey();
                 char sideChar = string.IsNullOrEmpty(side) ? 'A' : side[0];
                 sideChar = ValidateSide(sideChar);

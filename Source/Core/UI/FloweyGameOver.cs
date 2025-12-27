@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Celeste;
 using Microsoft.Xna.Framework;
 using Monocle;
+using DesoloZantas.Core.Core;
 
 namespace Celeste.Mod.DesoloZatnas.Core.UI
 {

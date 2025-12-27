@@ -41,7 +41,19 @@
             <Private>false</Private>
         </Reference>
         <Reference Include="SkinModHelperPlus">
-            <HintPath>Source\Core\lib-stripped\SkinModHelperPlus.dll</HintPath>
+            <HintPath>Core\lib-stripped\SkinModHelperPlus.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="NLua">
+            <HintPath>Core\lib-stripped\NLua.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="KeraLua">
+            <HintPath>Core\lib-stripped\KeraLua.dll</HintPath>
+            <Private>false</Private>
+        </Reference>
+        <Reference Include="YamlDotNet">
+            <HintPath>Core\lib-stripped\YamlDotNet.dll</HintPath>
             <Private>false</Private>
         </Reference>
     </ItemGroup>
@@ -76,10 +88,8 @@
         <PackageReference Include="Mono.Cecil" Version="0.11.5" />
         <PackageReference Include="MonoMod.RuntimeDetour" Version="22.1.29.1" />
         <PackageReference Include="MonoMod.Utils" Version="22.1.29.1" />
-        <PackageReference Include="YamlDotNet" Version="16.2.1" />
         <PackageReference Include="System.ValueTuple" Version="4.5.0" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-        <PackageReference Include="NLua" Version="1.7.3" />
         <PackageReference Include="MonoGame.ImGuiNet" Version="1.0.5" />
     </ItemGroup>
 

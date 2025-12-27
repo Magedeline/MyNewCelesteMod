@@ -206,7 +206,8 @@ namespace DesoloZantas.Core.Core.Triggers
 
                 // Use CallLuaFunction instead of direct DoString access
                 var luaFunctionCall = $"require('libraries.flowey_cutscene_library').executeCutscene('{cutsceneId}', {{}})";
-                var luaResultStr = LuaCutsceneManager.CallLuaFunction(luaFunctionCall);
+                var luaResultArray = LuaCutsceneManager.CallLuaFunction(luaFunctionCall);
+                var luaResultStr = luaResultArray?.Length > 0 ? luaResultArray[0]?.ToString() : null;
                 
                 if (!string.IsNullOrEmpty(luaResultStr))
                 {

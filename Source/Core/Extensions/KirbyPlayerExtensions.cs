@@ -1,6 +1,6 @@
 using DesoloZantas.Core.Core.Effects;
 using DesoloZantas.Core.Core.Player;
-using DesoloZantas.Core.Core.Settings;
+using DesoloZantas.Core.Core.Systems;
 using FMOD.Studio;
 using MonoMod.Utils;
 
@@ -350,8 +350,8 @@ namespace DesoloZantas.Core.Core.Extensions
         // CurrentPower property for backwards compatibility - delegates to PlayerExtensions DynamicData
         public PowerState CurrentPower
         {
-            get => player?.GetKirbyPowerState() ?? PowerState.None;
-            set => player?.SetKirbyPowerState(value);
+            get => (PowerState)(player?.GetKirbyPowerState() ?? 0);
+            set => player?.SetKirbyPowerState((int)value);
         }
         
         // Candy invincibility
@@ -498,10 +498,10 @@ namespace DesoloZantas.Core.Core.Extensions
         {
             if (player == null) return;
             
-            var currentPower = player.GetKirbyPowerState();
+            var currentPower = (PowerState)player.GetKirbyPowerState();
             if (currentPower == newPower) return;
             
-            player.SetKirbyPowerState(newPower);
+            player.SetKirbyPowerState((int)newPower);
             
             string animationName = newPower switch
             {
@@ -537,7 +537,7 @@ namespace DesoloZantas.Core.Core.Extensions
         
         public void PerformElementalAttack(global::Celeste.Player player)
         {
-            var currentPower = player.GetKirbyPowerState();
+            var currentPower = (PowerState)player.GetKirbyPowerState();
             if (currentPower == PowerState.None || !(Scene is Level level)) return;
             
             Vector2 attackDirection = new Vector2(Input.MoveX.Value, Input.MoveY.Value);
@@ -659,9 +659,9 @@ namespace DesoloZantas.Core.Core.Extensions
             player.EnableKirbyMode();
             
             // Initialize playable character system
-            Player.PlayableCharacterSystem.Initialize();
-            Player.PlayableCharacterSystem.SetCurrentCharacter(Player.PlayableCharacterId.Kirby);
-            Player.PlayableCharacterSystem.ApplyToPlayer(player);
+            PlayableCharacterSystem.Initialize();
+            PlayableCharacterSystem.SetCurrentCharacter(PlayableCharacterId.Kirby);
+            PlayableCharacterSystem.ApplyToPlayer(player);
             
             IngesteLogger.Info($"K_Player initialized with {(int)dashTier} dashes");
         }

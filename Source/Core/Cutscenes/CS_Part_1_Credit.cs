@@ -1,7 +1,5 @@
 #nullable enable
 
-using DesoloZantas.Core.Core.Utils;
-
 namespace DesoloZantas.Core.Core.Cutscenes
 {
     /// <summary>
@@ -161,18 +159,11 @@ namespace DesoloZantas.Core.Core.Cutscenes
 
             if (vignetteTexture != null)
             {
-                // Use Draw.SpriteBatch or similar method to draw the Texture2D
-                // Example using Monocle's Draw.SpriteBatch:
-                Draw.SpriteBatch.Draw(
-                    vignetteTexture,
+                // Use MTexture's Draw method for Celeste/Monocle compatibility
+                vignetteTexture.Draw(
                     Vector2.Zero,
-                    null,
-                    Color.White * alpha,
-                    0f,
                     Vector2.Zero,
-                    1f,
-                    Microsoft.Xna.Framework.Graphics.SpriteEffects.None,
-                    0f
+                    Color.White * alpha
                 );
             }
         }

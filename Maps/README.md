@@ -2,41 +2,69 @@
 
 ## Chapter Structure
 
-### Main Chapters (Areas 10-18)
+All maps are located in `Maps/Maggy/DesoloZantas/Chapters/`
 
-| Area ID | Chapter Name | Folder | Description |
-|---------|--------------|--------|-------------|
-| 10 | Prologue II | `Maggy/DesoloZantas/0-Prologue/` | Introduction and tutorial |
-| 11 | Forsaken Path | `Maggy/DesoloZantas/1-ForsakenPath/` | Forest and ruins |
-| 12 | Crystal Caverns | `Maggy/DesoloZantas/2-CrystalCaverns/` | Underground crystals |
-| 13 | Starlight Spire | `Maggy/DesoloZantas/3-StarlightSpire/` | Tower ascent |
-| 14 | Void Sanctum | `Maggy/DesoloZantas/4-VoidSanctum/` | Dark temple |
-| 15 | Dream Gardens | `Maggy/DesoloZantas/5-DreamGardens/` | Surreal landscapes |
-| 16 | Mirror Depths | `Maggy/DesoloZantas/6-MirrorDepths/` | Reflection puzzles |
-| 17 | Summit Redux | `Maggy/DesoloZantas/7-SummitRedux/` | Mountain climb |
-| 18 | Final Ascent | `Maggy/DesoloZantas/8-FinalAscent/` | Endgame |
+### Main Chapters (00-16)
 
-### DLC Chapters (Areas 19-21)
+| Chapter | Chapter Name | Map Files | Description |
+|---------|--------------|-----------|-------------|
+| 00 | Prologue | `00_Prologue.bin` | Introduction and tutorial |
+| 01 | City | `01_City_[A/B/C/D].bin` | Urban environment |
+| 02 | Nightmare | `02_Nightmare_[A/B/C/D].bin` | Dark dreamscape |
+| 03 | Stars | `03_Stars_[A/B/C/D].bin` | Celestial realm |
+| 04 | Legend | `04_Legend_[A/B/C/D].bin` | Mythic journey |
+| 05 | Restore | `05_Restore_[A/B/C/D].bin` | Recovery chapter |
+| 06 | Stronghold | `06_Stronghold_[A/B/C/D].bin` | Fortress ascent |
+| 07 | Hell | `07_Hell_[A/B/C/D].bin` | Infernal depths |
+| 08 | Truth | `08_Truth_[A/B/C/D].bin` | Revelation chapter |
+| 09 | Summit | `09_Summit_[A/B/C/D].bin` | Mountain climb |
+| 10 | Ruins | `10_Ruins_[A/B/C/D].bin` | Ancient ruins |
+| 11 | Snow | `11_Snow_[A/B/C/D].bin` | Frozen wasteland |
+| 12 | Water | `12_Water_[A/B/C/D].bin` | Aquatic depths |
+| 13 | Time | `13_Time_[A/B/C/D].bin` | Temporal puzzles |
+| 14 | Digital | `14_Digital_[A/B/C/D].bin` | Virtual world |
+| 15 | Castle | `15_Castle_[A/B/C/D].bin` | Royal fortress |
+| 16 | Corruption | `16_Corruption_A.bin` | Dark corruption (A-Side only) |
 
-| Area ID | Chapter Name | Folder | Description |
-|---------|--------------|--------|-------------|
-| 19 | Bonus Stage 1 | `Maggy/DesoloZantas/DLC/1-Bonus/` | Extra content |
-| 20 | Bonus Stage 2 | `Maggy/DesoloZantas/DLC/2-Bonus/` | Challenge maps |
-| 21 | Secret Finale | `Maggy/DesoloZantas/DLC/3-Secret/` | Hidden ending |
+### Story Chapters (17, 21)
+
+| Chapter | Chapter Name | Map Files | Description |
+|---------|--------------|-----------|-------------|
+| 17 | Epilogue | `17_Epilogue.bin` | Story epilogue |
+| 21 | Post Epilogue | `21_PostEpilogue.bin` | Post-game story |
+
+### DLC Chapters (18-20)
+
+| Chapter | Chapter Name | Map Files | Description |
+|---------|--------------|-----------|-------------|
+| 18 | Heart | `18_Heart_[A/B/C/D].bin` | Heart chapter with all sides |
+| 19 | Space | `19_Space_A.bin` | Space exploration (A-Side) |
+| 20 | The End | `20_TheEnd_A.bin` | Advanced challenge maps featuring remixed mechanics from main chapters, speedrun-focused rooms, and expert-level platforming sequences with D-Side difficulty |
 
 ## Naming Conventions
 
 ### Map Files
 
 ```
-[ChapterNumber]-[ChapterName]/[SidePrefix]-[RoomName].bin
+Maps/Maggy/DesoloZantas/Chapters/XX_ChapterName_Side.bin
+
+Format: [ChapterNumber]_[ChapterName]_[Side].bin
 
 Examples:
-0-Prologue/A-Intro.bin        # Prologue A-Side intro room
-1-ForsakenPath/B-01.bin       # Chapter 1 B-Side room 1
-2-CrystalCaverns/C-Boss.bin   # Chapter 2 C-Side boss room
-3-StarlightSpire/D-Final.bin  # Chapter 3 D-Side final room
+00_Prologue.bin           # Prologue (no sides)
+01_City_A.bin             # Chapter 1 City A-Side
+01_City_B.bin             # Chapter 1 City B-Side
+02_Nightmare_C.bin        # Chapter 2 Nightmare C-Side
+03_Stars_D.bin            # Chapter 3 Stars D-Side
+17_Epilogue.bin           # Epilogue (no sides)
+20_TheEnd_A.bin           # Chapter 20 The End A-Side
 ```
+
+### Associated Metadata Files
+
+Each map can have associated metadata files:
+- `XX_ChapterName_Side.meta.yaml` - Chapter metadata (music, visuals, etc.)
+- `XX_ChapterName_Side.altsideshelper.meta.yaml` - AltSidesHelper integration
 
 ### Side Prefixes
 
@@ -49,46 +77,95 @@ Examples:
 
 ## C# Helper Classes
 
+The map system is implemented in `Source/Core/Maps/` with three main classes:
+
 ### Area Data Registration
 
-```csharp
-using Celeste.Mod.DesoloZatnas.Core;
+Located in `Source/Core/Maps/AreaDataRegistration.cs`
 
-// Register custom area data
-MapAreaExpansion.RegisterArea(10, "DesoloZantas/0-Prologue", new AreaData {
-    Name = "Prologue II",
-    Icon = "areas/desolozantas/prologue",
-    TitleBase = "PROLOGUE",
-    // ... more properties
+```csharp
+using DesoloZantas.Core.Maps;
+
+// Initialize all areas during module load
+AreaDataRegistration.Initialize();
+
+// Register a custom area
+AreaDataRegistration.RegisterArea(new AreaDataRegistration.AreaRegistrationInfo
+{
+    AreaId = 20,
+    MapPath = "Maggy/DesoloZantas/DLC/2-Bonus",
+    Name = "Bonus Stage 2",
+    Icon = "areas/desolozantas/dlc/bonus2",
+    TitleBase = "CHALLENGE ARENA",
+    TitleAccentColor = "ff4500",
+    TitleTextColor = "ffffff",
+    HasDSide = false,
+    IsDLC = true,
+    Checkpoints = new[] { "start", "remix_forsaken", "expert_finale" },
+    Music = "event:/music/desolozantas/dlc/bonus2"
 });
+
+// Query areas
+var areaInfo = AreaDataRegistration.GetAreaInfo(20);
+var allAreas = AreaDataRegistration.GetAllAreas();
+var dlcAreas = AreaDataRegistration.GetDLCAreas();
+bool isOurs = AreaDataRegistration.IsDesoloZantasArea(areaId);
 ```
 
 ### Custom Chapter Metadata
 
+Located in `Source/Core/Maps/CustomChapterMetadataProcessor.cs`
+
 ```csharp
-// In ConcreteMapDataProcessor.cs
-public override void Process(AreaKey area, MapData data)
+using DesoloZantas.Core.Maps;
+
+// The processor automatically applies metadata during map loading
+// Access chapter metadata:
+var meta = CustomChapterMetadataProcessor.GetChapterMeta(areaKey);
+if (meta != null)
 {
-    // Add custom metadata to chapters
-    if (area.ID >= 10 && area.ID <= 21)
-    {
-        data.Meta.DesoloZantasChapter = true;
-        data.Meta.HasDSide = area.ID >= 10 && area.ID <= 18;
-    }
+    bool isDesoloZantas = meta.IsDesoloZantasChapter;
+    bool hasDSide = meta.HasDSide;
+    string bossType = meta.BossType;
+    string[] requirements = meta.UnlockRequirements;
 }
+
+// Check D-Side availability
+bool hasDSide = CustomChapterMetadataProcessor.HasDSide(areaId);
+int sideCount = CustomChapterMetadataProcessor.GetSideCount(areaId);
 ```
 
 ### Checkpoint Registration
 
+Located in `Source/Core/Maps/CheckpointRegistration.cs`
+
 ```csharp
-// Register checkpoints for chapter
-CheckpointData.Register("DesoloZantas/1-ForsakenPath", new[] {
+using DesoloZantas.Core.Maps;
+
+// Register checkpoints for a chapter (A-Side)
+CheckpointRegistration.RegisterCheckpoints("Maggy/DesoloZantas/1-ForsakenPath", new[] {
     "start",
     "ruins_entrance",
     "forest_clearing",
     "temple_gate",
     "boss_arena"
 });
+
+// Register checkpoints for specific side (B-Side)
+CheckpointRegistration.RegisterCheckpoints(
+    "Maggy/DesoloZantas/1-ForsakenPath",
+    AreaMode.BSide,
+    new[] { "start", "hard_section", "boss" }
+);
+
+// Query checkpoints
+var checkpoints = CheckpointRegistration.GetCheckpoints(mapPath);
+var start = CheckpointRegistration.GetStartCheckpoint(mapPath);
+var next = CheckpointRegistration.GetNextCheckpoint(mapPath, "ruins_entrance");
+int count = CheckpointRegistration.GetCheckpointCount(mapPath);
+
+// Register all default checkpoints
+CheckpointRegistration.RegisterDefaultCheckpoints();
 ```
 
 ## Loenn Integration
@@ -110,9 +187,25 @@ Custom Loenn plugins for map editing are in:
 ## Testing
 
 ```powershell
-# Test specific chapter
-celeste.exe --debug --map "Maggy/DesoloZantas/1-ForsakenPath/A-01"
+# Test specific chapter (A-Side)
+celeste.exe --debug --map "Maggy/DesoloZantas/Chapters/01_City_A"
+
+# Test B-Side
+celeste.exe --debug --map "Maggy/DesoloZantas/Chapters/01_City_B"
+
+# Test Prologue
+celeste.exe --debug --map "Maggy/DesoloZantas/Chapters/00_Prologue"
 
 # Test with debug mode
 celeste.exe --debug --console
 ```
+
+## Additional Folders
+
+| Folder | Purpose |
+|--------|---------|
+| `Chapters/` | Main campaign maps |
+| `Gyms/` | Practice/training maps |
+| `Lobbies/` | Hub/lobby maps |
+| `Submaps/` | Sub-area maps |
+| `WIP/` | Work-in-progress maps |

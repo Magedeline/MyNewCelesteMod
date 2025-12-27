@@ -1,5 +1,3 @@
-using DesoloZantas.Core.Core.Systems;
-
 namespace DesoloZantas.Core.Core.Entities
 {
     /// <summary>

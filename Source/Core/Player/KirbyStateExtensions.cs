@@ -1,5 +1,4 @@
 using DesoloZantas.Core.Core.Extensions;
-using DesoloZantas.Core.Core.Settings;
 using MonoMod.Utils;
 
 namespace DesoloZantas.Core.Core.Player
@@ -184,13 +183,13 @@ namespace DesoloZantas.Core.Core.Player
                 }
                 
                 // Elemental attack
-                if (Input.Dash.Pressed && self.GetKirbyPowerState() != KirbyPlayerComponent.PowerState.None)
+                if (Input.Dash.Pressed && self.GetKirbyPowerState() != (int)KirbyPlayerComponent.PowerState.None)
                 {
                     kirby.PerformElementalAttack(self);
                 }
                 
                 // Star warrior abilities
-                if (settings.StarWarriorMode && self.GetKirbyPowerState() == KirbyPlayerComponent.PowerState.None)
+                if (settings.StarWarriorMode && self.GetKirbyPowerState() == (int)KirbyPlayerComponent.PowerState.None)
                 {
                     kirby.UpdateStarWarriorAbilities(self);
                 }
@@ -338,7 +337,7 @@ namespace DesoloZantas.Core.Core.Player
             
             if (newPower != KirbyPlayerComponent.PowerState.None)
             {
-                self.SetKirbyPowerState(newPower);
+                self.SetKirbyPowerState((int)newPower);
             }
             
             obj.RemoveSelf();
@@ -373,7 +372,7 @@ namespace DesoloZantas.Core.Core.Player
             {
                 kirby.PlayAnimation("dash");
                 self.SetKirbyDashTimer(0f);
-                self.SetKirbyDashDirection(self.Facing);
+                self.SetKirbyDashDirection(new Vector2((int)self.Facing, 0));
             }
         }
         
@@ -395,7 +394,7 @@ namespace DesoloZantas.Core.Core.Player
                 
                 if (timer < dashDuration)
                 {
-                    self.Speed.X = (int)self.GetKirbyDashDirection() * dashSpeed;
+                    self.Speed.X = self.GetKirbyDashDirection().X * dashSpeed;
                     self.Speed.Y = 0f;
                 }
                 else
@@ -404,7 +403,7 @@ namespace DesoloZantas.Core.Core.Player
                 }
                 
                 // Wall collision
-                if (self.CollideCheck<Solid>(self.Position + Vector2.UnitX * (int)self.GetKirbyDashDirection()))
+                if (self.CollideCheck<Solid>(self.Position + Vector2.UnitX * self.GetKirbyDashDirection().X))
                 {
                     self.Speed.X = 0f;
                     return KirbyModeHooks.ST_KIRBY_NORMAL;

@@ -13,10 +13,10 @@ global using Celeste;
 global using Celeste.Mod;
 global using Celeste.Mod.Entities; // For CustomEntity attribute
 global using DesoloZantas.Core;
-// For AudioHelper type
-// Import AudioHelper as a static using so it can be called directly without namespace prefix
-global using static DesoloZantas.Core.Core.AudioSystems.AudioHelper;
-// Use Celeste.Audio explicitly to avoid conflict with DesoloZantas.Core.AudioSupport.Audio proxy
+// Stub types for removed dependencies
+global using DesoloZantas.Core.Core.Systems;
+global using DesoloZantas.Core.Core.Settings;
+// Use Celeste.Audio explicitly
 global using Audio = Celeste.Audio;
 // Type aliases to disambiguate custom entities from Celeste types
 global using CelestePayphone = Celeste.Payphone;

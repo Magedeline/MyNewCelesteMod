@@ -6,7 +6,6 @@ namespace DesoloZantas.Core.Core.Entities
     [CelesteEntities.CustomEntity("Ingeste/PinkPlatinumStrawberry")]
     [Monocle.Tracked]
     [CelesteEntities.RegisterStrawberry(tracked: false, blocksCollection: true)]
-    [TrackedAs(typeof(DeltaBerry))]
     internal class PinkPlatinumBerry : Entity, IStrawberry
     {
         private enum CollectSound

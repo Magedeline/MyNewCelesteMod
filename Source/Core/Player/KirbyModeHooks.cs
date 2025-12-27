@@ -1,5 +1,4 @@
 using DesoloZantas.Core.Core.Extensions;
-using DesoloZantas.Core.Core.Settings;
 using MonoMod.Cil;
 using MonoMod.RuntimeDetour;
 using MonoMod.Utils;

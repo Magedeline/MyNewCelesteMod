@@ -119,10 +119,11 @@ namespace DesoloZantas.Core.Core.Triggers
                     return dialogue .. ',' .. personality
                 ";
 
-                var result = LuaCutsceneManager.CallLuaFunction("dostring", luaScript);
+                var resultArray = LuaCutsceneManager.CallLuaFunction("dostring", luaScript);
+                var result = resultArray?.Length > 0 ? resultArray[0]?.ToString() : null;
                 if (!string.IsNullOrEmpty(result))
                 {
-                    var parts = result.Split(',');
+                    var parts = result.Split(new[] { ',' }, StringSplitOptions.None);
                     if (parts.Length >= 2)
                     {
                         return (parts[0].Trim(), parts[1].Trim());
@@ -145,7 +146,8 @@ namespace DesoloZantas.Core.Core.Triggers
                     return "event:/Ingeste/music/lvl10/flowey";
                 }
                 
-                var result = LuaCutsceneManager.CallLuaFunction($"require('libraries.flowey_cutscene_library').selectMusic('{personalityState}', nil)");
+                var resultArray = LuaCutsceneManager.CallLuaFunction($"require('libraries.flowey_cutscene_library').selectMusic('{personalityState}', nil)");
+                var result = resultArray?.Length > 0 ? resultArray[0]?.ToString() : null;
                 return result ?? "event:/Ingeste/music/lvl10/flowey";
             }
             catch (Exception ex)

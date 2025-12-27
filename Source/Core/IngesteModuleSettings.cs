@@ -1,13 +1,88 @@
 using System.ComponentModel;
-using DesoloZantas.Core.Core.Settings;
 using Microsoft.Xna.Framework.Input;
+using DesoloZantas.Core.Core.Settings;
 
 namespace DesoloZantas.Core.Core;
 
 public class IngesteModuleSettings : EverestModuleSettings
 {
-    // Kirby Settings
-    public KirbySettings KirbySettings { get; set; } = new KirbySettings();
+    // KirbySettings adapter - provides compatibility with legacy code expecting a KirbySettings object
+    [SettingIgnore]
+    public KirbySettings KirbySettings => new KirbySettings
+    {
+        KirbyModeEnabled = KirbyPlayerEnabled,
+        InhaleKey = KirbyInhaleKey,
+        HoverKey = KirbyHoverKey,
+        AttackKey = KirbyAttackKey,
+        HoverDuration = KirbyHoverDuration,
+        InhaleRange = InhaleRange,
+        CombatDamage = KirbyCombatDamage,
+        ParryWindow = KirbyParryWindow,
+        MovementPrecision = 1.0f,
+        StarWarriorMode = KirbyStarWarriorMode
+    };
+    
+    // ============================================
+    // KIRBY PLAYER KEYBINDS
+    // ============================================
+    
+    // Kirby Keyboard Bindings
+    [SettingName("KIRBY_INHALE_KEY")]
+    [DefaultValue(Keys.H)]
+    public Keys KirbyInhaleKey { get; set; } = Keys.H;
+    
+    [SettingName("KIRBY_HOVER_KEY")]
+    [DefaultValue(Keys.C)]
+    public Keys KirbyHoverKey { get; set; } = Keys.C;
+    
+    [SettingName("KIRBY_ATTACK_KEY")]
+    [DefaultValue(Keys.S)]
+    public Keys KirbyAttackKey { get; set; } = Keys.S;
+    
+    [SettingName("KIRBY_PARRY_KEY")]
+    [DefaultValue(Keys.LeftShift)]
+    public Keys KirbyParryKey { get; set; } = Keys.LeftShift;
+    
+    [SettingName("KIRBY_SPIT_KEY")]
+    [DefaultValue(Keys.X)]
+    public Keys KirbySpitKey { get; set; } = Keys.X;
+    
+    [SettingName("KIRBY_CYCLE_POWER_KEY")]
+    [DefaultValue(Keys.Tab)]
+    public Keys KirbyCyclePowerKey { get; set; } = Keys.Tab;
+    
+    [SettingName("KIRBY_DROP_POWER_KEY")]
+    [DefaultValue(Keys.Q)]
+    public Keys KirbyDropPowerKey { get; set; } = Keys.Q;
+    
+    // Kirby Controller Bindings
+    [DefaultButtonBinding(Buttons.X, Keys.H)]
+    [SettingName("KIRBY_INHALE_BUTTON")]
+    public ButtonBinding KirbyInhaleButton { get; set; } = new ButtonBinding();
+    
+    [DefaultButtonBinding(Buttons.A, Keys.C)]
+    [SettingName("KIRBY_HOVER_BUTTON")]
+    public ButtonBinding KirbyHoverButton { get; set; } = new ButtonBinding();
+    
+    [DefaultButtonBinding(Buttons.B, Keys.S)]
+    [SettingName("KIRBY_ATTACK_BUTTON")]
+    public ButtonBinding KirbyAttackButton { get; set; } = new ButtonBinding();
+    
+    [DefaultButtonBinding(Buttons.RightShoulder, Keys.LeftShift)]
+    [SettingName("KIRBY_PARRY_BUTTON")]
+    public ButtonBinding KirbyParryButton { get; set; } = new ButtonBinding();
+    
+    [DefaultButtonBinding(Buttons.Y, Keys.X)]
+    [SettingName("KIRBY_SPIT_BUTTON")]
+    public ButtonBinding KirbySpitButton { get; set; } = new ButtonBinding();
+    
+    [DefaultButtonBinding(Buttons.LeftShoulder, Keys.Tab)]
+    [SettingName("KIRBY_CYCLE_POWER_BUTTON")]
+    public ButtonBinding KirbyCyclePowerButton { get; set; } = new ButtonBinding();
+    
+    [DefaultButtonBinding(Buttons.LeftTrigger, Keys.Q)]
+    [SettingName("KIRBY_DROP_POWER_BUTTON")]
+    public ButtonBinding KirbyDropPowerButton { get; set; } = new ButtonBinding();
     
     // Kirby Player Mode - when enabled, Kirby is the playable character
     [SettingName("KIRBY_PLAYER_MODE")]
@@ -53,6 +128,28 @@ public class IngesteModuleSettings : EverestModuleSettings
     [SettingRange(30, 120)]
     [DefaultValue(60)]
     public int HoverFallSpeed { get; set; } = 60;
+    
+    [SettingName("KIRBY_HOVER_DURATION")]
+    [SettingRange(1, 10)]
+    [DefaultValue(3)]
+    public int KirbyHoverDuration { get; set; } = 3;
+    
+    [SettingName("KIRBY_COMBAT_DAMAGE")]
+    [SettingRange(10, 100)]
+    [DefaultValue(50)]
+    public int KirbyCombatDamage { get; set; } = 50;
+    
+    [SettingName("KIRBY_STAR_WARRIOR_MODE")]
+    [DefaultValue(true)]
+    public bool KirbyStarWarriorMode { get; set; } = true;
+    
+    [SettingName("KIRBY_PARRY_WINDOW")]
+    [SettingRange(1, 10)]
+    [DefaultValue(3)]
+    public int KirbyParryWindowTenths { get; set; } = 3;
+    
+    // Derived property for parry window in seconds
+    public float KirbyParryWindow => KirbyParryWindowTenths / 10f;
 
     // Boss Settings
     [SettingName("BOSS_HEALTH_MULTIPLIER")]

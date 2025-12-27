@@ -158,14 +158,6 @@ public class Postcard : Entity
             str1 = "event:/new_content/ui/postcard_dside";
         }
         this.GetFlag = "UnlockedDSide";
-        string str2;
-        if (soundId.StartsWith("event:/"))
-            str2= soundId;
-        else if (soundId == "rmxside")
-        {
-            str2 = "event:/new_content/ui/postcard_rmxside";
-        }
-        this.GetFlag = "UnlockedRMXSide";
         string str3;
         if (soundId.StartsWith("event:/"))
             str3 = soundId;

@@ -8,7 +8,7 @@ namespace DesoloZantas.Core.Core
     /// </summary>
     public static class HookManager
     {
-        private static readonly List<IDetour> ActiveHooks = new List<IDetour>();
+        private static readonly List<IDisposable> ActiveHooks = new List<IDisposable>();
         private static bool hooksRegistered = false;
 
         // Mod identification constant - all mod content should use this prefix
@@ -267,7 +267,7 @@ namespace DesoloZantas.Core.Core
         /// <summary>
         /// Registers a custom IL hook and tracks it for proper disposal
         /// </summary>
-        public static void RegisterILHook(IDetour hook)
+        public static void RegisterILHook(IDisposable hook)
         {
             if (hook != null)
             {

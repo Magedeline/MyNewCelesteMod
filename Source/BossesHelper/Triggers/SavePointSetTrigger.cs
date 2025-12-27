@@ -1,4 +1,5 @@
 using DesoloZantas.Core.BossesHelper.Helpers.Code.Components;
+using DesoloZantas.Core.Core;
 using DesoloZantas.Core.Core.Player;
 
 namespace DesoloZantas.Core.BossesHelper.Triggers
