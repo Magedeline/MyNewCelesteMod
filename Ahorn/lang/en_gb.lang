@@ -1,0 +1,5 @@
+# Sample Entity
+placements.entities.MyNewCelesteMod/SampleEntity.tooltips.sampleProperty=A sample property for your entity.
+
+# Sample Trigger
+placements.triggers.MyNewCelesteMod/SampleTrigger.tooltips.sampleProperty=A sample property for your trigger.

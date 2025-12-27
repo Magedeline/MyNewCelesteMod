@@ -1,0 +1,7 @@
+# Sample Entity
+entities.MyNewCelesteMod/SampleEntity.placements.name.normal=Sample Entity
+entities.MyNewCelesteMod/SampleEntity.attributes.description.sampleProperty=A sample property for your entity.
+
+# Sample Trigger
+triggers.MyNewCelesteMod/SampleTrigger.placements.name.normal=Sample Trigger
+triggers.MyNewCelesteMod/SampleTrigger.attributes.description.sampleProperty=A sample property for your trigger.
